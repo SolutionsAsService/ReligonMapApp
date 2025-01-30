@@ -6,7 +6,8 @@
         "children": [
             { "name": "Catholicism", "start": 1054, "end": 2025 },
             { "name": "Protestantism", "start": 1517, "end": 2025 },
-            { "name": "Orthodox", "start": 1054, "end": 2025 }
+            { "name": "Orthodox", "start": 1054, "end": 2025 },
+            { "name": "Anglicanism", "start": 1534, "end": 2025 }
         ]
     },
     {
@@ -15,7 +16,8 @@
         "end": 2025,
         "children": [
             { "name": "Sunni", "start": 632, "end": 2025 },
-            { "name": "Shia", "start": 632, "end": 2025 }
+            { "name": "Shia", "start": 632, "end": 2025 },
+            { "name": "Sufism", "start": 8th century, "end": 2025 }
         ]
     },
     {
@@ -24,7 +26,8 @@
         "end": 2025,
         "children": [
             { "name": "Orthodox Judaism", "start": -2000, "end": 2025 },
-            { "name": "Reform Judaism", "start": 19, "end": 2025 }
+            { "name": "Reform Judaism", "start": 19, "end": 2025 },
+            { "name": "Conservative Judaism", "start": 1886, "end": 2025 }
         ]
     },
     {
@@ -33,7 +36,8 @@
         "end": 2025,
         "children": [
             { "name": "Vaishnavism", "start": -1500, "end": 2025 },
-            { "name": "Shaivism", "start": -1500, "end": 2025 }
+            { "name": "Shaivism", "start": -1500, "end": 2025 },
+            { "name": "Shaktism", "start": -1500, "end": 2025 }
         ]
     },
     {
@@ -42,7 +46,8 @@
         "end": 2025,
         "children": [
             { "name": "Theravada", "start": -250, "end": 2025 },
-            { "name": "Mahayana", "start": 100, "end": 2025 }
+            { "name": "Mahayana", "start": 100, "end": 2025 },
+            { "name": "Vajrayana", "start": 8th century, "end": 2025 }
         ]
     },
     {
@@ -51,6 +56,51 @@
         "end": 2025,
         "children": [
             { "name": "Khalsa", "start": 1699, "end": 2025 }
+        ]
+    },
+    {
+        "name": "Taoism",
+        "start": -400,
+        "end": 2025,
+        "children": [
+            { "name": "Religious Taoism", "start": 142, "end": 2025 },
+            { "name": "Philosophical Taoism", "start": -400, "end": 2025 }
+        ]
+    },
+    {
+        "name": "Shinto",
+        "start": -500,
+        "end": 2025,
+        "children": [
+            { "name": "State Shinto", "start": 1868, "end": 1945 },
+            { "name": "Sect Shinto", "start": 1868, "end": 2025 },
+            { "name": "Folk Shinto", "start": -500, "end": 2025 }
+        ]
+    },
+    {
+        "name": "Jainism",
+        "start": -600,
+        "end": 2025,
+        "children": [
+            { "name": "Digambara", "start": 3rd century BCE, "end": 2025 },
+            { "name": "Svetambara", "start": 3rd century BCE, "end": 2025 }
+        ]
+    },
+    {
+        "name": "Zoroastrianism",
+        "start": -1000,
+        "end": 2025,
+        "children": [
+            { "name": "Zurvanism", "start": 5th century BCE, "end": 7th century },
+            { "name": "Mazdaism", "start": -1000, "end": 2025 }
+        ]
+    },
+    {
+        "name": "Bahá'í Faith",
+        "start": 1863,
+        "end": 2025,
+        "children": [
+            { "name": "Orthodox Bahá'í Faith", "start": 1960, "end": 2025 }
         ]
     }
 ]
