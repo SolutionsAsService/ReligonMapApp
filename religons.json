@@ -17,7 +17,7 @@
         "children": [
             { "name": "Sunni", "start": 632, "end": 2025 },
             { "name": "Shia", "start": 632, "end": 2025 },
-            { "name": "Sufism", "start": 8th century, "end": 2025 }
+            { "name": "Sufism", "start": 700, "end": 2025 }
         ]
     },
     {
@@ -26,7 +26,7 @@
         "end": 2025,
         "children": [
             { "name": "Orthodox Judaism", "start": -2000, "end": 2025 },
-            { "name": "Reform Judaism", "start": 19, "end": 2025 },
+            { "name": "Reform Judaism", "start": 1819, "end": 2025 },
             { "name": "Conservative Judaism", "start": 1886, "end": 2025 }
         ]
     },
@@ -47,7 +47,7 @@
         "children": [
             { "name": "Theravada", "start": -250, "end": 2025 },
             { "name": "Mahayana", "start": 100, "end": 2025 },
-            { "name": "Vajrayana", "start": 8th century, "end": 2025 }
+            { "name": "Vajrayana", "start": 750, "end": 2025 }
         ]
     },
     {
@@ -82,8 +82,8 @@
         "start": -600,
         "end": 2025,
         "children": [
-            { "name": "Digambara", "start": 3rd century BCE, "end": 2025 },
-            { "name": "Svetambara", "start": 3rd century BCE, "end": 2025 }
+            { "name": "Digambara", "start": -300, "end": 2025 },
+            { "name": "Svetambara", "start": -300, "end": 2025 }
         ]
     },
     {
@@ -91,7 +91,7 @@
         "start": -1000,
         "end": 2025,
         "children": [
-            { "name": "Zurvanism", "start": 5th century BCE, "end": 7th century },
+            { "name": "Zurvanism", "start": -500, "end": 700 },
             { "name": "Mazdaism", "start": -1000, "end": 2025 }
         ]
     },
