@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Ancient Egyptian Religion",
+        "start": -3150,
+        "end": 400,
+        "origin": "Predynastic Egypt",
+        "reason_for_dying_out": "Spread of Christianity and Roman influence"
+    },
+    {
+        "name": "Norse Mythology",
+        "start": 800,
+        "end": 1100,
+        "origin": "Scandinavia",
+        "reason_for_dying_out": "Christianization of Scandinavia"
+    },
+    {
+        "name": "Greek Mythology",
+        "start": -800,
+        "end": 400,
+        "origin": "Ancient Greece",
+        "reason_for_dying_out": "Roman conquest and spread of Christianity"
+    },
+    {
+        "name": "Roman Mythology",
+        "start": -753,
+        "end": 380,
+        "origin": "Ancient Rome",
+        "reason_for_dying_out": "Edict of Thessalonica declaring Christianity the state religion"
+    },
+    {
+        "name": "Canaanite Religion",
+        "start": -2000,
+        "end": 200,
+        "origin": "Ancient Canaan",
+        "reason_for_dying_out": "Conquest by surrounding empires and spread of monotheism"
+    },
+    {
+        "name": "Sumerian Religion",
+        "start": -3500,
+        "end": -2000,
+        "origin": "Ancient Sumer",
+        "reason_for_dying_out": "Conquests by Akkadian and Babylonian empires"
+    },
+    {
+        "name": "Maya Religion",
+        "start": -2000,
+        "end": 1600,
+        "origin": "Mesoamerica",
+        "reason_for_dying_out": "Spanish conquest and colonization"
+    },
+    {
+        "name": "Aztec Religion",
+        "start": 1300,
+        "end": 1521,
+        "origin": "Mesoamerica",
+        "reason_for_dying_out": "Spanish conquest and colonization"
+    },
+    {
+        "name": "Inca Religion",
+        "start": 1200,
+        "end": 1572,
+        "origin": "Andes, South America",
+        "reason_for_dying_out": "Spanish conquest and colonization"
+    },
+    {
+        "name": "Zoroastrianism (Ancient)",
+        "start": -600,
+        "end": 651,
+        "origin": "Ancient Persia",
+        "reason_for_dying_out": "Islamic conquest of Persia"
+    },
+    {
+        "name": "Manichaeism",
+        "start": 216,
+        "end": 1000,
+        "origin": "Sassanid Empire",
+        "reason_for_dying_out": "Persecution by various empires and the rise of Islam"
+    },
+    {
+        "name": "Mithraism",
+        "start": 1st century,
+        "end": 4th century,
+        "origin": "Roman Empire",
+        "reason_for_dying_out": "Rise of Christianity in the Roman Empire"
+    }
+]
