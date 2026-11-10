@@ -13,15 +13,18 @@ docs, new features, data corrections and ideas.
 
 ## Getting set up
 
-This is a static site: no build step.
+The site is static HTML generated from `data/*.json` by a small Node build. The built `site/` folder is committed, so hosting needs no build step.
 
 ```bash
 git clone https://github.com/SolutionsAsService/ReligonMapApp
 cd ReligonMapApp
-npx serve .
+npm install        # d3-geo, topojson-client, world-atlas (build-time only)
+npm run build      # writes site/
+npm run check      # measures every page in Chromium (needs Playwright)
+npx serve site
 ```
 
-Then open the printed localhost URL. Keep links relative so the site still deploys from any host.
+Data corrections go in `data/traditions.json`. Please cite a source in the pull request, and set `"approx": true` with a `date_note` when a date is disputed. Keep links relative so the site still deploys from any host.
 
 ## Making a change
 
@@ -34,7 +37,7 @@ Then open the printed localhost URL. Keep links relative so the site still deplo
 ## Pull request checklist
 
 - [ ] The change does one thing and the description explains it.
-- [ ] It runs locally, and existing tests still pass.
+- [ ] `npm run build` and `npm run check` pass.
 - [ ] Docs or README are updated if behaviour changed.
 - [ ] No secrets, API keys or personal data are committed.
 

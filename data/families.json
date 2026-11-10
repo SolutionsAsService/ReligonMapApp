@@ -1,0 +1,10 @@
+[
+  {"id": "abrahamic", "name": "Abrahamic", "color": "#2a5aa8", "blurb": "Traditions tracing themselves to the God of Abraham: Judaism, Christianity, Islam and the faiths that grew from them."},
+  {"id": "indian", "name": "Indian (Dharmic)", "color": "#b8480a", "blurb": "Traditions born on the Indian subcontinent around ideas of dharma, karma and release: Hinduism, Buddhism, Jainism, Sikhism."},
+  {"id": "eastasian", "name": "East Asian", "color": "#b3122e", "blurb": "Chinese, Japanese, Korean and Vietnamese traditions of ancestors, the Dao, kami and ritual order."},
+  {"id": "iranian", "name": "Iranian", "color": "#0f7c74", "blurb": "Traditions of the Iranian plateau and Mesopotamia: Zoroastrianism, Manichaeism, Yazidism."},
+  {"id": "ancient", "name": "Ancient Near East & Mediterranean", "color": "#7a5526", "blurb": "The temple religions of Sumer, Egypt, Canaan, Greece and Rome, all now ended as public cults."},
+  {"id": "northern", "name": "Northern & Celtic Europe", "color": "#4a6420", "blurb": "Germanic, Norse, Celtic, Slavic and Baltic religions, and the modern movements that revive them."},
+  {"id": "americas", "name": "Indigenous Americas", "color": "#7b3fa0", "blurb": "Maya, Mexica and Inca religion, and the Native American Church."},
+  {"id": "africa", "name": "Africa & diaspora", "color": "#b02a6a", "blurb": "West African orisha and vodun traditions, and the religions they became in the Caribbean and Brazil."}
+]

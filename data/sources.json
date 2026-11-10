@@ -1,0 +1,5 @@
+{
+  "pew2020": {"short": "Pew Research Center, 2020 estimates", "title": "How the Global Religious Landscape Changed From 2010 to 2020", "publisher": "Pew Research Center", "year": 2025, "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/", "note": "Rounded world totals for 2020, as published."},
+  "india2011": {"short": "Census of India 2011 (India only)", "title": "Census of India 2011: Religion (C-1 table)", "publisher": "Office of the Registrar General & Census Commissioner, India", "year": 2011, "url": "https://censusindia.gov.in/", "note": "Counts within India only; worldwide totals are higher."},
+  "natural-earth": {"short": "Natural Earth via world-atlas", "title": "world-atlas 2.0.2, land-110m", "publisher": "Natural Earth / Mike Bostock", "year": 2020, "url": "https://github.com/topojson/world-atlas", "note": "Public-domain coastlines at 1:110 million."}
+}

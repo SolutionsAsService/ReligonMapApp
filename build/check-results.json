@@ -1,0 +1,230 @@
+{
+  "at": "2026-11-10T02:13:15.354Z",
+  "results": [
+    {
+      "probe": "internal links resolve",
+      "pass": true,
+      "detail": "106 pages scanned"
+    },
+    {
+      "probe": "every page has an inbound link",
+      "pass": true,
+      "detail": "none orphaned"
+    },
+    {
+      "probe": "fixtures fail every probe (instrument check)",
+      "pass": true,
+      "detail": {
+        "overflow": 533,
+        "smallTargets": 3,
+        "hiddenShown": 1
+      }
+    },
+    {
+      "probe": "no sideways page scroll at 1280px (106 pages)",
+      "pass": true,
+      "detail": "all 0"
+    },
+    {
+      "probe": "no script errors at 1280px",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "probe": "no sideways page scroll at 375px (106 pages)",
+      "pass": true,
+      "detail": "all 0"
+    },
+    {
+      "probe": "no script errors at 375px",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "probe": "hero complete above the fold at 1280x800",
+      "pass": true,
+      "detail": {
+        "top": 74.25,
+        "bottom": 638.75,
+        "right": 1241.609375,
+        "innerScroll": 0,
+        "parts": 5
+      }
+    },
+    {
+      "probe": "(info) route strip bottom at 1280x800",
+      "pass": true,
+      "detail": "711px"
+    },
+    {
+      "probe": "hero complete above the fold at 375x812",
+      "pass": true,
+      "detail": {
+        "top": 90.6875,
+        "bottom": 689.75,
+        "right": 359,
+        "innerScroll": 0,
+        "parts": 5
+      }
+    },
+    {
+      "probe": "(info) route strip bottom at 375x812",
+      "pass": true,
+      "detail": "849px"
+    },
+    {
+      "probe": "legibility: default route traceable at 1280px",
+      "pass": true,
+      "detail": {
+        "route": "buddhism",
+        "legs": 9,
+        "labels": [
+          "Bodh Gaya · c. 450 BCE",
+          "Anuradhapura 250 BCE",
+          "Taxila 250 BCE",
+          "Asuka 538 CE",
+          "Borobudur 800 CE",
+          "Bagan 1056",
+          "Hohhot 1578"
+        ]
+      }
+    },
+    {
+      "probe": "legibility: default route traceable at 375px",
+      "pass": true,
+      "detail": {
+        "route": "buddhism",
+        "legs": 9,
+        "labels": [
+          "Bodh Gaya · c. 450 BCE",
+          "Anuradhapura 250 BCE",
+          "Borobudur 800 CE",
+          "Hohhot 1578"
+        ]
+      }
+    },
+    {
+      "probe": "map labels inside their map at 1280px",
+      "pass": true,
+      "detail": "all inside"
+    },
+    {
+      "probe": "map labels inside their map at 375px",
+      "pass": true,
+      "detail": "all inside"
+    },
+    {
+      "probe": "target size 24px or spaced (2.5.8) at 1280px",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "probe": "target size 24px or spaced (2.5.8) at 375px",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "probe": "[hidden] computes display:none after interaction",
+      "pass": true,
+      "detail": "0 visible"
+    },
+    {
+      "probe": "(info) year readout after setting slider to 400/1000",
+      "pass": true,
+      "detail": "342 CE · 26 of 91 alive"
+    },
+    {
+      "probe": "focus ring visible after a real Tab",
+      "pass": true,
+      "detail": {
+        "el": "Map",
+        "outline": "solid",
+        "width": "3px",
+        "color": "rgb(31, 27, 22)",
+        "fv": true
+      }
+    },
+    {
+      "probe": "family colours: marks ≥3:1 on paper and land; white chip text ≥4.5:1",
+      "pass": true,
+      "detail": [
+        {
+          "f": "abrahamic",
+          "onPaper": 6.12,
+          "onLand": 4.94,
+          "whiteOnFill": 6.72
+        },
+        {
+          "f": "indian",
+          "onPaper": 4.82,
+          "onLand": 3.89,
+          "whiteOnFill": 5.29
+        },
+        {
+          "f": "eastasian",
+          "onPaper": 6.29,
+          "onLand": 5.07,
+          "whiteOnFill": 6.9
+        },
+        {
+          "f": "iranian",
+          "onPaper": 4.61,
+          "onLand": 3.72,
+          "whiteOnFill": 5.05
+        },
+        {
+          "f": "ancient",
+          "onPaper": 6.07,
+          "onLand": 4.89,
+          "whiteOnFill": 6.66
+        },
+        {
+          "f": "northern",
+          "onPaper": 6.11,
+          "onLand": 4.93,
+          "whiteOnFill": 6.7
+        },
+        {
+          "f": "americas",
+          "onPaper": 6.25,
+          "onLand": 5.04,
+          "whiteOnFill": 6.86
+        },
+        {
+          "f": "africa",
+          "onPaper": 5.65,
+          "onLand": 4.56,
+          "whiteOnFill": 6.2
+        }
+      ]
+    },
+    {
+      "probe": "muted text #5c544a on paper ≥4.5:1",
+      "pass": true,
+      "detail": "6.78"
+    },
+    {
+      "probe": "muted text on #f1ebdf cards ≥4.5:1",
+      "pass": true,
+      "detail": "6.27"
+    },
+    {
+      "probe": "smallest timeline label at 375px ≥ 10px rendered",
+      "pass": true,
+      "detail": {
+        "min": "10.5",
+        "n": 133
+      }
+    },
+    {
+      "probe": "smallest map/ribbon label at 375px ≥ 10px",
+      "pass": true,
+      "detail": "11px"
+    },
+    {
+      "probe": "printed figures reproduce from data",
+      "pass": true,
+      "detail": "9 figures"
+    }
+  ]
+}
