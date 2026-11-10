@@ -132,6 +132,8 @@ All eight seats filed. Reports are in `panel/R0/`.
 
 **Andon:** none pulled. All eight objected to the inherited artifact, and those objections become the first Frontier items.
 
+### Resolutions R0
+
 | Finding | Resolution |
 |---|---|
 | Cairo + Debord: dead-religons.json does not parse; dead never drawn | ADAPT (M1, M8): one new `data/traditions.json` with numeric years; the 19 ended traditions are drawn with endings |
@@ -141,9 +143,9 @@ All eight seats filed. Reports are in `panel/R0/`.
 | Holmes + Mace + Krug + Cairo + Tufte: fixed 1000 px, phone scroll | ADAPT (M2, M5): fluid viewBox maps; first-screen hero measured at 375 |
 | Debord + Krug + Holmes + Mace: CDN failure = empty page | ADAPT (M4): all figures pre-rendered as static SVG at build; no runtime library |
 | Holmes + Mace + Krug: hover-only, nothing focusable | ADAPT (M6): every mark is a link; every figure has a list or table |
-| Shklovsky (Rupture) + Shklovsky (Provocateur): Gantt habit, time not felt | ADAPT (M3): folded time axis, BREAK |
-| Shklovsky (both) + Debord: the map may become a dot globe | ADAPT (M4, M5): the map is tied to a year; spread routes are dated; the landing shows a moment, not an orb |
-| Shklovsky (Provocateur): lead with the dead | ADAPT (M8): "Lost religions" page in the first-screen inventory; each ending drawn and its cause written |
+| Rupture (Shklovsky) + Provocateur (Shklovsky): Gantt habit, time not felt | ADAPT (M3): folded time axis, BREAK |
+| Provocateur (Shklovsky) + Rupture (Shklovsky) + Debord: the map may become a dot globe | ADAPT (M4, M5): the map is tied to a year; spread routes are dated; the landing shows a moment, not an orb |
+| Provocateur (Shklovsky): lead with the dead | ADAPT (M8): "Lost religions" page in the first-screen inventory; each ending drawn and its cause written |
 | Mace: #69b3a2 fill 2.45:1 | ADAPT (M4): family colours chosen and measured at ≥ 3:1 on paper |
 
 ---
@@ -337,22 +339,24 @@ All 8 seats filed (`collect_panel.py`: 8 REPORTED).
 
 **Andon:** pulled by Debord (F1). Drawn legs assert transmissions the data does not hold. No new moves until it is resolved: M11 resolves it first.
 
+### Resolutions R1
+
 | Finding | Resolution |
 |---|---|
 | Debord: 156 legs drawn from origin without a recorded `from` | ADAPT (M11): every stop now carries an explicit `from` (153 asserted, 43 marked "?" = path not traced, drawn as a dated dot with no leg) |
 | Cairo + Debord: end dates print as exact | ADAPT (M12): `end_approx` flag; "c." printed on approximate ends |
-| Cairo: evidence said 8/5 visible labels | OVERRULE (premise refuted: my evidence file was wrong, the seat was right. Recorded as an error in my evidence, corrected in R2 evidence) |
+| Cairo: evidence said 8/5 visible labels | ADAPT (R2 evidence): the seat was right (7 at 1280, 4 at 375); my evidence file was wrong and is corrected |
 | Cairo: legibility probe tests count only | ADAPT (M12): probe asserts the origin and the last stop are visible |
 | Cairo: "alive" counts this catalogue only | ADAPT (M13): note says "of the 91 traditions listed here" |
 | Cairo + Debord: "recent" India census beside world totals | ADAPT (M12): "India only, 2011" printed with the figure; "recent" removed |
 | Cairo: NOW floats with the build clock | ADAPT (M12): `data/meta.json` pins the present year (2026) |
 | Cairo: figure probe skips ratios, the 24/38/38 split and adherents | ADAPT (M12): probe extended |
-| Tufte + Shklovsky (both): gridlines hide the fold; label collisions on the fold | ADAPT (M13): one 100-year grid everywhere; fold labels moved into a header band; end years moved; 1000 BCE label dropped |
+| Tufte + Provocateur (Shklovsky) + Rupture (Shklovsky): gridlines hide the fold; label collisions on the fold | ADAPT (M13): one 100-year grid everywhere; fold labels moved into a header band; end years moved; 1000 BCE label dropped |
 | Tufte: filled ribbon area misstates | ADAPT (M13): ribbon drawn as a line |
 | Tufte: durations not shown | ADAPT (M13): duration in years in every row title and table |
 | Tufte: ribbon ticks hand-picked | ADAPT (M13): ticks from FOLDS boundaries plus round centuries |
-| Shklovsky (Provocateur) + Shklovsky (Rupture): fold softened on the landing | ADAPT (M14, BREAK): the home track shows its zigzag seams with ×2.4/×3.8 printed on them, and a true-scale key beneath, linking each fold to where it would sit on an unfolded line |
-| Shklovsky (Provocateur): chips are SaaS pills, merge the family row | OVERRULE (MAYA, Adaptive criterion + Landing rule: the family chips are the per-topic links and figures the landing must carry; merging them into the ribbon would hide eight of the site's topics) |
+| Provocateur (Shklovsky) + Rupture (Shklovsky): fold softened on the landing | ADAPT (M14, BREAK): the home track shows its zigzag seams with ×2.4/×3.8 printed on them, and a true-scale key beneath, linking each fold to where it would sit on an unfolded line |
+| Provocateur (Shklovsky): chips are SaaS pills, merge the family row | OVERRULE (MAYA, Adaptive criterion + Landing rule: the family chips are the per-topic links and figures the landing must carry; merging them into the ribbon would hide eight of the site's topics) |
 | Holmes + Mace: 91 dots before the slider in tab order; invisible mark focus | ADAPT (M15): map marks leave the tab order (`tabindex="-1"`); every tradition is reachable from the lists and tables beside each map |
 | Mace: SVG targets not measured | ADAPT (M15): probe measures map marks; they are pointer-only duplicates of list links, so 2.5.8's equivalent-control exception applies, and the probe asserts the duplicate exists |
 | Mace: forced colours erase family | ADAPT (M15): `forced-color-adjust: none` on map and timeline SVG |
@@ -462,6 +466,8 @@ The run was closed by the owner's grade (A−) while R2 was sitting. Three seats
 
 **Andon:** Debord's R1 Andon is resolved by M11, confirmed by Debord.
 
+### Resolutions R2
+
 | Finding | Resolution |
 |---|---|
 | Debord: approximate end years printed without c. (lost, tradition pages, landing) | ADAPT (applied, not re-judged): one `endYr()` helper; probe added and passing |
@@ -472,7 +478,7 @@ The run was closed by the owner's grade (A−) while R2 was sitting. Three seats
 | Tufte: ribbon and timeline misaligned | ADAPT (applied, not re-judged): the plot runs 10..1200 in a 1210 viewBox, matching the track insets. Measured at 1280: seams at 332/782 on both; "now" at 1232 vs 1230 |
 | Tufte: ×2.4 seam has no year on phone; "1000" tick hand-picked | ADAPT (applied, not re-judged): ticks only from FOLDS boundaries; the seam years kept at every width |
 | Tufte + Cairo: fold note hard-codes 1190 | ADAPT (applied, not re-judged): computed from TL_W − TL_L |
-| Cairo: evidence stale | OVERRULE (premise correct, recorded as a process fault): I applied Debord's and Tufte's fixes while Cairo was still measuring. Final figures are re-measured below (Step 2g) |
+| Cairo: evidence stale | ADAPT (Step 2g): the seat was right; I applied Debord's and Tufte's fixes while Cairo was still measuring (a process fault). Final figures re-measured below |
 | Cairo: "the year this site was built" | ADAPT (applied, not re-judged): "the year this edition is pinned to (data/meta.json)" |
 | Cairo: the pinned-year probe can never fail; some figures unprobed (57 sites, Years column, Followers lines) | DEFERRED: Open frontier |
 
@@ -539,3 +545,27 @@ The criterion held: MAYA kept the fold legible, and it was the right ground to o
   - One composed first screen: the map that moves with the year, a featured route, the folded ribbon with its true-scale key, and a link per family.
   - Data honesty a reader can see: dates explained, untraced paths shown as untraced.
 - **What it may withhold the A for:** the open R2 seats, or the long, dense timeline page.
+
+## Compliance Check
+
+- [x] Tooling inventory done (Traversal Plan, Step 0 table).
+- [x] Mode stated with the reason: Adaptive, for a public audience.
+- [x] Panel seated from `pick_panel.py`, every seat briefed from its `seats/` file. The bound was the owner's close at R2 ("Good design that's an A minus record and slot in to portfolio appropriately").
+- [x] Seed uses exact labels and includes three dotted-edge counterpoints. The Frontier was kept live (Initial Frontier, Frontier (final)).
+- [x] Run type stated (Full); nothing was frozen.
+- [x] For a website, the landing leads with one bold graphic that summarizes every topic.
+  - It is the map, plus a year track that is the Timeline in miniature, a route chip per featured route, a link and count per family, and doors to Timeline, Atlas, Lost and Sources.
+  - Measured complete at 1280×800 (bottom 663.5) and 375×812 (bottom 709.8), with no inner scroll.
+- [x] BREAK moves taken: M3, M5, M8, M10 and M14. No quota was used as a stopping rule.
+- [x] A Decision Record was written before each move (M1–M15), with dependencies. R2 fixes are logged as "applied, not re-judged".
+- [x] A Panel Report per round:
+  - R0: 8 of 8 seats.
+  - R1: 8 of 8 seats.
+  - R2: 3 of 8 seats; the other 5 were NOT CONVENED because the owner closed the run.
+- [x] Every OBJECT resolved as ADAPT, OVERRULE or DEFERRED, with dependents reopened (M11–M15 list what they reopened).
+- [ ] WHOLE rounds run, and S1–S5 shown: S1, S4 and S5 are met; **S2 and S3 are not met** (Stop test).
+- [x] Every figure the artifact displays re-measured at its final state (Step 2g).
+- [x] Anchor Ledger complete, and the live graph updated (Mermaid).
+- [x] Double-loop paragraph written, with the graph and process amendments.
+- [x] Run recorded in the ledger with the owner's grade (import_log.py, rate_seats.py in PrometheusIntelligence/dada).
+- [x] Final reply states the mode, the tools, the stop conditions and what was skipped.
