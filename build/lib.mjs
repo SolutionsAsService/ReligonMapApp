@@ -5,7 +5,8 @@ import { geoEqualEarth, geoPath, geoGraticule10, geoDistance } from 'd3-geo';
 import { feature } from 'topojson-client';
 
 export const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-export const NOW = new Date().getUTCFullYear();
+// The present year is pinned in data/meta.json so a rebuild reproduces every printed figure.
+export const NOW = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/meta.json'), 'utf8')).present;
 
 export function loadData() {
   const families = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/families.json'), 'utf8'));
@@ -43,16 +44,18 @@ export function yr(y) {
 }
 export function span(t) {
   const s = (t.approx ? 'c. ' : '') + yr(t.start);
-  const e = t.end === null ? 'present' : yr(t.end);
+  const e = t.end === null ? 'present' : (t.end_approx ? 'c. ' : '') + yr(t.end);
   return `${s} – ${e}`;
 }
 
 // ---------- folded time scale ----------
 // Three segments, each linear, each with its own scale. The folds are drawn on every chart that uses it.
+// One gridline every 100 years in every stretch, so the spacing of the lines shows the fold.
+export const GRID = 100;
 export const FOLDS = [
-  { from: -3500, to: -500, f0: 0, f1: 0.24, grid: 500, label: 1000 },
-  { from: -500, to: 1500, f0: 0.24, f1: 0.62, grid: 100, label: 500 },
-  { from: 1500, to: NOW, f0: 0.62, f1: 1, grid: 50, label: 100 },
+  { from: -3500, to: -500, f0: 0, f1: 0.24, labels: [-3000, -2000, -500] },
+  { from: -500, to: 1500, f0: 0.24, f1: 0.62, labels: [0, 500, 1000, 1500] },
+  { from: 1500, to: NOW, f0: 0.62, f1: 1, labels: [1600, 1700, 1800, 1900, 2000] },
 ];
 export function fold(y) {
   const s = FOLDS.find(s => y <= s.to) || FOLDS[FOLDS.length - 1];
@@ -107,15 +110,18 @@ export const MAP_W = WORLD.W, MAP_H = WORLD.H;
 export function km(a, b) { return Math.round(geoDistance([a[1], a[0]], [b[1], b[0]]) * 6371); }
 
 // Resolve each spread step to the point it came from.
+// Each step names the place it came from, or "?" when the path is not traced (no line is drawn for those).
 export function routeOf(t) {
   const pts = { [t.origin.place]: [t.origin.lat, t.origin.lon] };
   const steps = [];
   for (const [year, place, lat, lon, from, note] of [...t.spread].sort((a, b) => a[0] - b[0])) {
-    const src = from && pts[from] ? from : t.origin.place;
-    steps.push({ year, place, lat, lon, from: src, fromPt: pts[src], note });
+    if (from !== '?' && !pts[from]) throw new Error(`${t.id}: stop ${place} comes from unknown place ${from}`);
+    const unknown = from === '?';
+    steps.push({ year, place, lat, lon, from: unknown ? null : from, fromPt: unknown ? null : pts[from], unknown, note });
     if (!pts[place]) pts[place] = [lat, lon];
   }
   return steps;
 }
+export function years(t) { return (t.end ?? NOW) - t.start - (t.start < 0 && (t.end ?? NOW) > 0 ? 1 : 0); }
 
 export const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

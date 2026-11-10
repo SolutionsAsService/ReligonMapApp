@@ -1,6 +1,6 @@
 // The Religion Map: small runtime. Every figure is pre-rendered; this only moves the year and shows routes.
 (() => {
-  const FOLDS = [{"from":-3500,"to":-500,"f0":0,"f1":0.24,"grid":500,"label":1000},{"from":-500,"to":1500,"f0":0.24,"f1":0.62,"grid":100,"label":500},{"from":1500,"to":2026,"f0":0.62,"f1":1,"grid":50,"label":100}];
+  const FOLDS = [{"from":-3500,"to":-500,"f0":0,"f1":0.24,"labels":[-3000,-2000,-500]},{"from":-500,"to":1500,"f0":0.24,"f1":0.62,"labels":[0,500,1000,1500]},{"from":1500,"to":2026,"f0":0.62,"f1":1,"labels":[1600,1700,1800,1900,2000]}];
   const NOW = 2026;
   const fold = y => {
     const s = FOLDS.find(s => y <= s.to) || FOLDS[FOLDS.length - 1];
@@ -90,7 +90,13 @@
 
   // ---- atlas family filters
   $$('[data-fam-toggle]').forEach(cb => cb.addEventListener('change', () => {
-    $$(`.mk[data-f="${cb.dataset.famToggle}"]`).forEach(m => m.classList.toggle('famoff', !cb.checked));
+    const f = cb.dataset.famToggle;
+    $$(`.mk[data-f="${f}"]`).forEach(m => m.classList.toggle('famoff', !cb.checked));
+    // hide the family's buttons and, if its route is showing, the route
+    cb.closest('li').querySelectorAll('ul .tbtn').forEach(b => b.closest('li').classList.toggle('famoff-li', !cb.checked));
+    const on = pickers.find(b => b.getAttribute('aria-pressed') === 'true');
+    const fm = on && document.querySelector(`.mk[data-id="${on.dataset.showRoute}"]`);
+    if (!cb.checked && fm && fm.dataset.f === f) showRoute(null);
     const ctl = document.querySelector('[data-yearctl] input');
     if (ctl) ctl.dispatchEvent(new Event('input'));
   }));
@@ -98,7 +104,7 @@
 
 // On narrow screens, open each scrolling lineage chart at its earliest row rather than at 3500 BCE.
 (() => {
-  const FOLDS = [{"from":-3500,"to":-500,"f0":0,"f1":0.24,"grid":500,"label":1000},{"from":-500,"to":1500,"f0":0.24,"f1":0.62,"grid":100,"label":500},{"from":1500,"to":2026,"f0":0.62,"f1":1,"grid":50,"label":100}];
+  const FOLDS = [{"from":-3500,"to":-500,"f0":0,"f1":0.24,"labels":[-3000,-2000,-500]},{"from":-500,"to":1500,"f0":0.24,"f1":0.62,"labels":[0,500,1000,1500]},{"from":1500,"to":2026,"f0":0.62,"f1":1,"labels":[1600,1700,1800,1900,2000]}];
   const fold = y => { const s = FOLDS.find(s => y <= s.to) || FOLDS[FOLDS.length - 1]; return s.f0 + (s.f1 - s.f0) * (y - s.from) / (s.to - s.from); };
   document.querySelectorAll('.tl-scroll').forEach(box => {
     const svg = box.querySelector('svg[data-tl]');

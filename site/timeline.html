@@ -20,7 +20,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="favicon.svg#mark"/></svg><span>The Religion Map</span></a>
-  <nav aria-label="Main"><a href="index.html">Map</a><a href="timeline.html" aria-current="page">Timeline</a><a href="atlas.html">Atlas</a><a href="families.html">Families</a><a href="lost.html">Lost religions</a><a href="sources.html">Sources</a></nav>
+  <nav aria-label="Main"><a href="index.html">Map</a><a href="timeline.html" aria-current="page">Timeline</a><a href="atlas.html">Atlas</a><a href="families.html">Families</a><a href="lost.html">Lost<span class="nl"> religions</span></a><a href="sources.html">Sources</a></nav>
 </header>
 <main id="main">
 
@@ -33,474 +33,475 @@
     <li><svg viewBox="0 0 40 12" aria-hidden="true"><line x1="0" x2="32" y1="6" y2="6" class="lg-line"/><path d="M30,2 L36,6 L30,10" class="lg-open"/></svg> still practised</li>
     <li><svg viewBox="0 0 40 16" aria-hidden="true"><line x1="0" x2="32" y1="8" y2="8" class="lg-line"/><rect x="31" y="0" width="3.5" height="16" class="lg-cap"/></svg> ended</li>
     <li><svg viewBox="0 0 40 16" aria-hidden="true"><path d="M20,0 L23,4 L17,8 L23,12 L20,16" class="lg-fold"/></svg> fold: the scale changes</li>
+    <li><svg viewBox="0 0 40 16" aria-hidden="true"><path d="M20,0 V16" class="lg-line" style="stroke-dasharray:4 4;stroke-width:2"/></svg> revival of an ended tradition</li>
   </ul>
   <div class="yearctl" data-yearctl="tl">
-<div class="yc-head"><label for="tl-year">Year</label> <output id="tl-out" class="yc-out" for="tl-year"></output></div>
-<div class="yc-track"><svg class="ribbon" viewBox="0 0 1000 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0.0,52L0.0,51.4L4.0,51.4L8.0,51.4L12.0,51.4L16.0,51.4L20.0,51.4L24.0,51.4L28.0,51.4L32.0,50.8L36.0,50.8L40.0,50.8L44.0,50.8L48.0,50.8L52.0,50.8L56.0,50.8L60.0,50.8L64.0,50.8L68.0,50.8L72.0,50.8L76.0,50.8L80.0,50.8L84.0,50.8L88.0,50.8L92.0,50.8L96.0,50.8L100.0,50.8L104.0,50.8L108.0,50.8L112.0,50.8L116.0,50.8L120.0,49.7L124.0,50.3L128.0,50.3L132.0,50.3L136.0,50.3L140.0,50.3L144.0,50.3L148.0,50.3L152.0,50.3L156.0,50.3L160.0,49.7L164.0,49.7L168.0,49.1L172.0,49.1L176.0,49.1L180.0,48.5L184.0,47.9L188.0,47.9L192.0,47.9L196.0,47.9L200.0,46.8L204.0,46.8L208.0,46.8L212.0,46.8L216.0,46.8L220.0,46.2L224.0,46.2L228.0,46.2L232.0,45.6L236.0,45.6L240.0,42.7L243.8,43.3L247.6,43.3L251.4,42.7L255.2,42.7L259.0,41.5L262.8,41.5L266.6,41.5L270.4,41.5L274.2,41.5L278.0,41.5L281.8,41.5L285.6,41.5L289.4,40.9L293.2,40.9L297.0,40.9L300.8,40.9L304.6,40.9L308.4,40.3L312.2,40.3L316.0,40.3L319.8,40.3L323.6,40.3L327.4,40.3L331.2,40.3L335.0,40.3L338.8,40.3L342.6,39.8L346.4,39.8L350.2,39.2L354.0,37.4L357.8,38.0L361.6,38.0L365.4,37.4L369.2,37.4L373.0,37.4L376.8,37.4L380.6,36.8L384.4,36.8L388.2,36.8L392.0,36.8L395.8,36.8L399.6,36.8L403.4,36.8L407.2,36.8L411.0,37.4L414.8,38.0L418.6,37.4L422.4,36.8L426.2,36.8L430.0,34.5L433.8,34.5L437.6,35.7L441.4,35.7L445.2,35.7L449.0,35.7L452.8,35.7L456.6,35.1L460.4,34.5L464.2,33.9L468.0,32.8L471.8,32.8L475.6,32.8L479.4,31.6L483.2,31.0L487.0,30.4L490.8,30.4L494.6,30.4L498.4,30.4L502.2,30.4L506.0,30.4L509.8,30.4L513.6,30.4L517.4,30.4L521.2,30.4L525.0,29.8L528.8,29.3L532.6,29.3L536.4,28.1L540.2,28.1L544.0,28.1L547.8,28.7L551.6,28.7L555.4,27.5L559.2,27.5L563.0,26.9L566.8,26.9L570.6,26.9L574.4,26.3L578.2,26.3L582.0,26.3L585.8,26.3L589.6,25.8L593.4,25.8L597.2,25.8L601.0,26.3L604.8,26.9L608.6,26.9L612.4,26.9L616.2,26.9L620.0,26.3L623.6,26.3L627.2,25.8L630.8,25.8L634.4,24.6L638.1,24.6L641.7,24.0L645.3,23.4L648.9,23.4L652.5,23.4L656.1,23.4L659.7,23.4L663.3,23.4L667.0,23.4L670.6,23.4L674.2,24.0L677.8,24.0L681.4,24.0L685.0,24.0L688.6,24.0L692.2,23.4L695.9,24.0L699.5,23.4L703.1,23.4L706.7,23.4L710.3,23.4L713.9,23.4L717.5,23.4L721.1,23.4L724.8,23.4L728.4,23.4L732.0,22.8L735.6,22.8L739.2,22.8L742.8,22.8L746.4,22.8L750.0,22.8L753.7,22.8L757.3,22.8L760.9,22.8L764.5,22.8L768.1,22.8L771.7,22.8L775.3,22.8L778.9,22.8L782.5,22.8L786.2,22.8L789.8,22.8L793.4,21.7L797.0,21.7L800.6,21.1L804.2,21.1L807.8,21.1L811.4,21.1L815.1,21.1L818.7,21.1L822.3,21.1L825.9,21.1L829.5,21.1L833.1,21.1L836.7,21.1L840.3,21.1L844.0,20.5L847.6,20.5L851.2,19.9L854.8,19.9L858.4,18.8L862.0,18.8L865.6,18.2L869.2,17.6L872.9,17.0L876.5,17.0L880.1,16.4L883.7,15.3L887.3,15.3L890.9,15.3L894.5,14.7L898.1,14.7L901.7,13.5L905.4,13.5L909.0,13.5L912.6,13.5L916.2,12.9L919.8,12.9L923.4,12.3L927.0,12.3L930.6,11.2L934.3,11.2L937.9,11.2L941.5,11.2L945.1,11.8L948.7,11.2L952.3,10.6L955.9,10.6L959.5,10.6L963.2,10.0L966.8,10.0L970.4,10.0L974.0,10.0L977.6,10.0L981.2,10.0L984.8,10.0L988.4,10.0L992.1,10.0L995.7,10.0L999.3,10.0L1000.0,10.0L1000.0,52Z"/><line class="seam" x1="240.0" x2="240.0" y1="0" y2="56"/><line class="seam" x1="620.0" x2="620.0" y1="0" y2="56"/></svg><div class="rticks" aria-hidden="true"><span class="rt m-x" style="left:4.00%">3000 BCE</span><span class="rt m-x" style="left:16.00%">1500 BCE</span><span class="rt " style="left:24.00%">500 BCE</span><span class="rt m-x" style="left:43.00%">500 CE</span><span class="rt " style="left:52.50%">1000</span><span class="rt " style="left:62.00%">1500</span><span class="rt m-x" style="left:83.67%">1800</span><span class="rt " style="left:100.00%">now</span></div><input id="tl-year" type="range" min="0" max="1000" step="1" value="1000" aria-describedby="tl-out"></div>
-<p class="yc-note">The shaded band counts traditions alive in each year. The axis folds twice (at 500 BCE and 1500); a year after 1500 is 9.0× wider than one before 500 BCE.</p>
+<div class="yc-head"><label for="tl-year">Year</label> <output id="tl-out" class="yc-out" for="tl-year"></output><span class="yc-key" aria-hidden="true">thin line above: true scale</span></div>
+<div class="yc-track"><svg class="ribbon" viewBox="0 0 1000 46" preserveAspectRatio="none" aria-hidden="true"><line class="base" x1="0" x2="1000" y1="43" y2="43"/><path d="M0.0,42.5L4.0,42.5L8.0,42.5L12.0,42.5L16.0,42.5L20.0,42.5L24.0,42.5L28.0,42.5L32.0,42.1L36.0,42.1L40.0,42.1L44.0,42.1L48.0,42.1L52.0,42.1L56.0,42.1L60.0,42.1L64.0,42.1L68.0,42.1L72.0,42.1L76.0,42.1L80.0,42.1L84.0,42.1L88.0,42.1L92.0,42.1L96.0,42.1L100.0,42.1L104.0,42.1L108.0,42.1L112.0,42.1L116.0,42.1L120.0,41.1L124.0,41.6L128.0,41.6L132.0,41.6L136.0,41.6L140.0,41.6L144.0,41.6L148.0,41.6L152.0,41.6L156.0,41.6L160.0,41.1L164.0,41.1L168.0,40.6L172.0,40.6L176.0,40.6L180.0,40.2L184.0,39.7L188.0,39.7L192.0,39.7L196.0,39.7L200.0,38.8L204.0,38.8L208.0,38.8L212.0,38.8L216.0,38.8L220.0,38.3L224.0,38.3L228.0,38.3L232.0,37.8L236.0,37.8L240.0,35.4L243.8,35.9L247.6,35.9L251.4,35.4L255.2,35.4L259.0,34.5L262.8,34.5L266.6,34.5L270.4,34.5L274.2,34.5L278.0,34.5L281.8,34.5L285.6,34.5L289.4,34.0L293.2,34.0L297.0,34.0L300.8,34.0L304.6,34.0L308.4,33.6L312.2,33.6L316.0,33.6L319.8,33.6L323.6,33.6L327.4,33.6L331.2,33.6L335.0,33.6L338.8,33.6L342.6,33.1L346.4,33.1L350.2,32.6L354.0,31.2L357.8,31.7L361.6,31.7L365.4,31.2L369.2,31.2L373.0,31.2L376.8,31.2L380.6,30.7L384.4,30.7L388.2,30.7L392.0,30.7L395.8,30.7L399.6,30.7L403.4,30.7L407.2,30.7L411.0,31.2L414.8,31.7L418.6,31.2L422.4,30.7L426.2,30.7L430.0,28.8L433.8,28.8L437.6,29.8L441.4,29.8L445.2,29.8L449.0,29.8L452.8,29.8L456.6,29.3L460.4,28.8L464.2,28.4L468.0,27.4L471.8,27.4L475.6,27.4L479.4,26.5L483.2,26.0L487.0,25.5L490.8,25.5L494.6,25.5L498.4,25.5L502.2,25.5L506.0,25.5L509.8,25.5L513.6,25.5L517.4,25.5L521.2,25.5L525.0,25.1L528.8,24.6L532.6,24.6L536.4,23.6L540.2,23.6L544.0,23.6L547.8,24.1L551.6,24.1L555.4,23.2L559.2,23.2L563.0,22.7L566.8,22.7L570.6,22.7L574.4,22.2L578.2,22.2L582.0,22.2L585.8,22.2L589.6,21.8L593.4,21.8L597.2,21.8L601.0,22.2L604.8,22.7L608.6,22.7L612.4,22.7L616.2,22.7L620.0,22.2L623.6,22.2L627.2,21.8L630.8,21.8L634.4,20.8L638.1,20.8L641.7,20.3L645.3,19.9L648.9,19.9L652.5,19.9L656.1,19.9L659.7,19.9L663.3,19.9L667.0,19.9L670.6,19.9L674.2,20.3L677.8,20.3L681.4,20.3L685.0,20.3L688.6,20.3L692.2,19.9L695.9,20.3L699.5,19.9L703.1,19.9L706.7,19.9L710.3,19.9L713.9,19.9L717.5,19.9L721.1,19.9L724.8,19.9L728.4,19.9L732.0,19.4L735.6,19.4L739.2,19.4L742.8,19.4L746.4,19.4L750.0,19.4L753.7,19.4L757.3,19.4L760.9,19.4L764.5,19.4L768.1,19.4L771.7,19.4L775.3,19.4L778.9,19.4L782.5,19.4L786.2,19.4L789.8,19.4L793.4,18.4L797.0,18.4L800.6,18.0L804.2,18.0L807.8,18.0L811.4,18.0L815.1,18.0L818.7,18.0L822.3,18.0L825.9,18.0L829.5,18.0L833.1,18.0L836.7,18.0L840.3,18.0L844.0,17.5L847.6,17.5L851.2,17.0L854.8,17.0L858.4,16.1L862.0,16.1L865.6,15.6L869.2,15.1L872.9,14.7L876.5,14.7L880.1,14.2L883.7,13.3L887.3,13.3L890.9,13.3L894.5,12.8L898.1,12.8L901.7,11.8L905.4,11.8L909.0,11.8L912.6,11.8L916.2,11.4L919.8,11.4L923.4,10.9L927.0,10.9L930.6,9.9L934.3,9.9L937.9,9.9L941.5,9.9L945.1,10.4L948.7,9.9L952.3,9.5L955.9,9.5L959.5,9.5L963.2,9.0L966.8,9.0L970.4,9.0L974.0,9.0L977.6,9.0L981.2,9.0L984.8,9.0L988.4,9.0L992.1,9.0L995.7,9.0L999.3,9.0L1000.0,9.0"/></svg><div class="seams" aria-hidden="true"><span class="seamz" style="left:24.00%"></span><span class="seamr" style="left:24.00%">×2.4</span><span class="seamz" style="left:62.00%"></span><span class="seamr" style="left:62.00%">×3.8</span></div><div class="rticks" aria-hidden="true"><span class="rt" style="left:0.00%">3500 BCE</span><span class="rt m-x" style="left:24.00%">500 BCE</span><span class="rt" style="left:62.00%">1500</span><span class="rt m-x" style="left:52.50%">1000</span><span class="rt" style="left:100.00%">now</span></div><div class="tkeywrap" aria-hidden="true"><svg class="tkey" viewBox="0 0 1000 18" preserveAspectRatio="none" aria-hidden="true"><line class="kbase" x1="0" x2="1000" y1="2" y2="2"/><line class="ktick" x1="0.0" x2="0.0" y1="0" y2="6"/><line class="ktick" x1="542.9" x2="542.9" y1="0" y2="6"/><line class="ktick" x1="904.8" x2="904.8" y1="0" y2="6"/><line class="ktick" x1="1000.0" x2="1000.0" y1="0" y2="6"/><line class="kconn" x1="542.9" x2="240.0" y1="2" y2="18"/><line class="kconn" x1="904.8" x2="620.0" y1="2" y2="18"/></svg></div><input id="tl-year" type="range" min="0" max="1000" step="1" value="1000" aria-describedby="tl-out tl-note"></div>
 </div>
+<p class="yc-note" id="tl-note">The line counts how many of the 91 traditions listed here were alive in each year. The axis is folded: a year after 1500 is drawn 9.0× wider than one before 500 BCE; the thin line above it shows the same years at true scale.</p>
 </section>
-<div class="tl-scroll" tabindex="0" role="region" aria-label="Timeline chart, scrolls sideways on small screens"><svg class="tl" viewBox="0 0 1260 2718" data-tl data-w="1200" role="img" aria-label="Lineage timeline of 91 traditions on a folded time axis; the same data is listed in the table below.">
-<g class="grid"><line class="g" x1="0.0" x2="0.0" y1="22" y2="2718"/><line class="g major" x1="47.6" x2="47.6" y1="22" y2="2718"/><text class="gl" x="47.6" y="16" text-anchor="middle">3000 BCE</text><line class="g" x1="95.2" x2="95.2" y1="22" y2="2718"/><line class="g major" x1="142.8" x2="142.8" y1="22" y2="2718"/><text class="gl" x="142.8" y="16" text-anchor="middle">2000 BCE</text><line class="g" x1="190.4" x2="190.4" y1="22" y2="2718"/><line class="g major" x1="238.0" x2="238.0" y1="22" y2="2718"/><text class="gl" x="238.0" y="16" text-anchor="middle">1000 BCE</text><line class="g major" x1="285.6" x2="285.6" y1="22" y2="2718"/><text class="gl" x="285.6" y="16" text-anchor="middle">500 BCE</text><line class="g" x1="308.2" x2="308.2" y1="22" y2="2718"/><line class="g" x1="330.8" x2="330.8" y1="22" y2="2718"/><line class="g" x1="353.4" x2="353.4" y1="22" y2="2718"/><line class="g" x1="376.0" x2="376.0" y1="22" y2="2718"/><line class="g major" x1="398.6" x2="398.6" y1="22" y2="2718"/><text class="gl" x="398.6" y="16" text-anchor="middle">1 CE</text><line class="g" x1="421.3" x2="421.3" y1="22" y2="2718"/><line class="g" x1="443.9" x2="443.9" y1="22" y2="2718"/><line class="g" x1="466.5" x2="466.5" y1="22" y2="2718"/><line class="g" x1="489.1" x2="489.1" y1="22" y2="2718"/><line class="g major" x1="511.7" x2="511.7" y1="22" y2="2718"/><text class="gl" x="511.7" y="16" text-anchor="middle">500</text><line class="g" x1="534.3" x2="534.3" y1="22" y2="2718"/><line class="g" x1="556.9" x2="556.9" y1="22" y2="2718"/><line class="g" x1="579.5" x2="579.5" y1="22" y2="2718"/><line class="g" x1="602.1" x2="602.1" y1="22" y2="2718"/><line class="g major" x1="624.7" x2="624.7" y1="22" y2="2718"/><text class="gl" x="624.7" y="16" text-anchor="middle">1000</text><line class="g" x1="647.4" x2="647.4" y1="22" y2="2718"/><line class="g" x1="670.0" x2="670.0" y1="22" y2="2718"/><line class="g" x1="692.6" x2="692.6" y1="22" y2="2718"/><line class="g" x1="715.2" x2="715.2" y1="22" y2="2718"/><line class="g major" x1="737.8" x2="737.8" y1="22" y2="2718"/><text class="gl" x="737.8" y="16" text-anchor="middle">1500</text><line class="g" x1="780.8" x2="780.8" y1="22" y2="2718"/><line class="g major" x1="823.8" x2="823.8" y1="22" y2="2718"/><text class="gl" x="823.8" y="16" text-anchor="middle">1600</text><line class="g" x1="866.8" x2="866.8" y1="22" y2="2718"/><line class="g major" x1="909.7" x2="909.7" y1="22" y2="2718"/><text class="gl" x="909.7" y="16" text-anchor="middle">1700</text><line class="g" x1="952.7" x2="952.7" y1="22" y2="2718"/><line class="g major" x1="995.7" x2="995.7" y1="22" y2="2718"/><text class="gl" x="995.7" y="16" text-anchor="middle">1800</text><line class="g" x1="1038.7" x2="1038.7" y1="22" y2="2718"/><line class="g major" x1="1081.7" x2="1081.7" y1="22" y2="2718"/><text class="gl" x="1081.7" y="16" text-anchor="middle">1900</text><line class="g" x1="1124.7" x2="1124.7" y1="22" y2="2718"/><line class="g major" x1="1167.6" x2="1167.6" y1="22" y2="2718"/><text class="gl" x="1167.6" y="16" text-anchor="middle">2000</text></g><g class="fold"><path d="M285.6,22 L288.6,34 L282.6,46 L288.6,58 L282.6,70 L288.6,82 L282.6,94 L288.6,106 L282.6,118 L288.6,130 L282.6,142 L288.6,154 L282.6,166 L288.6,178 L282.6,190 L288.6,202 L282.6,214 L288.6,226 L282.6,238 L288.6,250 L282.6,262 L288.6,274 L282.6,286 L288.6,298 L282.6,310 L288.6,322 L282.6,334 L288.6,346 L282.6,358 L288.6,370 L282.6,382 L288.6,394 L282.6,406 L288.6,418 L282.6,430 L288.6,442 L282.6,454 L288.6,466 L282.6,478 L288.6,490 L282.6,502 L288.6,514 L282.6,526 L288.6,538 L282.6,550 L288.6,562 L282.6,574 L288.6,586 L282.6,598 L288.6,610 L282.6,622 L288.6,634 L282.6,646 L288.6,658 L282.6,670 L288.6,682 L282.6,694 L288.6,706 L282.6,718 L288.6,730 L282.6,742 L288.6,754 L282.6,766 L288.6,778 L282.6,790 L288.6,802 L282.6,814 L288.6,826 L282.6,838 L288.6,850 L282.6,862 L288.6,874 L282.6,886 L288.6,898 L282.6,910 L288.6,922 L282.6,934 L288.6,946 L282.6,958 L288.6,970 L282.6,982 L288.6,994 L282.6,1006 L288.6,1018 L282.6,1030 L288.6,1042 L282.6,1054 L288.6,1066 L282.6,1078 L288.6,1090 L282.6,1102 L288.6,1114 L282.6,1126 L288.6,1138 L282.6,1150 L288.6,1162 L282.6,1174 L288.6,1186 L282.6,1198 L288.6,1210 L282.6,1222 L288.6,1234 L282.6,1246 L288.6,1258 L282.6,1270 L288.6,1282 L282.6,1294 L288.6,1306 L282.6,1318 L288.6,1330 L282.6,1342 L288.6,1354 L282.6,1366 L288.6,1378 L282.6,1390 L288.6,1402 L282.6,1414 L288.6,1426 L282.6,1438 L288.6,1450 L282.6,1462 L288.6,1474 L282.6,1486 L288.6,1498 L282.6,1510 L288.6,1522 L282.6,1534 L288.6,1546 L282.6,1558 L288.6,1570 L282.6,1582 L288.6,1594 L282.6,1606 L288.6,1618 L282.6,1630 L288.6,1642 L282.6,1654 L288.6,1666 L282.6,1678 L288.6,1690 L282.6,1702 L288.6,1714 L282.6,1726 L288.6,1738 L282.6,1750 L288.6,1762 L282.6,1774 L288.6,1786 L282.6,1798 L288.6,1810 L282.6,1822 L288.6,1834 L282.6,1846 L288.6,1858 L282.6,1870 L288.6,1882 L282.6,1894 L288.6,1906 L282.6,1918 L288.6,1930 L282.6,1942 L288.6,1954 L282.6,1966 L288.6,1978 L282.6,1990 L288.6,2002 L282.6,2014 L288.6,2026 L282.6,2038 L288.6,2050 L282.6,2062 L288.6,2074 L282.6,2086 L288.6,2098 L282.6,2110 L288.6,2122 L282.6,2134 L288.6,2146 L282.6,2158 L288.6,2170 L282.6,2182 L288.6,2194 L282.6,2206 L288.6,2218 L282.6,2230 L288.6,2242 L282.6,2254 L288.6,2266 L282.6,2278 L288.6,2290 L282.6,2302 L288.6,2314 L282.6,2326 L288.6,2338 L282.6,2350 L288.6,2362 L282.6,2374 L288.6,2386 L282.6,2398 L288.6,2410 L282.6,2422 L288.6,2434 L282.6,2446 L288.6,2458 L282.6,2470 L288.6,2482 L282.6,2494 L288.6,2506 L282.6,2518 L288.6,2530 L282.6,2542 L288.6,2554 L282.6,2566 L288.6,2578 L282.6,2590 L288.6,2602 L282.6,2614 L288.6,2626 L282.6,2638 L288.6,2650 L282.6,2662 L288.6,2674 L282.6,2686 L288.6,2698 L282.6,2710 L288.6,2722"/><text x="291.6" y="34">fold · years 2.4× wider →</text></g><g class="fold"><path d="M737.8,22 L740.8,34 L734.8,46 L740.8,58 L734.8,70 L740.8,82 L734.8,94 L740.8,106 L734.8,118 L740.8,130 L734.8,142 L740.8,154 L734.8,166 L740.8,178 L734.8,190 L740.8,202 L734.8,214 L740.8,226 L734.8,238 L740.8,250 L734.8,262 L740.8,274 L734.8,286 L740.8,298 L734.8,310 L740.8,322 L734.8,334 L740.8,346 L734.8,358 L740.8,370 L734.8,382 L740.8,394 L734.8,406 L740.8,418 L734.8,430 L740.8,442 L734.8,454 L740.8,466 L734.8,478 L740.8,490 L734.8,502 L740.8,514 L734.8,526 L740.8,538 L734.8,550 L740.8,562 L734.8,574 L740.8,586 L734.8,598 L740.8,610 L734.8,622 L740.8,634 L734.8,646 L740.8,658 L734.8,670 L740.8,682 L734.8,694 L740.8,706 L734.8,718 L740.8,730 L734.8,742 L740.8,754 L734.8,766 L740.8,778 L734.8,790 L740.8,802 L734.8,814 L740.8,826 L734.8,838 L740.8,850 L734.8,862 L740.8,874 L734.8,886 L740.8,898 L734.8,910 L740.8,922 L734.8,934 L740.8,946 L734.8,958 L740.8,970 L734.8,982 L740.8,994 L734.8,1006 L740.8,1018 L734.8,1030 L740.8,1042 L734.8,1054 L740.8,1066 L734.8,1078 L740.8,1090 L734.8,1102 L740.8,1114 L734.8,1126 L740.8,1138 L734.8,1150 L740.8,1162 L734.8,1174 L740.8,1186 L734.8,1198 L740.8,1210 L734.8,1222 L740.8,1234 L734.8,1246 L740.8,1258 L734.8,1270 L740.8,1282 L734.8,1294 L740.8,1306 L734.8,1318 L740.8,1330 L734.8,1342 L740.8,1354 L734.8,1366 L740.8,1378 L734.8,1390 L740.8,1402 L734.8,1414 L740.8,1426 L734.8,1438 L740.8,1450 L734.8,1462 L740.8,1474 L734.8,1486 L740.8,1498 L734.8,1510 L740.8,1522 L734.8,1534 L740.8,1546 L734.8,1558 L740.8,1570 L734.8,1582 L740.8,1594 L734.8,1606 L740.8,1618 L734.8,1630 L740.8,1642 L734.8,1654 L740.8,1666 L734.8,1678 L740.8,1690 L734.8,1702 L740.8,1714 L734.8,1726 L740.8,1738 L734.8,1750 L740.8,1762 L734.8,1774 L740.8,1786 L734.8,1798 L740.8,1810 L734.8,1822 L740.8,1834 L734.8,1846 L740.8,1858 L734.8,1870 L740.8,1882 L734.8,1894 L740.8,1906 L734.8,1918 L740.8,1930 L734.8,1942 L740.8,1954 L734.8,1966 L740.8,1978 L734.8,1990 L740.8,2002 L734.8,2014 L740.8,2026 L734.8,2038 L740.8,2050 L734.8,2062 L740.8,2074 L734.8,2086 L740.8,2098 L734.8,2110 L740.8,2122 L734.8,2134 L740.8,2146 L734.8,2158 L740.8,2170 L734.8,2182 L740.8,2194 L734.8,2206 L740.8,2218 L734.8,2230 L740.8,2242 L734.8,2254 L740.8,2266 L734.8,2278 L740.8,2290 L734.8,2302 L740.8,2314 L734.8,2326 L740.8,2338 L734.8,2350 L740.8,2362 L734.8,2374 L740.8,2386 L734.8,2398 L740.8,2410 L734.8,2422 L740.8,2434 L734.8,2446 L740.8,2458 L734.8,2470 L740.8,2482 L734.8,2494 L740.8,2506 L734.8,2518 L740.8,2530 L734.8,2542 L740.8,2554 L734.8,2566 L740.8,2578 L734.8,2590 L740.8,2602 L734.8,2614 L740.8,2626 L734.8,2638 L740.8,2650 L734.8,2662 L740.8,2674 L734.8,2686 L740.8,2698 L734.8,2710 L740.8,2722"/><text x="743.8" y="34">fold · years 3.8× wider →</text></g><g class="heads"><text class="famhead" x="1.9" y="46" style="fill:#2a5aa8">Abrahamic</text><text class="famhead" x="1.9" y="1022" style="fill:#b8480a">Indian (Dharmic)</text><text class="famhead" x="1.9" y="1582" style="fill:#b3122e">East Asian</text><text class="famhead" x="1.9" y="1882" style="fill:#0f7c74">Iranian</text><text class="famhead" x="1.9" y="2000" style="fill:#7a5526">Ancient Near East &amp; Mediterranean</text><text class="famhead" x="1.9" y="2222" style="fill:#4a6420">Northern &amp; Celtic Europe</text><text class="famhead" x="1.9" y="2418" style="fill:#7b3fa0">Indigenous Americas</text><text class="famhead" x="1.9" y="2562" style="fill:#b02a6a">Africa &amp; diaspora</text></g><g class="links"><path class="branch" style="stroke:#2a5aa8" d="M308.2,62 C308.2,75 308.2,75 308.2,88"/><path class="branch" style="stroke:#2a5aa8" d="M405.4,62 C405.4,88 405.4,88 405.4,114"/><path class="branch" style="stroke:#2a5aa8" d="M496.1,114 C496.1,127 496.1,127 496.1,140"/><path class="branch" style="stroke:#2a5aa8" d="M500.6,114 C500.6,140 500.6,140 500.6,166"/><path class="branch" style="stroke:#2a5aa8" d="M637.0,114 C637.0,153 637.0,153 637.0,192"/><path class="branch" style="stroke:#2a5aa8" d="M637.0,114 C637.0,166 637.0,166 637.0,218"/><path class="branch" style="stroke:#2a5aa8" d="M752.4,218 C752.4,231 752.4,231 752.4,244"/><path class="branch" style="stroke:#2a5aa8" d="M754.1,244 C754.1,257 754.1,257 754.1,270"/><path class="branch" style="stroke:#2a5aa8" d="M759.3,244 C759.3,270 759.3,270 759.3,296"/><path class="branch" style="stroke:#2a5aa8" d="M763.6,244 C763.6,283 763.6,283 763.6,322"/><path class="branch" style="stroke:#2a5aa8" d="M767.0,244 C767.0,296 767.0,296 767.0,348"/><path class="branch" style="stroke:#2a5aa8" d="M942.4,348 C942.4,361 942.4,361 942.4,374"/><path class="branch" style="stroke:#2a5aa8" d="M1086.8,374 C1086.8,387 1086.8,387 1086.8,400"/><path class="branch" style="stroke:#2a5aa8" d="M831.5,244 C831.5,335 831.5,335 831.5,426"/><path class="branch" style="stroke:#2a5aa8" d="M868.5,244 C868.5,348 868.5,348 868.5,452"/><path class="branch" style="stroke:#2a5aa8" d="M1049.9,244 C1049.9,361 1049.9,361 1049.9,478"/><path class="branch" style="stroke:#2a5aa8" d="M1063.6,244 C1063.6,374 1063.6,374 1063.6,504"/><path class="branch" style="stroke:#2a5aa8" d="M1021.5,114 C1021.5,322 1021.5,322 1021.5,530"/><path class="branch" style="stroke:#2a5aa8" d="M1107.5,114 C1107.5,335 1107.5,335 1107.5,556"/><path class="branch" style="stroke:#2a5aa8" d="M570.5,62 C570.5,322 570.5,322 570.5,582"/><path class="branch" style="stroke:#2a5aa8" d="M944.1,62 C944.1,335 944.1,335 944.1,608"/><path class="branch" style="stroke:#2a5aa8" d="M1004.3,62 C1004.3,348 1004.3,348 1004.3,634"/><path class="branch" style="stroke:#2a5aa8" d="M1012.9,62 C1012.9,361 1012.9,361 1012.9,660"/><path class="branch" style="stroke:#2a5aa8" d="M1069.6,62 C1069.6,374 1069.6,374 1069.6,686"/><path class="branch" style="stroke:#2a5aa8" d="M541.5,738 C541.5,751 541.5,751 541.5,764"/><path class="branch" style="stroke:#2a5aa8" d="M1072.2,764 C1072.2,777 1072.2,777 1072.2,790"/><path class="branch" style="stroke:#2a5aa8" d="M552.4,738 C552.4,777 552.4,777 552.4,816"/><path class="branch" style="stroke:#2a5aa8" d="M571.6,816 C571.6,829 571.6,829 571.6,842"/><path class="branch" style="stroke:#2a5aa8" d="M628.6,842 C628.6,855 628.6,855 628.6,868"/><path class="branch" style="stroke:#2a5aa8" d="M1033.5,816 C1033.5,855 1033.5,855 1033.5,894"/><path class="branch" style="stroke:#2a5aa8" d="M1049.9,894 C1049.9,907 1049.9,907 1049.9,920"/><path class="branch" style="stroke:#2a5aa8" d="M553.5,738 C553.5,842 553.5,842 553.5,946"/><path class="branch" style="stroke:#2a5aa8" d="M568.2,738 C568.2,855 568.2,855 568.2,972"/><path class="branch" style="stroke:#b8480a" d="M285.6,1038 C285.6,1051 285.6,1051 285.6,1064"/><path class="branch" style="stroke:#b8480a" d="M364.7,1064 C364.7,1077 364.7,1077 364.7,1090"/><path class="branch" style="stroke:#b8480a" d="M746.4,1090 C746.4,1103 746.4,1103 746.4,1116"/><path class="branch" style="stroke:#b8480a" d="M421.3,1064 C421.3,1103 421.3,1103 421.3,1142"/><path class="branch" style="stroke:#b8480a" d="M660.9,1142 C660.9,1155 660.9,1155 660.9,1168"/><path class="branch" style="stroke:#b8480a" d="M511.7,1064 C511.7,1129 511.7,1129 511.7,1194"/><path class="branch" style="stroke:#b8480a" d="M579.5,1064 C579.5,1142 579.5,1142 579.5,1220"/><path class="branch" style="stroke:#b8480a" d="M342.1,1298 C342.1,1311 342.1,1311 342.1,1324"/><path class="branch" style="stroke:#b8480a" d="M421.3,1298 C421.3,1324 421.3,1324 421.3,1350"/><path class="branch" style="stroke:#b8480a" d="M489.5,1350 C489.5,1363 489.5,1363 489.5,1376"/><path class="branch" style="stroke:#b8480a" d="M511.7,1350 C511.7,1376 511.7,1376 511.7,1402"/><path class="branch" style="stroke:#b8480a" d="M545.6,1350 C545.6,1389 545.6,1389 545.6,1428"/><path class="branch" style="stroke:#b8480a" d="M682.0,1350 C682.0,1402 682.0,1402 682.0,1454"/><path class="branch" style="stroke:#b8480a" d="M1129.8,1298 C1129.8,1389 1129.8,1389 1129.8,1480"/><path class="branch" style="stroke:#b8480a" d="M908.9,1506 C908.9,1519 908.9,1519 908.9,1532"/><path class="branch" style="stroke:#b3122e" d="M285.6,1598 C285.6,1611 285.6,1611 285.6,1624"/><path class="branch" style="stroke:#b3122e" d="M308.2,1598 C308.2,1624 308.2,1624 308.2,1650"/><path class="branch" style="stroke:#b3122e" d="M430.8,1650 C430.8,1663 430.8,1663 430.8,1676"/><path class="branch" style="stroke:#b3122e" d="M663.2,1650 C663.2,1676 663.2,1676 663.2,1702"/><path class="branch" style="stroke:#b3122e" d="M1028.4,1728 C1028.4,1741 1028.4,1741 1028.4,1754"/><path class="branch" style="stroke:#b3122e" d="M1054.2,1728 C1054.2,1754 1054.2,1754 1054.2,1780"/><path class="branch" style="stroke:#7a5526" d="M142.8,2016 C142.8,2029 142.8,2029 142.8,2042"/><path class="branch revival" style="stroke:#4a6420" d="M1143.6,2264 C1143.6,2277 1143.6,2277 1143.6,2290"/><path class="branch" style="stroke:#b02a6a" d="M1021.5,2578 C1021.5,2591 1021.5,2591 1021.5,2604"/><path class="branch" style="stroke:#b02a6a" d="M1038.7,2578 C1038.7,2604 1038.7,2604 1038.7,2630"/><path class="branch" style="stroke:#b02a6a" d="M952.7,2656 C952.7,2669 952.7,2669 952.7,2682"/></g><g class="rows"><a class="row" href="t/judaism.html" data-s="-1200" data-e="" style="--c:#2a5aa8">
-<title>Judaism: c. 1200 BCE – present</title>
-<rect class="hit" x="0" y="50" width="1200" height="24"/>
-<line class="life" x1="219.0" x2="1190.0" y1="62" y2="62"/><path class="open" d="M1188.0,58 L1194.0,62 L1188.0,66"/>
-<circle class="start approx" cx="219.0" cy="62" r="4.5"/>
-<text class="nm" x="228.0" y="56">Judaism</text></a><a class="row" href="t/samaritanism.html" data-s="-400" data-e="" style="--c:#2a5aa8">
-<title>Samaritanism: c. 400 BCE – present</title>
-<rect class="hit" x="0" y="76" width="1200" height="24"/>
-<line class="life" x1="308.2" x2="1190.0" y1="88" y2="88"/><path class="open" d="M1188.0,84 L1194.0,88 L1188.0,92"/>
-<circle class="start approx" cx="308.2" cy="88" r="4.5"/>
-<text class="nm" x="317.2" y="82">Samaritanism</text></a><a class="row" href="t/christianity.html" data-s="30" data-e="" style="--c:#2a5aa8">
-<title>Christianity: c. 30 CE – present</title>
-<rect class="hit" x="0" y="102" width="1200" height="24"/>
-<line class="life" x1="405.4" x2="1190.0" y1="114" y2="114"/><path class="open" d="M1188.0,110 L1194.0,114 L1188.0,118"/>
-<circle class="start approx" cx="405.4" cy="114" r="4.5"/>
-<text class="nm" x="414.4" y="108">Christianity</text></a><a class="row" href="t/church-of-the-east.html" data-s="431" data-e="" style="--c:#2a5aa8">
-<title>Church of the East: c. 431 CE – present</title>
-<rect class="hit" x="0" y="128" width="1200" height="24"/>
-<line class="life" x1="496.1" x2="1190.0" y1="140" y2="140"/><path class="open" d="M1188.0,136 L1194.0,140 L1188.0,144"/>
-<circle class="start approx" cx="496.1" cy="140" r="4.5"/>
-<text class="nm" x="505.1" y="134">Church of the East</text></a><a class="row" href="t/oriental-orthodox.html" data-s="451" data-e="" style="--c:#2a5aa8">
-<title>Oriental Orthodoxy: 451 CE – present</title>
-<rect class="hit" x="0" y="154" width="1200" height="24"/>
-<line class="life" x1="500.6" x2="1190.0" y1="166" y2="166"/><path class="open" d="M1188.0,162 L1194.0,166 L1188.0,170"/>
-<circle class="start" cx="500.6" cy="166" r="4.5"/>
-<text class="nm" x="509.6" y="160">Oriental Orthodoxy</text></a><a class="row" href="t/eastern-orthodox.html" data-s="1054" data-e="" style="--c:#2a5aa8">
-<title>Eastern Orthodoxy: c. 1054 – present</title>
-<rect class="hit" x="0" y="180" width="1200" height="24"/>
-<line class="life" x1="637.0" x2="1190.0" y1="192" y2="192"/><path class="open" d="M1188.0,188 L1194.0,192 L1188.0,196"/>
-<circle class="start approx" cx="637.0" cy="192" r="4.5"/>
-<text class="nm" x="646.0" y="186">Eastern Orthodoxy</text></a><a class="row" href="t/catholicism.html" data-s="1054" data-e="" style="--c:#2a5aa8">
-<title>Catholicism: c. 1054 – present</title>
-<rect class="hit" x="0" y="206" width="1200" height="24"/>
-<line class="life" x1="637.0" x2="1190.0" y1="218" y2="218"/><path class="open" d="M1188.0,214 L1194.0,218 L1188.0,222"/>
-<circle class="start approx" cx="637.0" cy="218" r="4.5"/>
-<text class="nm" x="646.0" y="212">Catholicism</text></a><a class="row" href="t/protestantism.html" data-s="1517" data-e="" style="--c:#2a5aa8">
-<title>Protestantism: 1517 – present</title>
-<rect class="hit" x="0" y="232" width="1200" height="24"/>
-<line class="life" x1="752.4" x2="1190.0" y1="244" y2="244"/><path class="open" d="M1188.0,240 L1194.0,244 L1188.0,248"/>
-<circle class="start" cx="752.4" cy="244" r="4.5"/>
-<text class="nm" x="761.4" y="238">Protestantism</text></a><a class="row" href="t/reformed.html" data-s="1519" data-e="" style="--c:#2a5aa8">
-<title>Reformed (Calvinist): 1519 – present</title>
-<rect class="hit" x="0" y="258" width="1200" height="24"/>
-<line class="life" x1="754.1" x2="1190.0" y1="270" y2="270"/><path class="open" d="M1188.0,266 L1194.0,270 L1188.0,274"/>
-<circle class="start" cx="754.1" cy="270" r="4.5"/>
-<text class="nm" x="763.1" y="264">Reformed (Calvinist)</text></a><a class="row" href="t/anabaptism.html" data-s="1525" data-e="" style="--c:#2a5aa8">
-<title>Anabaptism: 1525 – present</title>
-<rect class="hit" x="0" y="284" width="1200" height="24"/>
-<line class="life" x1="759.3" x2="1190.0" y1="296" y2="296"/><path class="open" d="M1188.0,292 L1194.0,296 L1188.0,300"/>
-<circle class="start" cx="759.3" cy="296" r="4.5"/>
-<text class="nm" x="768.3" y="290">Anabaptism</text></a><a class="row" href="t/lutheranism.html" data-s="1530" data-e="" style="--c:#2a5aa8">
-<title>Lutheranism: 1530 – present</title>
-<rect class="hit" x="0" y="310" width="1200" height="24"/>
-<line class="life" x1="763.6" x2="1190.0" y1="322" y2="322"/><path class="open" d="M1188.0,318 L1194.0,322 L1188.0,326"/>
-<circle class="start" cx="763.6" cy="322" r="4.5"/>
-<text class="nm" x="772.6" y="316">Lutheranism</text></a><a class="row" href="t/anglicanism.html" data-s="1534" data-e="" style="--c:#2a5aa8">
-<title>Anglicanism: 1534 – present</title>
-<rect class="hit" x="0" y="336" width="1200" height="24"/>
-<line class="life" x1="767.0" x2="1190.0" y1="348" y2="348"/><path class="open" d="M1188.0,344 L1194.0,348 L1188.0,352"/>
-<circle class="start" cx="767.0" cy="348" r="4.5"/>
-<text class="nm" x="776.0" y="342">Anglicanism</text></a><a class="row" href="t/methodism.html" data-s="1738" data-e="" style="--c:#2a5aa8">
-<title>Methodism: 1738 – present</title>
-<rect class="hit" x="0" y="362" width="1200" height="24"/>
-<line class="life" x1="942.4" x2="1190.0" y1="374" y2="374"/><path class="open" d="M1188.0,370 L1194.0,374 L1188.0,378"/>
-<circle class="start" cx="942.4" cy="374" r="4.5"/>
-<text class="nm" x="951.4" y="368">Methodism</text></a><a class="row" href="t/pentecostalism.html" data-s="1906" data-e="" style="--c:#2a5aa8">
-<title>Pentecostalism: 1906 – present</title>
-<rect class="hit" x="0" y="388" width="1200" height="24"/>
-<line class="life" x1="1086.8" x2="1190.0" y1="400" y2="400"/><path class="open" d="M1188.0,396 L1194.0,400 L1188.0,404"/>
-<circle class="start" cx="1086.8" cy="400" r="4.5"/>
-<text class="nm" x="1077.8" y="394" text-anchor="end">Pentecostalism</text></a><a class="row" href="t/baptists.html" data-s="1609" data-e="" style="--c:#2a5aa8">
-<title>Baptists: 1609 – present</title>
-<rect class="hit" x="0" y="414" width="1200" height="24"/>
-<line class="life" x1="831.5" x2="1190.0" y1="426" y2="426"/><path class="open" d="M1188.0,422 L1194.0,426 L1188.0,430"/>
-<circle class="start" cx="831.5" cy="426" r="4.5"/>
-<text class="nm" x="840.5" y="420">Baptists</text></a><a class="row" href="t/quakers.html" data-s="1652" data-e="" style="--c:#2a5aa8">
-<title>Quakers: 1652 – present</title>
-<rect class="hit" x="0" y="440" width="1200" height="24"/>
-<line class="life" x1="868.5" x2="1190.0" y1="452" y2="452"/><path class="open" d="M1188.0,448 L1194.0,452 L1188.0,456"/>
-<circle class="start" cx="868.5" cy="452" r="4.5"/>
-<text class="nm" x="877.5" y="446">Quakers</text></a><a class="row" href="t/adventism.html" data-s="1863" data-e="" style="--c:#2a5aa8">
-<title>Seventh-day Adventism: 1863 – present</title>
-<rect class="hit" x="0" y="466" width="1200" height="24"/>
-<line class="life" x1="1049.9" x2="1190.0" y1="478" y2="478"/><path class="open" d="M1188.0,474 L1194.0,478 L1188.0,482"/>
-<circle class="start" cx="1049.9" cy="478" r="4.5"/>
-<text class="nm" x="1040.9" y="472" text-anchor="end">Seventh-day Adventism</text></a><a class="row" href="t/jehovahs-witnesses.html" data-s="1879" data-e="" style="--c:#2a5aa8">
-<title>Jehovah's Witnesses: 1879 – present</title>
-<rect class="hit" x="0" y="492" width="1200" height="24"/>
-<line class="life" x1="1063.6" x2="1190.0" y1="504" y2="504"/><path class="open" d="M1188.0,500 L1194.0,504 L1188.0,508"/>
-<circle class="start" cx="1063.6" cy="504" r="4.5"/>
-<text class="nm" x="1054.6" y="498" text-anchor="end">Jehovah's Witnesses</text></a><a class="row" href="t/latter-day-saints.html" data-s="1830" data-e="" style="--c:#2a5aa8">
-<title>Latter Day Saints: 1830 – present</title>
-<rect class="hit" x="0" y="518" width="1200" height="24"/>
-<line class="life" x1="1021.5" x2="1190.0" y1="530" y2="530"/><path class="open" d="M1188.0,526 L1194.0,530 L1188.0,534"/>
-<circle class="start" cx="1021.5" cy="530" r="4.5"/>
-<text class="nm" x="1012.5" y="524" text-anchor="end">Latter Day Saints</text></a><a class="row" href="t/rastafari.html" data-s="1930" data-e="" style="--c:#2a5aa8">
-<title>Rastafari: c. 1930 – present</title>
-<rect class="hit" x="0" y="544" width="1200" height="24"/>
-<line class="life" x1="1107.5" x2="1190.0" y1="556" y2="556"/><path class="open" d="M1188.0,552 L1194.0,556 L1188.0,560"/>
-<circle class="start approx" cx="1107.5" cy="556" r="4.5"/>
-<text class="nm" x="1098.5" y="550" text-anchor="end">Rastafari</text></a><a class="row" href="t/karaite.html" data-s="760" data-e="" style="--c:#2a5aa8">
-<title>Karaite Judaism: c. 760 CE – present</title>
-<rect class="hit" x="0" y="570" width="1200" height="24"/>
-<line class="life" x1="570.5" x2="1190.0" y1="582" y2="582"/><path class="open" d="M1188.0,578 L1194.0,582 L1188.0,586"/>
-<circle class="start approx" cx="570.5" cy="582" r="4.5"/>
-<text class="nm" x="579.5" y="576">Karaite Judaism</text></a><a class="row" href="t/hasidism.html" data-s="1740" data-e="" style="--c:#2a5aa8">
-<title>Hasidic Judaism: c. 1740 – present</title>
-<rect class="hit" x="0" y="596" width="1200" height="24"/>
-<line class="life" x1="944.1" x2="1190.0" y1="608" y2="608"/><path class="open" d="M1188.0,604 L1194.0,608 L1188.0,612"/>
-<circle class="start approx" cx="944.1" cy="608" r="4.5"/>
-<text class="nm" x="953.1" y="602">Hasidic Judaism</text></a><a class="row" href="t/reform-judaism.html" data-s="1810" data-e="" style="--c:#2a5aa8">
-<title>Reform Judaism: 1810 – present</title>
-<rect class="hit" x="0" y="622" width="1200" height="24"/>
-<line class="life" x1="1004.3" x2="1190.0" y1="634" y2="634"/><path class="open" d="M1188.0,630 L1194.0,634 L1188.0,638"/>
-<circle class="start" cx="1004.3" cy="634" r="4.5"/>
-<text class="nm" x="995.3" y="628" text-anchor="end">Reform Judaism</text></a><a class="row" href="t/orthodox-judaism.html" data-s="1820" data-e="" style="--c:#2a5aa8">
-<title>Orthodox Judaism: c. 1820 – present</title>
-<rect class="hit" x="0" y="648" width="1200" height="24"/>
-<line class="life" x1="1012.9" x2="1190.0" y1="660" y2="660"/><path class="open" d="M1188.0,656 L1194.0,660 L1188.0,664"/>
-<circle class="start approx" cx="1012.9" cy="660" r="4.5"/>
-<text class="nm" x="1003.9" y="654" text-anchor="end">Orthodox Judaism</text></a><a class="row" href="t/conservative-judaism.html" data-s="1886" data-e="" style="--c:#2a5aa8">
-<title>Conservative Judaism: 1886 – present</title>
-<rect class="hit" x="0" y="674" width="1200" height="24"/>
-<line class="life" x1="1069.6" x2="1190.0" y1="686" y2="686"/><path class="open" d="M1188.0,682 L1194.0,686 L1188.0,690"/>
-<circle class="start" cx="1069.6" cy="686" r="4.5"/>
-<text class="nm" x="1060.6" y="680" text-anchor="end">Conservative Judaism</text></a><a class="row" href="t/mandaeism.html" data-s="100" data-e="" style="--c:#2a5aa8">
-<title>Mandaeism: c. 100 CE – present</title>
-<rect class="hit" x="0" y="700" width="1200" height="24"/>
-<line class="life" x1="421.3" x2="1190.0" y1="712" y2="712"/><path class="open" d="M1188.0,708 L1194.0,712 L1188.0,716"/>
-<circle class="start approx" cx="421.3" cy="712" r="4.5"/>
-<text class="nm" x="430.3" y="706">Mandaeism</text></a><a class="row" href="t/islam.html" data-s="610" data-e="" style="--c:#2a5aa8">
-<title>Islam: 610 CE – present</title>
-<rect class="hit" x="0" y="726" width="1200" height="24"/>
-<line class="life" x1="536.6" x2="1190.0" y1="738" y2="738"/><path class="open" d="M1188.0,734 L1194.0,738 L1188.0,742"/>
-<circle class="start" cx="536.6" cy="738" r="4.5"/>
-<text class="nm" x="545.6" y="732">Islam</text></a><a class="row" href="t/sunni.html" data-s="632" data-e="" style="--c:#2a5aa8">
-<title>Sunni Islam: c. 632 CE – present</title>
-<rect class="hit" x="0" y="752" width="1200" height="24"/>
-<line class="life" x1="541.5" x2="1190.0" y1="764" y2="764"/><path class="open" d="M1188.0,760 L1194.0,764 L1188.0,768"/>
-<circle class="start approx" cx="541.5" cy="764" r="4.5"/>
-<text class="nm" x="550.5" y="758">Sunni Islam</text></a><a class="row" href="t/ahmadiyya.html" data-s="1889" data-e="" style="--c:#2a5aa8">
-<title>Ahmadiyya: 1889 – present</title>
-<rect class="hit" x="0" y="778" width="1200" height="24"/>
-<line class="life" x1="1072.2" x2="1190.0" y1="790" y2="790"/><path class="open" d="M1188.0,786 L1194.0,790 L1188.0,794"/>
-<circle class="start" cx="1072.2" cy="790" r="4.5"/>
-<text class="nm" x="1063.2" y="784" text-anchor="end">Ahmadiyya</text></a><a class="row" href="t/shia.html" data-s="680" data-e="" style="--c:#2a5aa8">
-<title>Shia Islam: c. 680 CE – present</title>
-<rect class="hit" x="0" y="804" width="1200" height="24"/>
-<line class="life" x1="552.4" x2="1190.0" y1="816" y2="816"/><path class="open" d="M1188.0,812 L1194.0,816 L1188.0,820"/>
-<circle class="start approx" cx="552.4" cy="816" r="4.5"/>
-<text class="nm" x="561.4" y="810">Shia Islam</text></a><a class="row" href="t/ismailism.html" data-s="765" data-e="" style="--c:#2a5aa8">
-<title>Ismailism: c. 765 CE – present</title>
-<rect class="hit" x="0" y="830" width="1200" height="24"/>
-<line class="life" x1="571.6" x2="1190.0" y1="842" y2="842"/><path class="open" d="M1188.0,838 L1194.0,842 L1188.0,846"/>
-<circle class="start approx" cx="571.6" cy="842" r="4.5"/>
-<text class="nm" x="580.6" y="836">Ismailism</text></a><a class="row" href="t/druze.html" data-s="1017" data-e="" style="--c:#2a5aa8">
-<title>Druze: 1017 – present</title>
-<rect class="hit" x="0" y="856" width="1200" height="24"/>
-<line class="life" x1="628.6" x2="1190.0" y1="868" y2="868"/><path class="open" d="M1188.0,864 L1194.0,868 L1188.0,872"/>
-<circle class="start" cx="628.6" cy="868" r="4.5"/>
-<text class="nm" x="637.6" y="862">Druze</text></a><a class="row ended" href="t/babism.html" data-s="1844" data-e="1866" style="--c:#2a5aa8">
-<title>Bábism: c. 1844 – 1866</title>
-<rect class="hit" x="0" y="882" width="1200" height="24"/>
-<line class="life" x1="1033.5" x2="1052.4" y1="894" y2="894"/><rect class="cap" x="1050.9" y="886" width="3.5" height="16"/>
-<circle class="start approx" cx="1033.5" cy="894" r="4.5"/>
-<text class="nm" x="1024.5" y="888" text-anchor="end">Bábism</text><text class="endtxt" x="1059.4" y="898">1866</text></a><a class="row" href="t/bahai.html" data-s="1863" data-e="" style="--c:#2a5aa8">
-<title>Bahá'í Faith: 1863 – present</title>
-<rect class="hit" x="0" y="908" width="1200" height="24"/>
-<line class="life" x1="1049.9" x2="1190.0" y1="920" y2="920"/><path class="open" d="M1188.0,916 L1194.0,920 L1188.0,924"/>
-<circle class="start" cx="1049.9" cy="920" r="4.5"/>
-<text class="nm" x="1040.9" y="914" text-anchor="end">Bahá'í Faith</text></a><a class="row" href="t/ibadi.html" data-s="685" data-e="" style="--c:#2a5aa8">
-<title>Ibadi Islam: c. 685 CE – present</title>
-<rect class="hit" x="0" y="934" width="1200" height="24"/>
-<line class="life" x1="553.5" x2="1190.0" y1="946" y2="946"/><path class="open" d="M1188.0,942 L1194.0,946 L1188.0,950"/>
-<circle class="start approx" cx="553.5" cy="946" r="4.5"/>
-<text class="nm" x="562.5" y="940">Ibadi Islam</text></a><a class="row" href="t/sufism.html" data-s="750" data-e="" style="--c:#2a5aa8">
-<title>Sufism: c. 750 CE – present</title>
-<rect class="hit" x="0" y="960" width="1200" height="24"/>
-<line class="life" x1="568.2" x2="1190.0" y1="972" y2="972"/><path class="open" d="M1188.0,968 L1194.0,972 L1188.0,976"/>
-<circle class="start approx" cx="568.2" cy="972" r="4.5"/>
-<text class="nm" x="577.2" y="966">Sufism</text></a><a class="row ended" href="t/vedic.html" data-s="-1500" data-e="-500" style="--c:#b8480a">
-<title>Historical Vedic religion: c. 1500 BCE – 500 BCE</title>
-<rect class="hit" x="0" y="1026" width="1200" height="24"/>
-<line class="life" x1="190.4" x2="285.6" y1="1038" y2="1038"/><rect class="cap" x="284.1" y="1030" width="3.5" height="16"/>
-<circle class="start approx" cx="190.4" cy="1038" r="4.5"/>
-<text class="nm" x="199.4" y="1032">Historical Vedic religion</text><text class="endtxt" x="292.6" y="1042">500 BCE</text></a><a class="row" href="t/hinduism.html" data-s="-500" data-e="" style="--c:#b8480a">
-<title>Hinduism: c. 500 BCE – present</title>
-<rect class="hit" x="0" y="1052" width="1200" height="24"/>
-<line class="life" x1="285.6" x2="1190.0" y1="1064" y2="1064"/><path class="open" d="M1188.0,1060 L1194.0,1064 L1188.0,1068"/>
-<circle class="start approx" cx="285.6" cy="1064" r="4.5"/>
-<text class="nm" x="294.6" y="1058">Hinduism</text></a><a class="row" href="t/vaishnavism.html" data-s="-150" data-e="" style="--c:#b8480a">
-<title>Vaishnavism: c. 150 BCE – present</title>
-<rect class="hit" x="0" y="1078" width="1200" height="24"/>
-<line class="life" x1="364.7" x2="1190.0" y1="1090" y2="1090"/><path class="open" d="M1188.0,1086 L1194.0,1090 L1188.0,1094"/>
-<circle class="start approx" cx="364.7" cy="1090" r="4.5"/>
-<text class="nm" x="373.7" y="1084">Vaishnavism</text></a><a class="row" href="t/gaudiya.html" data-s="1510" data-e="" style="--c:#b8480a">
-<title>Gaudiya Vaishnavism: c. 1510 – present</title>
-<rect class="hit" x="0" y="1104" width="1200" height="24"/>
-<line class="life" x1="746.4" x2="1190.0" y1="1116" y2="1116"/><path class="open" d="M1188.0,1112 L1194.0,1116 L1188.0,1120"/>
-<circle class="start approx" cx="746.4" cy="1116" r="4.5"/>
-<text class="nm" x="755.4" y="1110">Gaudiya Vaishnavism</text></a><a class="row" href="t/shaivism.html" data-s="100" data-e="" style="--c:#b8480a">
-<title>Shaivism: c. 100 CE – present</title>
-<rect class="hit" x="0" y="1130" width="1200" height="24"/>
-<line class="life" x1="421.3" x2="1190.0" y1="1142" y2="1142"/><path class="open" d="M1188.0,1138 L1194.0,1142 L1188.0,1146"/>
-<circle class="start approx" cx="421.3" cy="1142" r="4.5"/>
-<text class="nm" x="430.3" y="1136">Shaivism</text></a><a class="row" href="t/lingayatism.html" data-s="1160" data-e="" style="--c:#b8480a">
-<title>Lingayatism: c. 1160 – present</title>
-<rect class="hit" x="0" y="1156" width="1200" height="24"/>
-<line class="life" x1="660.9" x2="1190.0" y1="1168" y2="1168"/><path class="open" d="M1188.0,1164 L1194.0,1168 L1188.0,1172"/>
-<circle class="start approx" cx="660.9" cy="1168" r="4.5"/>
-<text class="nm" x="669.9" y="1162">Lingayatism</text></a><a class="row" href="t/shaktism.html" data-s="500" data-e="" style="--c:#b8480a">
-<title>Shaktism: c. 500 CE – present</title>
-<rect class="hit" x="0" y="1182" width="1200" height="24"/>
-<line class="life" x1="511.7" x2="1190.0" y1="1194" y2="1194"/><path class="open" d="M1188.0,1190 L1194.0,1194 L1188.0,1198"/>
-<circle class="start approx" cx="511.7" cy="1194" r="4.5"/>
-<text class="nm" x="520.7" y="1188">Shaktism</text></a><a class="row" href="t/smartism.html" data-s="800" data-e="" style="--c:#b8480a">
-<title>Smartism: c. 800 CE – present</title>
-<rect class="hit" x="0" y="1208" width="1200" height="24"/>
-<line class="life" x1="579.5" x2="1190.0" y1="1220" y2="1220"/><path class="open" d="M1188.0,1216 L1194.0,1220 L1188.0,1224"/>
-<circle class="start approx" cx="579.5" cy="1220" r="4.5"/>
-<text class="nm" x="588.5" y="1214">Smartism</text></a><a class="row" href="t/jainism.html" data-s="-500" data-e="" style="--c:#b8480a">
-<title>Jainism: c. 500 BCE – present</title>
-<rect class="hit" x="0" y="1234" width="1200" height="24"/>
-<line class="life" x1="285.6" x2="1190.0" y1="1246" y2="1246"/><path class="open" d="M1188.0,1242 L1194.0,1246 L1188.0,1250"/>
-<circle class="start approx" cx="285.6" cy="1246" r="4.5"/>
-<text class="nm" x="294.6" y="1240">Jainism</text></a><a class="row ended" href="t/ajivika.html" data-s="-500" data-e="1400" style="--c:#b8480a">
-<title>Ājīvika: c. 500 BCE – 1400</title>
-<rect class="hit" x="0" y="1260" width="1200" height="24"/>
-<line class="life" x1="285.6" x2="715.2" y1="1272" y2="1272"/><rect class="cap" x="713.7" y="1264" width="3.5" height="16"/>
-<circle class="start approx" cx="285.6" cy="1272" r="4.5"/>
-<text class="nm" x="294.6" y="1266">Ājīvika</text><text class="endtxt" x="722.2" y="1276">1400</text></a><a class="row" href="t/buddhism.html" data-s="-450" data-e="" style="--c:#b8480a">
-<title>Buddhism: c. 450 BCE – present</title>
-<rect class="hit" x="0" y="1286" width="1200" height="24"/>
-<line class="life" x1="296.9" x2="1190.0" y1="1298" y2="1298"/><path class="open" d="M1188.0,1294 L1194.0,1298 L1188.0,1302"/>
-<circle class="start approx" cx="296.9" cy="1298" r="4.5"/>
-<text class="nm" x="305.9" y="1292">Buddhism</text></a><a class="row" href="t/theravada.html" data-s="-250" data-e="" style="--c:#b8480a">
-<title>Theravada: c. 250 BCE – present</title>
-<rect class="hit" x="0" y="1312" width="1200" height="24"/>
-<line class="life" x1="342.1" x2="1190.0" y1="1324" y2="1324"/><path class="open" d="M1188.0,1320 L1194.0,1324 L1188.0,1328"/>
-<circle class="start approx" cx="342.1" cy="1324" r="4.5"/>
-<text class="nm" x="351.1" y="1318">Theravada</text></a><a class="row" href="t/mahayana.html" data-s="100" data-e="" style="--c:#b8480a">
-<title>Mahayana: c. 100 CE – present</title>
-<rect class="hit" x="0" y="1338" width="1200" height="24"/>
-<line class="life" x1="421.3" x2="1190.0" y1="1350" y2="1350"/><path class="open" d="M1188.0,1346 L1194.0,1350 L1188.0,1354"/>
-<circle class="start approx" cx="421.3" cy="1350" r="4.5"/>
-<text class="nm" x="430.3" y="1344">Mahayana</text></a><a class="row" href="t/pure-land.html" data-s="402" data-e="" style="--c:#b8480a">
-<title>Pure Land Buddhism: c. 402 CE – present</title>
-<rect class="hit" x="0" y="1364" width="1200" height="24"/>
-<line class="life" x1="489.5" x2="1190.0" y1="1376" y2="1376"/><path class="open" d="M1188.0,1372 L1194.0,1376 L1188.0,1380"/>
-<circle class="start approx" cx="489.5" cy="1376" r="4.5"/>
-<text class="nm" x="498.5" y="1370">Pure Land Buddhism</text></a><a class="row" href="t/chan-zen.html" data-s="500" data-e="" style="--c:#b8480a">
-<title>Chan / Zen: c. 500 CE – present</title>
-<rect class="hit" x="0" y="1390" width="1200" height="24"/>
-<line class="life" x1="511.7" x2="1190.0" y1="1402" y2="1402"/><path class="open" d="M1188.0,1398 L1194.0,1402 L1188.0,1406"/>
-<circle class="start approx" cx="511.7" cy="1402" r="4.5"/>
-<text class="nm" x="520.7" y="1396">Chan / Zen</text></a><a class="row" href="t/vajrayana.html" data-s="650" data-e="" style="--c:#b8480a">
-<title>Vajrayana: c. 650 CE – present</title>
-<rect class="hit" x="0" y="1416" width="1200" height="24"/>
-<line class="life" x1="545.6" x2="1190.0" y1="1428" y2="1428"/><path class="open" d="M1188.0,1424 L1194.0,1428 L1188.0,1432"/>
-<circle class="start approx" cx="545.6" cy="1428" r="4.5"/>
-<text class="nm" x="554.6" y="1422">Vajrayana</text></a><a class="row" href="t/nichiren.html" data-s="1253" data-e="" style="--c:#b8480a">
-<title>Nichiren Buddhism: 1253 – present</title>
-<rect class="hit" x="0" y="1442" width="1200" height="24"/>
-<line class="life" x1="682.0" x2="1190.0" y1="1454" y2="1454"/><path class="open" d="M1188.0,1450 L1194.0,1454 L1188.0,1458"/>
-<circle class="start" cx="682.0" cy="1454" r="4.5"/>
-<text class="nm" x="691.0" y="1448">Nichiren Buddhism</text></a><a class="row" href="t/navayana.html" data-s="1956" data-e="" style="--c:#b8480a">
-<title>Navayana: 1956 – present</title>
-<rect class="hit" x="0" y="1468" width="1200" height="24"/>
-<line class="life" x1="1129.8" x2="1190.0" y1="1480" y2="1480"/><path class="open" d="M1188.0,1476 L1194.0,1480 L1188.0,1484"/>
-<circle class="start" cx="1129.8" cy="1480" r="4.5"/>
-<text class="nm" x="1120.8" y="1474" text-anchor="end">Navayana</text></a><a class="row" href="t/sikhism.html" data-s="1499" data-e="" style="--c:#b8480a">
-<title>Sikhism: c. 1499 – present</title>
-<rect class="hit" x="0" y="1494" width="1200" height="24"/>
-<line class="life" x1="737.6" x2="1190.0" y1="1506" y2="1506"/><path class="open" d="M1188.0,1502 L1194.0,1506 L1188.0,1510"/>
-<circle class="start approx" cx="737.6" cy="1506" r="4.5"/>
-<text class="nm" x="746.6" y="1500">Sikhism</text></a><a class="row" href="t/khalsa.html" data-s="1699" data-e="" style="--c:#b8480a">
-<title>Khalsa: 1699 – present</title>
-<rect class="hit" x="0" y="1520" width="1200" height="24"/>
-<line class="life" x1="908.9" x2="1190.0" y1="1532" y2="1532"/><path class="open" d="M1188.0,1528 L1194.0,1532 L1188.0,1536"/>
-<circle class="start" cx="908.9" cy="1532" r="4.5"/>
-<text class="nm" x="917.9" y="1526">Khalsa</text></a><a class="row" href="t/chinese-folk.html" data-s="-1250" data-e="" style="--c:#b3122e">
-<title>Chinese folk religion: c. 1250 BCE – present</title>
-<rect class="hit" x="0" y="1586" width="1200" height="24"/>
-<line class="life" x1="214.2" x2="1190.0" y1="1598" y2="1598"/><path class="open" d="M1188.0,1594 L1194.0,1598 L1188.0,1602"/>
-<circle class="start approx" cx="214.2" cy="1598" r="4.5"/>
-<text class="nm" x="223.2" y="1592">Chinese folk religion</text></a><a class="row" href="t/confucianism.html" data-s="-500" data-e="" style="--c:#b3122e">
-<title>Confucianism: c. 500 BCE – present</title>
-<rect class="hit" x="0" y="1612" width="1200" height="24"/>
-<line class="life" x1="285.6" x2="1190.0" y1="1624" y2="1624"/><path class="open" d="M1188.0,1620 L1194.0,1624 L1188.0,1628"/>
-<circle class="start approx" cx="285.6" cy="1624" r="4.5"/>
-<text class="nm" x="294.6" y="1618">Confucianism</text></a><a class="row" href="t/daoism.html" data-s="-400" data-e="" style="--c:#b3122e">
-<title>Daoism: c. 400 BCE – present</title>
-<rect class="hit" x="0" y="1638" width="1200" height="24"/>
-<line class="life" x1="308.2" x2="1190.0" y1="1650" y2="1650"/><path class="open" d="M1188.0,1646 L1194.0,1650 L1188.0,1654"/>
-<circle class="start approx" cx="308.2" cy="1650" r="4.5"/>
-<text class="nm" x="317.2" y="1644">Daoism</text></a><a class="row" href="t/celestial-masters.html" data-s="142" data-e="" style="--c:#b3122e">
-<title>Way of the Celestial Masters: 142 CE – present</title>
-<rect class="hit" x="0" y="1664" width="1200" height="24"/>
-<line class="life" x1="430.8" x2="1190.0" y1="1676" y2="1676"/><path class="open" d="M1188.0,1672 L1194.0,1676 L1188.0,1680"/>
-<circle class="start" cx="430.8" cy="1676" r="4.5"/>
-<text class="nm" x="439.8" y="1670">Way of the Celestial Masters</text></a><a class="row" href="t/quanzhen.html" data-s="1170" data-e="" style="--c:#b3122e">
-<title>Quanzhen Daoism: c. 1170 – present</title>
-<rect class="hit" x="0" y="1690" width="1200" height="24"/>
-<line class="life" x1="663.2" x2="1190.0" y1="1702" y2="1702"/><path class="open" d="M1188.0,1698 L1194.0,1702 L1188.0,1706"/>
-<circle class="start approx" cx="663.2" cy="1702" r="4.5"/>
-<text class="nm" x="672.2" y="1696">Quanzhen Daoism</text></a><a class="row" href="t/shinto.html" data-s="700" data-e="" style="--c:#b3122e">
-<title>Shinto: c. 700 CE – present</title>
-<rect class="hit" x="0" y="1716" width="1200" height="24"/>
-<line class="life" x1="556.9" x2="1190.0" y1="1728" y2="1728"/><path class="open" d="M1188.0,1724 L1194.0,1728 L1188.0,1732"/>
-<circle class="start approx" cx="556.9" cy="1728" r="4.5"/>
-<text class="nm" x="565.9" y="1722">Shinto</text></a><a class="row" href="t/tenrikyo.html" data-s="1838" data-e="" style="--c:#b3122e">
-<title>Tenrikyo: 1838 – present</title>
-<rect class="hit" x="0" y="1742" width="1200" height="24"/>
-<line class="life" x1="1028.4" x2="1190.0" y1="1754" y2="1754"/><path class="open" d="M1188.0,1750 L1194.0,1754 L1188.0,1758"/>
-<circle class="start" cx="1028.4" cy="1754" r="4.5"/>
-<text class="nm" x="1019.4" y="1748" text-anchor="end">Tenrikyo</text></a><a class="row ended" href="t/state-shinto.html" data-s="1868" data-e="1945" style="--c:#b3122e">
-<title>State Shinto: 1868 – 1945</title>
-<rect class="hit" x="0" y="1768" width="1200" height="24"/>
-<line class="life" x1="1054.2" x2="1120.4" y1="1780" y2="1780"/><rect class="cap" x="1118.9" y="1772" width="3.5" height="16"/>
-<circle class="start" cx="1054.2" cy="1780" r="4.5"/>
-<text class="nm" x="1045.2" y="1774" text-anchor="end">State Shinto</text><text class="endtxt" x="1127.4" y="1784">1945</text></a><a class="row" href="t/cheondoism.html" data-s="1860" data-e="" style="--c:#b3122e">
-<title>Cheondoism: 1860 – present</title>
-<rect class="hit" x="0" y="1794" width="1200" height="24"/>
-<line class="life" x1="1047.3" x2="1190.0" y1="1806" y2="1806"/><path class="open" d="M1188.0,1802 L1194.0,1806 L1188.0,1810"/>
-<circle class="start" cx="1047.3" cy="1806" r="4.5"/>
-<text class="nm" x="1038.3" y="1800" text-anchor="end">Cheondoism</text></a><a class="row" href="t/caodaism.html" data-s="1926" data-e="" style="--c:#b3122e">
-<title>Caodaism: 1926 – present</title>
-<rect class="hit" x="0" y="1820" width="1200" height="24"/>
-<line class="life" x1="1104.0" x2="1190.0" y1="1832" y2="1832"/><path class="open" d="M1188.0,1828 L1194.0,1832 L1188.0,1836"/>
-<circle class="start" cx="1104.0" cy="1832" r="4.5"/>
-<text class="nm" x="1095.0" y="1826" text-anchor="end">Caodaism</text></a><a class="row" href="t/zoroastrianism.html" data-s="-1000" data-e="" style="--c:#0f7c74">
-<title>Zoroastrianism: c. 1000 BCE – present</title>
-<rect class="hit" x="0" y="1886" width="1200" height="24"/>
-<line class="life" x1="238.0" x2="1190.0" y1="1898" y2="1898"/><path class="open" d="M1188.0,1894 L1194.0,1898 L1188.0,1902"/>
-<circle class="start approx" cx="238.0" cy="1898" r="4.5"/>
-<text class="nm" x="247.0" y="1892">Zoroastrianism</text></a><a class="row ended" href="t/manichaeism.html" data-s="240" data-e="1600" style="--c:#0f7c74">
-<title>Manichaeism: c. 240 CE – 1600</title>
-<rect class="hit" x="0" y="1912" width="1200" height="24"/>
-<line class="life" x1="452.9" x2="823.8" y1="1924" y2="1924"/><rect class="cap" x="822.3" y="1916" width="3.5" height="16"/>
-<circle class="start approx" cx="452.9" cy="1924" r="4.5"/>
-<text class="nm" x="461.9" y="1918">Manichaeism</text><text class="endtxt" x="830.8" y="1928">1600</text></a><a class="row" href="t/yazidism.html" data-s="1150" data-e="" style="--c:#0f7c74">
-<title>Yazidism: c. 1150 – present</title>
-<rect class="hit" x="0" y="1938" width="1200" height="24"/>
-<line class="life" x1="658.7" x2="1190.0" y1="1950" y2="1950"/><path class="open" d="M1188.0,1946 L1194.0,1950 L1188.0,1954"/>
-<circle class="start approx" cx="658.7" cy="1950" r="4.5"/>
-<text class="nm" x="667.7" y="1944">Yazidism</text></a><a class="row ended" href="t/sumerian.html" data-s="-3500" data-e="-2000" style="--c:#7a5526">
-<title>Sumerian religion: c. 3500 BCE – 2000 BCE</title>
-<rect class="hit" x="0" y="2004" width="1200" height="24"/>
-<line class="life" x1="0.0" x2="142.8" y1="2016" y2="2016"/><rect class="cap" x="141.3" y="2008" width="3.5" height="16"/>
-<circle class="start approx" cx="0.0" cy="2016" r="4.5"/>
-<text class="nm" x="9.0" y="2010">Sumerian religion</text><text class="endtxt" x="149.8" y="2020">2000 BCE</text></a><a class="row ended" href="t/mesopotamian.html" data-s="-2000" data-e="100" style="--c:#7a5526">
-<title>Babylonian &amp; Assyrian religion: c. 2000 BCE – 100 CE</title>
-<rect class="hit" x="0" y="2030" width="1200" height="24"/>
-<line class="life" x1="142.8" x2="421.3" y1="2042" y2="2042"/><rect class="cap" x="419.8" y="2034" width="3.5" height="16"/>
-<circle class="start approx" cx="142.8" cy="2042" r="4.5"/>
-<text class="nm" x="151.8" y="2036">Babylonian &amp; Assyrian religion</text><text class="endtxt" x="428.3" y="2046">100 CE</text></a><a class="row ended" href="t/egyptian.html" data-s="-3100" data-e="537" style="--c:#7a5526">
-<title>Ancient Egyptian religion: c. 3100 BCE – 537 CE</title>
-<rect class="hit" x="0" y="2056" width="1200" height="24"/>
-<line class="life" x1="38.1" x2="520.1" y1="2068" y2="2068"/><rect class="cap" x="518.6" y="2060" width="3.5" height="16"/>
-<circle class="start approx" cx="38.1" cy="2068" r="4.5"/>
-<text class="nm" x="47.1" y="2062">Ancient Egyptian religion</text><text class="endtxt" x="527.1" y="2072">537 CE</text></a><a class="row ended" href="t/canaanite.html" data-s="-2000" data-e="400" style="--c:#7a5526">
-<title>Canaanite &amp; Phoenician religion: c. 2000 BCE – 400 CE</title>
-<rect class="hit" x="0" y="2082" width="1200" height="24"/>
-<line class="life" x1="142.8" x2="489.1" y1="2094" y2="2094"/><rect class="cap" x="487.6" y="2086" width="3.5" height="16"/>
-<circle class="start approx" cx="142.8" cy="2094" r="4.5"/>
-<text class="nm" x="151.8" y="2088">Canaanite &amp; Phoenician religion</text><text class="endtxt" x="496.1" y="2098">400 CE</text></a><a class="row ended" href="t/greek.html" data-s="-1400" data-e="529" style="--c:#7a5526">
-<title>Ancient Greek religion: c. 1400 BCE – 529 CE</title>
-<rect class="hit" x="0" y="2108" width="1200" height="24"/>
-<line class="life" x1="199.9" x2="518.3" y1="2120" y2="2120"/><rect class="cap" x="516.8" y="2112" width="3.5" height="16"/>
-<circle class="start approx" cx="199.9" cy="2120" r="4.5"/>
-<text class="nm" x="208.9" y="2114">Ancient Greek religion</text><text class="endtxt" x="525.3" y="2124">529 CE</text></a><a class="row ended" href="t/roman.html" data-s="-753" data-e="392" style="--c:#7a5526">
-<title>Ancient Roman religion: c. 753 BCE – 392 CE</title>
-<rect class="hit" x="0" y="2134" width="1200" height="24"/>
-<line class="life" x1="261.5" x2="487.3" y1="2146" y2="2146"/><rect class="cap" x="485.8" y="2138" width="3.5" height="16"/>
-<circle class="start approx" cx="261.5" cy="2146" r="4.5"/>
-<text class="nm" x="270.5" y="2140">Ancient Roman religion</text><text class="endtxt" x="494.3" y="2150">392 CE</text></a><a class="row ended" href="t/mithraism.html" data-s="80" data-e="400" style="--c:#7a5526">
-<title>Mithraism: c. 80 CE – 400 CE</title>
-<rect class="hit" x="0" y="2160" width="1200" height="24"/>
-<line class="life" x1="416.7" x2="489.1" y1="2172" y2="2172"/><rect class="cap" x="487.6" y="2164" width="3.5" height="16"/>
-<circle class="start approx" cx="416.7" cy="2172" r="4.5"/>
-<text class="nm" x="425.7" y="2166">Mithraism</text><text class="endtxt" x="496.1" y="2176">400 CE</text></a><a class="row ended" href="t/celtic.html" data-s="-600" data-e="600" style="--c:#4a6420">
-<title>Celtic religion: c. 600 BCE – 600 CE</title>
-<rect class="hit" x="0" y="2226" width="1200" height="24"/>
-<line class="life" x1="276.1" x2="534.3" y1="2238" y2="2238"/><rect class="cap" x="532.8" y="2230" width="3.5" height="16"/>
-<circle class="start approx" cx="276.1" cy="2238" r="4.5"/>
-<text class="nm" x="285.1" y="2232">Celtic religion</text><text class="endtxt" x="541.3" y="2242">600 CE</text></a><a class="row ended" href="t/germanic.html" data-s="-500" data-e="1100" style="--c:#4a6420">
-<title>Germanic &amp; Norse religion: c. 500 BCE – 1100</title>
-<rect class="hit" x="0" y="2252" width="1200" height="24"/>
-<line class="life" x1="285.6" x2="647.4" y1="2264" y2="2264"/><rect class="cap" x="645.9" y="2256" width="3.5" height="16"/>
-<circle class="start approx" cx="285.6" cy="2264" r="4.5"/>
-<text class="nm" x="294.6" y="2258">Germanic &amp; Norse religion</text><text class="endtxt" x="654.4" y="2268">1100</text></a><a class="row" href="t/heathenry.html" data-s="1972" data-e="" style="--c:#4a6420">
-<title>Heathenry (Ásatrú): 1972 – present</title>
-<rect class="hit" x="0" y="2278" width="1200" height="24"/>
-<line class="life" x1="1143.6" x2="1190.0" y1="2290" y2="2290"/><path class="open" d="M1188.0,2286 L1194.0,2290 L1188.0,2294"/>
-<circle class="start" cx="1143.6" cy="2290" r="4.5"/>
-<text class="nm" x="1134.6" y="2284" text-anchor="end">Heathenry (Ásatrú)</text></a><a class="row ended" href="t/slavic.html" data-s="500" data-e="1168" style="--c:#4a6420">
-<title>Slavic religion: c. 500 CE – 1168</title>
-<rect class="hit" x="0" y="2304" width="1200" height="24"/>
-<line class="life" x1="511.7" x2="662.7" y1="2316" y2="2316"/><rect class="cap" x="661.2" y="2308" width="3.5" height="16"/>
-<circle class="start approx" cx="511.7" cy="2316" r="4.5"/>
-<text class="nm" x="520.7" y="2310">Slavic religion</text><text class="endtxt" x="669.7" y="2320">1168</text></a><a class="row ended" href="t/baltic.html" data-s="500" data-e="1387" style="--c:#4a6420">
-<title>Baltic religion: c. 500 CE – 1387</title>
-<rect class="hit" x="0" y="2330" width="1200" height="24"/>
-<line class="life" x1="511.7" x2="712.3" y1="2342" y2="2342"/><rect class="cap" x="710.8" y="2334" width="3.5" height="16"/>
-<circle class="start approx" cx="511.7" cy="2342" r="4.5"/>
-<text class="nm" x="520.7" y="2336">Baltic religion</text><text class="endtxt" x="719.3" y="2346">1387</text></a><a class="row" href="t/wicca.html" data-s="1954" data-e="" style="--c:#4a6420">
-<title>Wicca: 1954 – present</title>
-<rect class="hit" x="0" y="2356" width="1200" height="24"/>
-<line class="life" x1="1128.1" x2="1190.0" y1="2368" y2="2368"/><path class="open" d="M1188.0,2364 L1194.0,2368 L1188.0,2372"/>
-<circle class="start" cx="1128.1" cy="2368" r="4.5"/>
-<text class="nm" x="1119.1" y="2362" text-anchor="end">Wicca</text></a><a class="row ended" href="t/maya.html" data-s="-1000" data-e="1697" style="--c:#7b3fa0">
-<title>Maya religion: c. 1000 BCE – 1697</title>
-<rect class="hit" x="0" y="2422" width="1200" height="24"/>
-<line class="life" x1="238.0" x2="907.2" y1="2434" y2="2434"/><rect class="cap" x="905.7" y="2426" width="3.5" height="16"/>
-<circle class="start approx" cx="238.0" cy="2434" r="4.5"/>
-<text class="nm" x="247.0" y="2428">Maya religion</text><text class="endtxt" x="914.2" y="2438">1697</text></a><a class="row ended" href="t/inca.html" data-s="1200" data-e="1572" style="--c:#7b3fa0">
-<title>Inca religion: c. 1200 – 1572</title>
-<rect class="hit" x="0" y="2448" width="1200" height="24"/>
-<line class="life" x1="670.0" x2="799.7" y1="2460" y2="2460"/><rect class="cap" x="798.2" y="2452" width="3.5" height="16"/>
-<circle class="start approx" cx="670.0" cy="2460" r="4.5"/>
-<text class="nm" x="679.0" y="2454">Inca religion</text><text class="endtxt" x="806.7" y="2464">1572</text></a><a class="row ended" href="t/mexica.html" data-s="1325" data-e="1521" style="--c:#7b3fa0">
-<title>Mexica (Aztec) religion: 1325 – 1521</title>
-<rect class="hit" x="0" y="2474" width="1200" height="24"/>
-<line class="life" x1="698.2" x2="755.9" y1="2486" y2="2486"/><rect class="cap" x="754.4" y="2478" width="3.5" height="16"/>
-<circle class="start" cx="698.2" cy="2486" r="4.5"/>
-<text class="nm" x="707.2" y="2480">Mexica (Aztec) religion</text><text class="endtxt" x="762.9" y="2490">1521</text></a><a class="row" href="t/native-american-church.html" data-s="1918" data-e="" style="--c:#7b3fa0">
-<title>Native American Church: 1918 – present</title>
-<rect class="hit" x="0" y="2500" width="1200" height="24"/>
-<line class="life" x1="1097.2" x2="1190.0" y1="2512" y2="2512"/><path class="open" d="M1188.0,2508 L1194.0,2512 L1188.0,2516"/>
-<circle class="start" cx="1097.2" cy="2512" r="4.5"/>
-<text class="nm" x="1088.2" y="2506" text-anchor="end">Native American Church</text></a><a class="row" href="t/yoruba.html" data-s="1000" data-e="" style="--c:#b02a6a">
-<title>Yoruba religion (Ifá, Orisha): c. 1000 – present</title>
-<rect class="hit" x="0" y="2566" width="1200" height="24"/>
-<line class="life" x1="624.7" x2="1190.0" y1="2578" y2="2578"/><path class="open" d="M1188.0,2574 L1194.0,2578 L1188.0,2582"/>
-<circle class="start approx" cx="624.7" cy="2578" r="4.5"/>
-<text class="nm" x="633.7" y="2572">Yoruba religion (Ifá, Orisha)</text></a><a class="row" href="t/candomble.html" data-s="1830" data-e="" style="--c:#b02a6a">
-<title>Candomblé: c. 1830 – present</title>
-<rect class="hit" x="0" y="2592" width="1200" height="24"/>
-<line class="life" x1="1021.5" x2="1190.0" y1="2604" y2="2604"/><path class="open" d="M1188.0,2600 L1194.0,2604 L1188.0,2608"/>
-<circle class="start approx" cx="1021.5" cy="2604" r="4.5"/>
-<text class="nm" x="1012.5" y="2598" text-anchor="end">Candomblé</text></a><a class="row" href="t/santeria.html" data-s="1850" data-e="" style="--c:#b02a6a">
-<title>Santería (Lucumí): c. 1850 – present</title>
-<rect class="hit" x="0" y="2618" width="1200" height="24"/>
-<line class="life" x1="1038.7" x2="1190.0" y1="2630" y2="2630"/><path class="open" d="M1188.0,2626 L1194.0,2630 L1188.0,2634"/>
-<circle class="start approx" cx="1038.7" cy="2630" r="4.5"/>
-<text class="nm" x="1029.7" y="2624" text-anchor="end">Santería (Lucumí)</text></a><a class="row" href="t/vodun.html" data-s="1600" data-e="" style="--c:#b02a6a">
-<title>Vodun: c. 1600 – present</title>
-<rect class="hit" x="0" y="2644" width="1200" height="24"/>
-<line class="life" x1="823.8" x2="1190.0" y1="2656" y2="2656"/><path class="open" d="M1188.0,2652 L1194.0,2656 L1188.0,2660"/>
-<circle class="start approx" cx="823.8" cy="2656" r="4.5"/>
-<text class="nm" x="832.8" y="2650">Vodun</text></a><a class="row" href="t/vodou.html" data-s="1750" data-e="" style="--c:#b02a6a">
-<title>Haitian Vodou: c. 1750 – present</title>
-<rect class="hit" x="0" y="2670" width="1200" height="24"/>
-<line class="life" x1="952.7" x2="1190.0" y1="2682" y2="2682"/><path class="open" d="M1188.0,2678 L1194.0,2682 L1188.0,2686"/>
-<circle class="start approx" cx="952.7" cy="2682" r="4.5"/>
-<text class="nm" x="961.7" y="2676">Haitian Vodou</text></a></g>
-<line class="cursor" x1="0" x2="0" y1="22" y2="2718" hidden/>
+<div class="tl-scroll" tabindex="0" role="region" aria-label="Timeline chart, scrolls sideways on small screens"><svg class="tl" viewBox="0 0 1260 2736" data-tl data-w="1200" role="img" aria-label="Lineage timeline of 91 traditions on a folded time axis; the same data is listed in the table below.">
+<g class="grid"><line class="g" x1="0.0" x2="0.0" y1="22" y2="2736"/><line class="g" x1="9.5" x2="9.5" y1="22" y2="2736"/><line class="g" x1="19.0" x2="19.0" y1="22" y2="2736"/><line class="g" x1="28.6" x2="28.6" y1="22" y2="2736"/><line class="g" x1="38.1" x2="38.1" y1="22" y2="2736"/><line class="g" x1="47.6" x2="47.6" y1="22" y2="2736"/><line class="g" x1="57.1" x2="57.1" y1="22" y2="2736"/><line class="g" x1="66.6" x2="66.6" y1="22" y2="2736"/><line class="g" x1="76.2" x2="76.2" y1="22" y2="2736"/><line class="g" x1="85.7" x2="85.7" y1="22" y2="2736"/><line class="g" x1="95.2" x2="95.2" y1="22" y2="2736"/><line class="g" x1="104.7" x2="104.7" y1="22" y2="2736"/><line class="g" x1="114.2" x2="114.2" y1="22" y2="2736"/><line class="g" x1="123.8" x2="123.8" y1="22" y2="2736"/><line class="g" x1="133.3" x2="133.3" y1="22" y2="2736"/><line class="g" x1="142.8" x2="142.8" y1="22" y2="2736"/><line class="g" x1="152.3" x2="152.3" y1="22" y2="2736"/><line class="g" x1="161.8" x2="161.8" y1="22" y2="2736"/><line class="g" x1="171.4" x2="171.4" y1="22" y2="2736"/><line class="g" x1="180.9" x2="180.9" y1="22" y2="2736"/><line class="g" x1="190.4" x2="190.4" y1="22" y2="2736"/><line class="g" x1="199.9" x2="199.9" y1="22" y2="2736"/><line class="g" x1="209.4" x2="209.4" y1="22" y2="2736"/><line class="g" x1="219.0" x2="219.0" y1="22" y2="2736"/><line class="g" x1="228.5" x2="228.5" y1="22" y2="2736"/><line class="g" x1="238.0" x2="238.0" y1="22" y2="2736"/><line class="g" x1="247.5" x2="247.5" y1="22" y2="2736"/><line class="g" x1="257.0" x2="257.0" y1="22" y2="2736"/><line class="g" x1="266.6" x2="266.6" y1="22" y2="2736"/><line class="g" x1="276.1" x2="276.1" y1="22" y2="2736"/><line class="g" x1="285.6" x2="285.6" y1="22" y2="2736"/><line class="g" x1="308.2" x2="308.2" y1="22" y2="2736"/><line class="g" x1="330.8" x2="330.8" y1="22" y2="2736"/><line class="g" x1="353.4" x2="353.4" y1="22" y2="2736"/><line class="g" x1="376.0" x2="376.0" y1="22" y2="2736"/><line class="g" x1="398.6" x2="398.6" y1="22" y2="2736"/><line class="g" x1="421.3" x2="421.3" y1="22" y2="2736"/><line class="g" x1="443.9" x2="443.9" y1="22" y2="2736"/><line class="g" x1="466.5" x2="466.5" y1="22" y2="2736"/><line class="g" x1="489.1" x2="489.1" y1="22" y2="2736"/><line class="g" x1="511.7" x2="511.7" y1="22" y2="2736"/><line class="g" x1="534.3" x2="534.3" y1="22" y2="2736"/><line class="g" x1="556.9" x2="556.9" y1="22" y2="2736"/><line class="g" x1="579.5" x2="579.5" y1="22" y2="2736"/><line class="g" x1="602.1" x2="602.1" y1="22" y2="2736"/><line class="g" x1="624.7" x2="624.7" y1="22" y2="2736"/><line class="g" x1="647.4" x2="647.4" y1="22" y2="2736"/><line class="g" x1="670.0" x2="670.0" y1="22" y2="2736"/><line class="g" x1="692.6" x2="692.6" y1="22" y2="2736"/><line class="g" x1="715.2" x2="715.2" y1="22" y2="2736"/><line class="g" x1="737.8" x2="737.8" y1="22" y2="2736"/><line class="g" x1="823.8" x2="823.8" y1="22" y2="2736"/><line class="g" x1="909.7" x2="909.7" y1="22" y2="2736"/><line class="g" x1="995.7" x2="995.7" y1="22" y2="2736"/><line class="g" x1="1081.7" x2="1081.7" y1="22" y2="2736"/><line class="g" x1="1167.6" x2="1167.6" y1="22" y2="2736"/><line class="g major" x1="47.6" x2="47.6" y1="22" y2="2736"/><text class="gl" x="47.6" y="16" text-anchor="middle">3000 BCE</text><line class="g major" x1="142.8" x2="142.8" y1="22" y2="2736"/><text class="gl" x="142.8" y="16" text-anchor="middle">2000 BCE</text><line class="g major" x1="285.6" x2="285.6" y1="22" y2="2736"/><text class="gl" x="285.6" y="16" text-anchor="middle">500 BCE</text><line class="g major" x1="398.6" x2="398.6" y1="22" y2="2736"/><text class="gl" x="398.6" y="16" text-anchor="middle">1 CE</text><line class="g major" x1="511.7" x2="511.7" y1="22" y2="2736"/><text class="gl" x="511.7" y="16" text-anchor="middle">500</text><line class="g major" x1="624.7" x2="624.7" y1="22" y2="2736"/><text class="gl" x="624.7" y="16" text-anchor="middle">1000</text><line class="g major" x1="737.8" x2="737.8" y1="22" y2="2736"/><text class="gl" x="737.8" y="16" text-anchor="middle">1500</text><line class="g major" x1="823.8" x2="823.8" y1="22" y2="2736"/><text class="gl" x="823.8" y="16" text-anchor="middle">1600</text><line class="g major" x1="909.7" x2="909.7" y1="22" y2="2736"/><text class="gl" x="909.7" y="16" text-anchor="middle">1700</text><line class="g major" x1="995.7" x2="995.7" y1="22" y2="2736"/><text class="gl" x="995.7" y="16" text-anchor="middle">1800</text><line class="g major" x1="1081.7" x2="1081.7" y1="22" y2="2736"/><text class="gl" x="1081.7" y="16" text-anchor="middle">1900</text><line class="g major" x1="1167.6" x2="1167.6" y1="22" y2="2736"/><text class="gl" x="1167.6" y="16" text-anchor="middle">2000</text></g><g class="fold"><path d="M285.6,22 L288.6,34 L282.6,46 L288.6,58 L282.6,70 L288.6,82 L282.6,94 L288.6,106 L282.6,118 L288.6,130 L282.6,142 L288.6,154 L282.6,166 L288.6,178 L282.6,190 L288.6,202 L282.6,214 L288.6,226 L282.6,238 L288.6,250 L282.6,262 L288.6,274 L282.6,286 L288.6,298 L282.6,310 L288.6,322 L282.6,334 L288.6,346 L282.6,358 L288.6,370 L282.6,382 L288.6,394 L282.6,406 L288.6,418 L282.6,430 L288.6,442 L282.6,454 L288.6,466 L282.6,478 L288.6,490 L282.6,502 L288.6,514 L282.6,526 L288.6,538 L282.6,550 L288.6,562 L282.6,574 L288.6,586 L282.6,598 L288.6,610 L282.6,622 L288.6,634 L282.6,646 L288.6,658 L282.6,670 L288.6,682 L282.6,694 L288.6,706 L282.6,718 L288.6,730 L282.6,742 L288.6,754 L282.6,766 L288.6,778 L282.6,790 L288.6,802 L282.6,814 L288.6,826 L282.6,838 L288.6,850 L282.6,862 L288.6,874 L282.6,886 L288.6,898 L282.6,910 L288.6,922 L282.6,934 L288.6,946 L282.6,958 L288.6,970 L282.6,982 L288.6,994 L282.6,1006 L288.6,1018 L282.6,1030 L288.6,1042 L282.6,1054 L288.6,1066 L282.6,1078 L288.6,1090 L282.6,1102 L288.6,1114 L282.6,1126 L288.6,1138 L282.6,1150 L288.6,1162 L282.6,1174 L288.6,1186 L282.6,1198 L288.6,1210 L282.6,1222 L288.6,1234 L282.6,1246 L288.6,1258 L282.6,1270 L288.6,1282 L282.6,1294 L288.6,1306 L282.6,1318 L288.6,1330 L282.6,1342 L288.6,1354 L282.6,1366 L288.6,1378 L282.6,1390 L288.6,1402 L282.6,1414 L288.6,1426 L282.6,1438 L288.6,1450 L282.6,1462 L288.6,1474 L282.6,1486 L288.6,1498 L282.6,1510 L288.6,1522 L282.6,1534 L288.6,1546 L282.6,1558 L288.6,1570 L282.6,1582 L288.6,1594 L282.6,1606 L288.6,1618 L282.6,1630 L288.6,1642 L282.6,1654 L288.6,1666 L282.6,1678 L288.6,1690 L282.6,1702 L288.6,1714 L282.6,1726 L288.6,1738 L282.6,1750 L288.6,1762 L282.6,1774 L288.6,1786 L282.6,1798 L288.6,1810 L282.6,1822 L288.6,1834 L282.6,1846 L288.6,1858 L282.6,1870 L288.6,1882 L282.6,1894 L288.6,1906 L282.6,1918 L288.6,1930 L282.6,1942 L288.6,1954 L282.6,1966 L288.6,1978 L282.6,1990 L288.6,2002 L282.6,2014 L288.6,2026 L282.6,2038 L288.6,2050 L282.6,2062 L288.6,2074 L282.6,2086 L288.6,2098 L282.6,2110 L288.6,2122 L282.6,2134 L288.6,2146 L282.6,2158 L288.6,2170 L282.6,2182 L288.6,2194 L282.6,2206 L288.6,2218 L282.6,2230 L288.6,2242 L282.6,2254 L288.6,2266 L282.6,2278 L288.6,2290 L282.6,2302 L288.6,2314 L282.6,2326 L288.6,2338 L282.6,2350 L288.6,2362 L282.6,2374 L288.6,2386 L282.6,2398 L288.6,2410 L282.6,2422 L288.6,2434 L282.6,2446 L288.6,2458 L282.6,2470 L288.6,2482 L282.6,2494 L288.6,2506 L282.6,2518 L288.6,2530 L282.6,2542 L288.6,2554 L282.6,2566 L288.6,2578 L282.6,2590 L288.6,2602 L282.6,2614 L288.6,2626 L282.6,2638 L288.6,2650 L282.6,2662 L288.6,2674 L282.6,2686 L288.6,2698 L282.6,2710 L288.6,2722 L282.6,2734 L288.6,2746"/><text x="292.6" y="36">fold: ×2.4 per year</text></g><g class="fold"><path d="M737.8,22 L740.8,34 L734.8,46 L740.8,58 L734.8,70 L740.8,82 L734.8,94 L740.8,106 L734.8,118 L740.8,130 L734.8,142 L740.8,154 L734.8,166 L740.8,178 L734.8,190 L740.8,202 L734.8,214 L740.8,226 L734.8,238 L740.8,250 L734.8,262 L740.8,274 L734.8,286 L740.8,298 L734.8,310 L740.8,322 L734.8,334 L740.8,346 L734.8,358 L740.8,370 L734.8,382 L740.8,394 L734.8,406 L740.8,418 L734.8,430 L740.8,442 L734.8,454 L740.8,466 L734.8,478 L740.8,490 L734.8,502 L740.8,514 L734.8,526 L740.8,538 L734.8,550 L740.8,562 L734.8,574 L740.8,586 L734.8,598 L740.8,610 L734.8,622 L740.8,634 L734.8,646 L740.8,658 L734.8,670 L740.8,682 L734.8,694 L740.8,706 L734.8,718 L740.8,730 L734.8,742 L740.8,754 L734.8,766 L740.8,778 L734.8,790 L740.8,802 L734.8,814 L740.8,826 L734.8,838 L740.8,850 L734.8,862 L740.8,874 L734.8,886 L740.8,898 L734.8,910 L740.8,922 L734.8,934 L740.8,946 L734.8,958 L740.8,970 L734.8,982 L740.8,994 L734.8,1006 L740.8,1018 L734.8,1030 L740.8,1042 L734.8,1054 L740.8,1066 L734.8,1078 L740.8,1090 L734.8,1102 L740.8,1114 L734.8,1126 L740.8,1138 L734.8,1150 L740.8,1162 L734.8,1174 L740.8,1186 L734.8,1198 L740.8,1210 L734.8,1222 L740.8,1234 L734.8,1246 L740.8,1258 L734.8,1270 L740.8,1282 L734.8,1294 L740.8,1306 L734.8,1318 L740.8,1330 L734.8,1342 L740.8,1354 L734.8,1366 L740.8,1378 L734.8,1390 L740.8,1402 L734.8,1414 L740.8,1426 L734.8,1438 L740.8,1450 L734.8,1462 L740.8,1474 L734.8,1486 L740.8,1498 L734.8,1510 L740.8,1522 L734.8,1534 L740.8,1546 L734.8,1558 L740.8,1570 L734.8,1582 L740.8,1594 L734.8,1606 L740.8,1618 L734.8,1630 L740.8,1642 L734.8,1654 L740.8,1666 L734.8,1678 L740.8,1690 L734.8,1702 L740.8,1714 L734.8,1726 L740.8,1738 L734.8,1750 L740.8,1762 L734.8,1774 L740.8,1786 L734.8,1798 L740.8,1810 L734.8,1822 L740.8,1834 L734.8,1846 L740.8,1858 L734.8,1870 L740.8,1882 L734.8,1894 L740.8,1906 L734.8,1918 L740.8,1930 L734.8,1942 L740.8,1954 L734.8,1966 L740.8,1978 L734.8,1990 L740.8,2002 L734.8,2014 L740.8,2026 L734.8,2038 L740.8,2050 L734.8,2062 L740.8,2074 L734.8,2086 L740.8,2098 L734.8,2110 L740.8,2122 L734.8,2134 L740.8,2146 L734.8,2158 L740.8,2170 L734.8,2182 L740.8,2194 L734.8,2206 L740.8,2218 L734.8,2230 L740.8,2242 L734.8,2254 L740.8,2266 L734.8,2278 L740.8,2290 L734.8,2302 L740.8,2314 L734.8,2326 L740.8,2338 L734.8,2350 L740.8,2362 L734.8,2374 L740.8,2386 L734.8,2398 L740.8,2410 L734.8,2422 L740.8,2434 L734.8,2446 L740.8,2458 L734.8,2470 L740.8,2482 L734.8,2494 L740.8,2506 L734.8,2518 L740.8,2530 L734.8,2542 L740.8,2554 L734.8,2566 L740.8,2578 L734.8,2590 L740.8,2602 L734.8,2614 L740.8,2626 L734.8,2638 L740.8,2650 L734.8,2662 L740.8,2674 L734.8,2686 L740.8,2698 L734.8,2710 L740.8,2722 L734.8,2734 L740.8,2746"/><text x="744.8" y="36">fold: ×3.8 per year</text></g><g class="heads"><text class="famhead" x="1.9" y="64" style="fill:#2a5aa8">Abrahamic</text><text class="famhead" x="1.9" y="1040" style="fill:#b8480a">Indian (Dharmic)</text><text class="famhead" x="1.9" y="1600" style="fill:#b3122e">East Asian</text><text class="famhead" x="1.9" y="1900" style="fill:#0f7c74">Iranian</text><text class="famhead" x="1.9" y="2018" style="fill:#7a5526">Ancient Near East &amp; Mediterranean</text><text class="famhead" x="1.9" y="2240" style="fill:#4a6420">Northern &amp; Celtic Europe</text><text class="famhead" x="1.9" y="2436" style="fill:#7b3fa0">Indigenous Americas</text><text class="famhead" x="1.9" y="2580" style="fill:#b02a6a">Africa &amp; diaspora</text></g><g class="links"><path class="branch" style="stroke:#2a5aa8" d="M308.2,80 C308.2,93 308.2,93 308.2,106"/><path class="branch" style="stroke:#2a5aa8" d="M405.4,80 C405.4,106 405.4,106 405.4,132"/><path class="branch" style="stroke:#2a5aa8" d="M496.1,132 C496.1,145 496.1,145 496.1,158"/><path class="branch" style="stroke:#2a5aa8" d="M500.6,132 C500.6,158 500.6,158 500.6,184"/><path class="branch" style="stroke:#2a5aa8" d="M637.0,132 C637.0,171 637.0,171 637.0,210"/><path class="branch" style="stroke:#2a5aa8" d="M637.0,132 C637.0,184 637.0,184 637.0,236"/><path class="branch" style="stroke:#2a5aa8" d="M752.4,236 C752.4,249 752.4,249 752.4,262"/><path class="branch" style="stroke:#2a5aa8" d="M754.1,262 C754.1,275 754.1,275 754.1,288"/><path class="branch" style="stroke:#2a5aa8" d="M759.3,262 C759.3,288 759.3,288 759.3,314"/><path class="branch" style="stroke:#2a5aa8" d="M763.6,262 C763.6,301 763.6,301 763.6,340"/><path class="branch" style="stroke:#2a5aa8" d="M767.0,262 C767.0,314 767.0,314 767.0,366"/><path class="branch" style="stroke:#2a5aa8" d="M942.4,366 C942.4,379 942.4,379 942.4,392"/><path class="branch" style="stroke:#2a5aa8" d="M1086.8,392 C1086.8,405 1086.8,405 1086.8,418"/><path class="branch" style="stroke:#2a5aa8" d="M831.5,262 C831.5,353 831.5,353 831.5,444"/><path class="branch" style="stroke:#2a5aa8" d="M868.5,262 C868.5,366 868.5,366 868.5,470"/><path class="branch" style="stroke:#2a5aa8" d="M1049.9,262 C1049.9,379 1049.9,379 1049.9,496"/><path class="branch" style="stroke:#2a5aa8" d="M1063.6,262 C1063.6,392 1063.6,392 1063.6,522"/><path class="branch" style="stroke:#2a5aa8" d="M1021.5,132 C1021.5,340 1021.5,340 1021.5,548"/><path class="branch" style="stroke:#2a5aa8" d="M1107.5,132 C1107.5,353 1107.5,353 1107.5,574"/><path class="branch" style="stroke:#2a5aa8" d="M570.5,80 C570.5,340 570.5,340 570.5,600"/><path class="branch" style="stroke:#2a5aa8" d="M944.1,80 C944.1,353 944.1,353 944.1,626"/><path class="branch" style="stroke:#2a5aa8" d="M1004.3,80 C1004.3,366 1004.3,366 1004.3,652"/><path class="branch" style="stroke:#2a5aa8" d="M1012.9,80 C1012.9,379 1012.9,379 1012.9,678"/><path class="branch" style="stroke:#2a5aa8" d="M1069.6,80 C1069.6,392 1069.6,392 1069.6,704"/><path class="branch" style="stroke:#2a5aa8" d="M541.5,756 C541.5,769 541.5,769 541.5,782"/><path class="branch" style="stroke:#2a5aa8" d="M1072.2,782 C1072.2,795 1072.2,795 1072.2,808"/><path class="branch" style="stroke:#2a5aa8" d="M552.4,756 C552.4,795 552.4,795 552.4,834"/><path class="branch" style="stroke:#2a5aa8" d="M571.6,834 C571.6,847 571.6,847 571.6,860"/><path class="branch" style="stroke:#2a5aa8" d="M628.6,860 C628.6,873 628.6,873 628.6,886"/><path class="branch" style="stroke:#2a5aa8" d="M1033.5,834 C1033.5,873 1033.5,873 1033.5,912"/><path class="branch" style="stroke:#2a5aa8" d="M1049.9,912 C1049.9,925 1049.9,925 1049.9,938"/><path class="branch" style="stroke:#2a5aa8" d="M553.5,756 C553.5,860 553.5,860 553.5,964"/><path class="branch" style="stroke:#2a5aa8" d="M568.2,756 C568.2,873 568.2,873 568.2,990"/><path class="branch" style="stroke:#b8480a" d="M285.6,1056 C285.6,1069 285.6,1069 285.6,1082"/><path class="branch" style="stroke:#b8480a" d="M364.7,1082 C364.7,1095 364.7,1095 364.7,1108"/><path class="branch" style="stroke:#b8480a" d="M746.4,1108 C746.4,1121 746.4,1121 746.4,1134"/><path class="branch" style="stroke:#b8480a" d="M421.3,1082 C421.3,1121 421.3,1121 421.3,1160"/><path class="branch" style="stroke:#b8480a" d="M660.9,1160 C660.9,1173 660.9,1173 660.9,1186"/><path class="branch" style="stroke:#b8480a" d="M511.7,1082 C511.7,1147 511.7,1147 511.7,1212"/><path class="branch" style="stroke:#b8480a" d="M579.5,1082 C579.5,1160 579.5,1160 579.5,1238"/><path class="branch" style="stroke:#b8480a" d="M342.1,1316 C342.1,1329 342.1,1329 342.1,1342"/><path class="branch" style="stroke:#b8480a" d="M421.3,1316 C421.3,1342 421.3,1342 421.3,1368"/><path class="branch" style="stroke:#b8480a" d="M489.5,1368 C489.5,1381 489.5,1381 489.5,1394"/><path class="branch" style="stroke:#b8480a" d="M511.7,1368 C511.7,1394 511.7,1394 511.7,1420"/><path class="branch" style="stroke:#b8480a" d="M545.6,1368 C545.6,1407 545.6,1407 545.6,1446"/><path class="branch" style="stroke:#b8480a" d="M682.0,1368 C682.0,1420 682.0,1420 682.0,1472"/><path class="branch" style="stroke:#b8480a" d="M1129.8,1316 C1129.8,1407 1129.8,1407 1129.8,1498"/><path class="branch" style="stroke:#b8480a" d="M908.9,1524 C908.9,1537 908.9,1537 908.9,1550"/><path class="branch" style="stroke:#b3122e" d="M285.6,1616 C285.6,1629 285.6,1629 285.6,1642"/><path class="branch" style="stroke:#b3122e" d="M308.2,1616 C308.2,1642 308.2,1642 308.2,1668"/><path class="branch" style="stroke:#b3122e" d="M430.8,1668 C430.8,1681 430.8,1681 430.8,1694"/><path class="branch" style="stroke:#b3122e" d="M663.2,1668 C663.2,1694 663.2,1694 663.2,1720"/><path class="branch" style="stroke:#b3122e" d="M1028.4,1746 C1028.4,1759 1028.4,1759 1028.4,1772"/><path class="branch" style="stroke:#b3122e" d="M1054.2,1746 C1054.2,1772 1054.2,1772 1054.2,1798"/><path class="branch" style="stroke:#7a5526" d="M142.8,2034 C142.8,2047 142.8,2047 142.8,2060"/><path class="branch revival" style="stroke:#4a6420" d="M1143.6,2282 C1143.6,2295 1143.6,2295 1143.6,2308"/><path class="branch" style="stroke:#b02a6a" d="M1021.5,2596 C1021.5,2609 1021.5,2609 1021.5,2622"/><path class="branch" style="stroke:#b02a6a" d="M1038.7,2596 C1038.7,2622 1038.7,2622 1038.7,2648"/><path class="branch" style="stroke:#b02a6a" d="M952.7,2674 C952.7,2687 952.7,2687 952.7,2700"/></g><g class="rows"><a class="row" href="t/judaism.html" data-s="-1200" data-e="" style="--c:#2a5aa8">
+<title>Judaism: c. 1200 BCE – present, 3,225 years</title>
+<rect class="hit" x="0" y="68" width="1200" height="24"/>
+<line class="life" x1="219.0" x2="1190.0" y1="80" y2="80"/><path class="open" d="M1188.0,76 L1194.0,80 L1188.0,84"/>
+<circle class="start approx" cx="219.0" cy="80" r="4.5"/>
+<text class="nm" x="228.0" y="74">Judaism</text></a><a class="row" href="t/samaritanism.html" data-s="-400" data-e="" style="--c:#2a5aa8">
+<title>Samaritanism: c. 400 BCE – present, 2,425 years</title>
+<rect class="hit" x="0" y="94" width="1200" height="24"/>
+<line class="life" x1="308.2" x2="1190.0" y1="106" y2="106"/><path class="open" d="M1188.0,102 L1194.0,106 L1188.0,110"/>
+<circle class="start approx" cx="308.2" cy="106" r="4.5"/>
+<text class="nm" x="317.2" y="100">Samaritanism</text></a><a class="row" href="t/christianity.html" data-s="30" data-e="" style="--c:#2a5aa8">
+<title>Christianity: c. 30 CE – present, 1,996 years</title>
+<rect class="hit" x="0" y="120" width="1200" height="24"/>
+<line class="life" x1="405.4" x2="1190.0" y1="132" y2="132"/><path class="open" d="M1188.0,128 L1194.0,132 L1188.0,136"/>
+<circle class="start approx" cx="405.4" cy="132" r="4.5"/>
+<text class="nm" x="414.4" y="126">Christianity</text></a><a class="row" href="t/church-of-the-east.html" data-s="431" data-e="" style="--c:#2a5aa8">
+<title>Church of the East: c. 431 CE – present, 1,595 years</title>
+<rect class="hit" x="0" y="146" width="1200" height="24"/>
+<line class="life" x1="496.1" x2="1190.0" y1="158" y2="158"/><path class="open" d="M1188.0,154 L1194.0,158 L1188.0,162"/>
+<circle class="start approx" cx="496.1" cy="158" r="4.5"/>
+<text class="nm" x="505.1" y="152">Church of the East</text></a><a class="row" href="t/oriental-orthodox.html" data-s="451" data-e="" style="--c:#2a5aa8">
+<title>Oriental Orthodoxy: 451 CE – present, 1,575 years</title>
+<rect class="hit" x="0" y="172" width="1200" height="24"/>
+<line class="life" x1="500.6" x2="1190.0" y1="184" y2="184"/><path class="open" d="M1188.0,180 L1194.0,184 L1188.0,188"/>
+<circle class="start" cx="500.6" cy="184" r="4.5"/>
+<text class="nm" x="509.6" y="178">Oriental Orthodoxy</text></a><a class="row" href="t/eastern-orthodox.html" data-s="1054" data-e="" style="--c:#2a5aa8">
+<title>Eastern Orthodoxy: c. 1054 – present, 972 years</title>
+<rect class="hit" x="0" y="198" width="1200" height="24"/>
+<line class="life" x1="637.0" x2="1190.0" y1="210" y2="210"/><path class="open" d="M1188.0,206 L1194.0,210 L1188.0,214"/>
+<circle class="start approx" cx="637.0" cy="210" r="4.5"/>
+<text class="nm" x="646.0" y="204">Eastern Orthodoxy</text></a><a class="row" href="t/catholicism.html" data-s="1054" data-e="" style="--c:#2a5aa8">
+<title>Catholicism: c. 1054 – present, 972 years</title>
+<rect class="hit" x="0" y="224" width="1200" height="24"/>
+<line class="life" x1="637.0" x2="1190.0" y1="236" y2="236"/><path class="open" d="M1188.0,232 L1194.0,236 L1188.0,240"/>
+<circle class="start approx" cx="637.0" cy="236" r="4.5"/>
+<text class="nm" x="646.0" y="230">Catholicism</text></a><a class="row" href="t/protestantism.html" data-s="1517" data-e="" style="--c:#2a5aa8">
+<title>Protestantism: 1517 – present, 509 years</title>
+<rect class="hit" x="0" y="250" width="1200" height="24"/>
+<line class="life" x1="752.4" x2="1190.0" y1="262" y2="262"/><path class="open" d="M1188.0,258 L1194.0,262 L1188.0,266"/>
+<circle class="start" cx="752.4" cy="262" r="4.5"/>
+<text class="nm" x="761.4" y="256">Protestantism</text></a><a class="row" href="t/reformed.html" data-s="1519" data-e="" style="--c:#2a5aa8">
+<title>Reformed (Calvinist): 1519 – present, 507 years</title>
+<rect class="hit" x="0" y="276" width="1200" height="24"/>
+<line class="life" x1="754.1" x2="1190.0" y1="288" y2="288"/><path class="open" d="M1188.0,284 L1194.0,288 L1188.0,292"/>
+<circle class="start" cx="754.1" cy="288" r="4.5"/>
+<text class="nm" x="763.1" y="282">Reformed (Calvinist)</text></a><a class="row" href="t/anabaptism.html" data-s="1525" data-e="" style="--c:#2a5aa8">
+<title>Anabaptism: 1525 – present, 501 years</title>
+<rect class="hit" x="0" y="302" width="1200" height="24"/>
+<line class="life" x1="759.3" x2="1190.0" y1="314" y2="314"/><path class="open" d="M1188.0,310 L1194.0,314 L1188.0,318"/>
+<circle class="start" cx="759.3" cy="314" r="4.5"/>
+<text class="nm" x="768.3" y="308">Anabaptism</text></a><a class="row" href="t/lutheranism.html" data-s="1530" data-e="" style="--c:#2a5aa8">
+<title>Lutheranism: 1530 – present, 496 years</title>
+<rect class="hit" x="0" y="328" width="1200" height="24"/>
+<line class="life" x1="763.6" x2="1190.0" y1="340" y2="340"/><path class="open" d="M1188.0,336 L1194.0,340 L1188.0,344"/>
+<circle class="start" cx="763.6" cy="340" r="4.5"/>
+<text class="nm" x="772.6" y="334">Lutheranism</text></a><a class="row" href="t/anglicanism.html" data-s="1534" data-e="" style="--c:#2a5aa8">
+<title>Anglicanism: 1534 – present, 492 years</title>
+<rect class="hit" x="0" y="354" width="1200" height="24"/>
+<line class="life" x1="767.0" x2="1190.0" y1="366" y2="366"/><path class="open" d="M1188.0,362 L1194.0,366 L1188.0,370"/>
+<circle class="start" cx="767.0" cy="366" r="4.5"/>
+<text class="nm" x="776.0" y="360">Anglicanism</text></a><a class="row" href="t/methodism.html" data-s="1738" data-e="" style="--c:#2a5aa8">
+<title>Methodism: 1738 – present, 288 years</title>
+<rect class="hit" x="0" y="380" width="1200" height="24"/>
+<line class="life" x1="942.4" x2="1190.0" y1="392" y2="392"/><path class="open" d="M1188.0,388 L1194.0,392 L1188.0,396"/>
+<circle class="start" cx="942.4" cy="392" r="4.5"/>
+<text class="nm" x="951.4" y="386">Methodism</text></a><a class="row" href="t/pentecostalism.html" data-s="1906" data-e="" style="--c:#2a5aa8">
+<title>Pentecostalism: 1906 – present, 120 years</title>
+<rect class="hit" x="0" y="406" width="1200" height="24"/>
+<line class="life" x1="1086.8" x2="1190.0" y1="418" y2="418"/><path class="open" d="M1188.0,414 L1194.0,418 L1188.0,422"/>
+<circle class="start" cx="1086.8" cy="418" r="4.5"/>
+<text class="nm" x="1077.8" y="412" text-anchor="end">Pentecostalism</text></a><a class="row" href="t/baptists.html" data-s="1609" data-e="" style="--c:#2a5aa8">
+<title>Baptists: 1609 – present, 417 years</title>
+<rect class="hit" x="0" y="432" width="1200" height="24"/>
+<line class="life" x1="831.5" x2="1190.0" y1="444" y2="444"/><path class="open" d="M1188.0,440 L1194.0,444 L1188.0,448"/>
+<circle class="start" cx="831.5" cy="444" r="4.5"/>
+<text class="nm" x="840.5" y="438">Baptists</text></a><a class="row" href="t/quakers.html" data-s="1652" data-e="" style="--c:#2a5aa8">
+<title>Quakers: 1652 – present, 374 years</title>
+<rect class="hit" x="0" y="458" width="1200" height="24"/>
+<line class="life" x1="868.5" x2="1190.0" y1="470" y2="470"/><path class="open" d="M1188.0,466 L1194.0,470 L1188.0,474"/>
+<circle class="start" cx="868.5" cy="470" r="4.5"/>
+<text class="nm" x="877.5" y="464">Quakers</text></a><a class="row" href="t/adventism.html" data-s="1863" data-e="" style="--c:#2a5aa8">
+<title>Seventh-day Adventism: 1863 – present, 163 years</title>
+<rect class="hit" x="0" y="484" width="1200" height="24"/>
+<line class="life" x1="1049.9" x2="1190.0" y1="496" y2="496"/><path class="open" d="M1188.0,492 L1194.0,496 L1188.0,500"/>
+<circle class="start" cx="1049.9" cy="496" r="4.5"/>
+<text class="nm" x="1040.9" y="490" text-anchor="end">Seventh-day Adventism</text></a><a class="row" href="t/jehovahs-witnesses.html" data-s="1879" data-e="" style="--c:#2a5aa8">
+<title>Jehovah's Witnesses: 1879 – present, 147 years</title>
+<rect class="hit" x="0" y="510" width="1200" height="24"/>
+<line class="life" x1="1063.6" x2="1190.0" y1="522" y2="522"/><path class="open" d="M1188.0,518 L1194.0,522 L1188.0,526"/>
+<circle class="start" cx="1063.6" cy="522" r="4.5"/>
+<text class="nm" x="1054.6" y="516" text-anchor="end">Jehovah's Witnesses</text></a><a class="row" href="t/latter-day-saints.html" data-s="1830" data-e="" style="--c:#2a5aa8">
+<title>Latter Day Saints: 1830 – present, 196 years</title>
+<rect class="hit" x="0" y="536" width="1200" height="24"/>
+<line class="life" x1="1021.5" x2="1190.0" y1="548" y2="548"/><path class="open" d="M1188.0,544 L1194.0,548 L1188.0,552"/>
+<circle class="start" cx="1021.5" cy="548" r="4.5"/>
+<text class="nm" x="1012.5" y="542" text-anchor="end">Latter Day Saints</text></a><a class="row" href="t/rastafari.html" data-s="1930" data-e="" style="--c:#2a5aa8">
+<title>Rastafari: c. 1930 – present, 96 years</title>
+<rect class="hit" x="0" y="562" width="1200" height="24"/>
+<line class="life" x1="1107.5" x2="1190.0" y1="574" y2="574"/><path class="open" d="M1188.0,570 L1194.0,574 L1188.0,578"/>
+<circle class="start approx" cx="1107.5" cy="574" r="4.5"/>
+<text class="nm" x="1098.5" y="568" text-anchor="end">Rastafari</text></a><a class="row" href="t/karaite.html" data-s="760" data-e="" style="--c:#2a5aa8">
+<title>Karaite Judaism: c. 760 CE – present, 1,266 years</title>
+<rect class="hit" x="0" y="588" width="1200" height="24"/>
+<line class="life" x1="570.5" x2="1190.0" y1="600" y2="600"/><path class="open" d="M1188.0,596 L1194.0,600 L1188.0,604"/>
+<circle class="start approx" cx="570.5" cy="600" r="4.5"/>
+<text class="nm" x="579.5" y="594">Karaite Judaism</text></a><a class="row" href="t/hasidism.html" data-s="1740" data-e="" style="--c:#2a5aa8">
+<title>Hasidic Judaism: c. 1740 – present, 286 years</title>
+<rect class="hit" x="0" y="614" width="1200" height="24"/>
+<line class="life" x1="944.1" x2="1190.0" y1="626" y2="626"/><path class="open" d="M1188.0,622 L1194.0,626 L1188.0,630"/>
+<circle class="start approx" cx="944.1" cy="626" r="4.5"/>
+<text class="nm" x="953.1" y="620">Hasidic Judaism</text></a><a class="row" href="t/reform-judaism.html" data-s="1810" data-e="" style="--c:#2a5aa8">
+<title>Reform Judaism: 1810 – present, 216 years</title>
+<rect class="hit" x="0" y="640" width="1200" height="24"/>
+<line class="life" x1="1004.3" x2="1190.0" y1="652" y2="652"/><path class="open" d="M1188.0,648 L1194.0,652 L1188.0,656"/>
+<circle class="start" cx="1004.3" cy="652" r="4.5"/>
+<text class="nm" x="995.3" y="646" text-anchor="end">Reform Judaism</text></a><a class="row" href="t/orthodox-judaism.html" data-s="1820" data-e="" style="--c:#2a5aa8">
+<title>Orthodox Judaism: c. 1820 – present, 206 years</title>
+<rect class="hit" x="0" y="666" width="1200" height="24"/>
+<line class="life" x1="1012.9" x2="1190.0" y1="678" y2="678"/><path class="open" d="M1188.0,674 L1194.0,678 L1188.0,682"/>
+<circle class="start approx" cx="1012.9" cy="678" r="4.5"/>
+<text class="nm" x="1003.9" y="672" text-anchor="end">Orthodox Judaism</text></a><a class="row" href="t/conservative-judaism.html" data-s="1886" data-e="" style="--c:#2a5aa8">
+<title>Conservative Judaism: 1886 – present, 140 years</title>
+<rect class="hit" x="0" y="692" width="1200" height="24"/>
+<line class="life" x1="1069.6" x2="1190.0" y1="704" y2="704"/><path class="open" d="M1188.0,700 L1194.0,704 L1188.0,708"/>
+<circle class="start" cx="1069.6" cy="704" r="4.5"/>
+<text class="nm" x="1060.6" y="698" text-anchor="end">Conservative Judaism</text></a><a class="row" href="t/mandaeism.html" data-s="100" data-e="" style="--c:#2a5aa8">
+<title>Mandaeism: c. 100 CE – present, 1,926 years</title>
+<rect class="hit" x="0" y="718" width="1200" height="24"/>
+<line class="life" x1="421.3" x2="1190.0" y1="730" y2="730"/><path class="open" d="M1188.0,726 L1194.0,730 L1188.0,734"/>
+<circle class="start approx" cx="421.3" cy="730" r="4.5"/>
+<text class="nm" x="430.3" y="724">Mandaeism</text></a><a class="row" href="t/islam.html" data-s="610" data-e="" style="--c:#2a5aa8">
+<title>Islam: 610 CE – present, 1,416 years</title>
+<rect class="hit" x="0" y="744" width="1200" height="24"/>
+<line class="life" x1="536.6" x2="1190.0" y1="756" y2="756"/><path class="open" d="M1188.0,752 L1194.0,756 L1188.0,760"/>
+<circle class="start" cx="536.6" cy="756" r="4.5"/>
+<text class="nm" x="545.6" y="750">Islam</text></a><a class="row" href="t/sunni.html" data-s="632" data-e="" style="--c:#2a5aa8">
+<title>Sunni Islam: c. 632 CE – present, 1,394 years</title>
+<rect class="hit" x="0" y="770" width="1200" height="24"/>
+<line class="life" x1="541.5" x2="1190.0" y1="782" y2="782"/><path class="open" d="M1188.0,778 L1194.0,782 L1188.0,786"/>
+<circle class="start approx" cx="541.5" cy="782" r="4.5"/>
+<text class="nm" x="550.5" y="776">Sunni Islam</text></a><a class="row" href="t/ahmadiyya.html" data-s="1889" data-e="" style="--c:#2a5aa8">
+<title>Ahmadiyya: 1889 – present, 137 years</title>
+<rect class="hit" x="0" y="796" width="1200" height="24"/>
+<line class="life" x1="1072.2" x2="1190.0" y1="808" y2="808"/><path class="open" d="M1188.0,804 L1194.0,808 L1188.0,812"/>
+<circle class="start" cx="1072.2" cy="808" r="4.5"/>
+<text class="nm" x="1063.2" y="802" text-anchor="end">Ahmadiyya</text></a><a class="row" href="t/shia.html" data-s="680" data-e="" style="--c:#2a5aa8">
+<title>Shia Islam: c. 680 CE – present, 1,346 years</title>
+<rect class="hit" x="0" y="822" width="1200" height="24"/>
+<line class="life" x1="552.4" x2="1190.0" y1="834" y2="834"/><path class="open" d="M1188.0,830 L1194.0,834 L1188.0,838"/>
+<circle class="start approx" cx="552.4" cy="834" r="4.5"/>
+<text class="nm" x="561.4" y="828">Shia Islam</text></a><a class="row" href="t/ismailism.html" data-s="765" data-e="" style="--c:#2a5aa8">
+<title>Ismailism: c. 765 CE – present, 1,261 years</title>
+<rect class="hit" x="0" y="848" width="1200" height="24"/>
+<line class="life" x1="571.6" x2="1190.0" y1="860" y2="860"/><path class="open" d="M1188.0,856 L1194.0,860 L1188.0,864"/>
+<circle class="start approx" cx="571.6" cy="860" r="4.5"/>
+<text class="nm" x="580.6" y="854">Ismailism</text></a><a class="row" href="t/druze.html" data-s="1017" data-e="" style="--c:#2a5aa8">
+<title>Druze: 1017 – present, 1,009 years</title>
+<rect class="hit" x="0" y="874" width="1200" height="24"/>
+<line class="life" x1="628.6" x2="1190.0" y1="886" y2="886"/><path class="open" d="M1188.0,882 L1194.0,886 L1188.0,890"/>
+<circle class="start" cx="628.6" cy="886" r="4.5"/>
+<text class="nm" x="637.6" y="880">Druze</text></a><a class="row ended" href="t/babism.html" data-s="1844" data-e="1866" style="--c:#2a5aa8">
+<title>Bábism: c. 1844 – c. 1866, 22 years</title>
+<rect class="hit" x="0" y="900" width="1200" height="24"/>
+<line class="life" x1="1033.5" x2="1052.4" y1="912" y2="912"/><rect class="cap" x="1050.9" y="904" width="3.5" height="16"/>
+<circle class="start approx" cx="1033.5" cy="912" r="4.5"/>
+<text class="nm" x="1024.5" y="906" text-anchor="end">Bábism</text><text class="endtxt" x="1059.4" y="906">c. 1866</text></a><a class="row" href="t/bahai.html" data-s="1863" data-e="" style="--c:#2a5aa8">
+<title>Bahá'í Faith: 1863 – present, 163 years</title>
+<rect class="hit" x="0" y="926" width="1200" height="24"/>
+<line class="life" x1="1049.9" x2="1190.0" y1="938" y2="938"/><path class="open" d="M1188.0,934 L1194.0,938 L1188.0,942"/>
+<circle class="start" cx="1049.9" cy="938" r="4.5"/>
+<text class="nm" x="1040.9" y="932" text-anchor="end">Bahá'í Faith</text></a><a class="row" href="t/ibadi.html" data-s="685" data-e="" style="--c:#2a5aa8">
+<title>Ibadi Islam: c. 685 CE – present, 1,341 years</title>
+<rect class="hit" x="0" y="952" width="1200" height="24"/>
+<line class="life" x1="553.5" x2="1190.0" y1="964" y2="964"/><path class="open" d="M1188.0,960 L1194.0,964 L1188.0,968"/>
+<circle class="start approx" cx="553.5" cy="964" r="4.5"/>
+<text class="nm" x="562.5" y="958">Ibadi Islam</text></a><a class="row" href="t/sufism.html" data-s="750" data-e="" style="--c:#2a5aa8">
+<title>Sufism: c. 750 CE – present, 1,276 years</title>
+<rect class="hit" x="0" y="978" width="1200" height="24"/>
+<line class="life" x1="568.2" x2="1190.0" y1="990" y2="990"/><path class="open" d="M1188.0,986 L1194.0,990 L1188.0,994"/>
+<circle class="start approx" cx="568.2" cy="990" r="4.5"/>
+<text class="nm" x="577.2" y="984">Sufism</text></a><a class="row ended" href="t/vedic.html" data-s="-1500" data-e="-500" style="--c:#b8480a">
+<title>Historical Vedic religion: c. 1500 BCE – c. 500 BCE, 1,000 years</title>
+<rect class="hit" x="0" y="1044" width="1200" height="24"/>
+<line class="life" x1="190.4" x2="285.6" y1="1056" y2="1056"/><rect class="cap" x="284.1" y="1048" width="3.5" height="16"/>
+<circle class="start approx" cx="190.4" cy="1056" r="4.5"/>
+<text class="nm" x="199.4" y="1050">Historical Vedic religion</text><text class="endtxt" x="292.6" y="1050">c. 500 BCE</text></a><a class="row" href="t/hinduism.html" data-s="-500" data-e="" style="--c:#b8480a">
+<title>Hinduism: c. 500 BCE – present, 2,525 years</title>
+<rect class="hit" x="0" y="1070" width="1200" height="24"/>
+<line class="life" x1="285.6" x2="1190.0" y1="1082" y2="1082"/><path class="open" d="M1188.0,1078 L1194.0,1082 L1188.0,1086"/>
+<circle class="start approx" cx="285.6" cy="1082" r="4.5"/>
+<text class="nm" x="294.6" y="1076">Hinduism</text></a><a class="row" href="t/vaishnavism.html" data-s="-150" data-e="" style="--c:#b8480a">
+<title>Vaishnavism: c. 150 BCE – present, 2,175 years</title>
+<rect class="hit" x="0" y="1096" width="1200" height="24"/>
+<line class="life" x1="364.7" x2="1190.0" y1="1108" y2="1108"/><path class="open" d="M1188.0,1104 L1194.0,1108 L1188.0,1112"/>
+<circle class="start approx" cx="364.7" cy="1108" r="4.5"/>
+<text class="nm" x="373.7" y="1102">Vaishnavism</text></a><a class="row" href="t/gaudiya.html" data-s="1510" data-e="" style="--c:#b8480a">
+<title>Gaudiya Vaishnavism: c. 1510 – present, 516 years</title>
+<rect class="hit" x="0" y="1122" width="1200" height="24"/>
+<line class="life" x1="746.4" x2="1190.0" y1="1134" y2="1134"/><path class="open" d="M1188.0,1130 L1194.0,1134 L1188.0,1138"/>
+<circle class="start approx" cx="746.4" cy="1134" r="4.5"/>
+<text class="nm" x="755.4" y="1128">Gaudiya Vaishnavism</text></a><a class="row" href="t/shaivism.html" data-s="100" data-e="" style="--c:#b8480a">
+<title>Shaivism: c. 100 CE – present, 1,926 years</title>
+<rect class="hit" x="0" y="1148" width="1200" height="24"/>
+<line class="life" x1="421.3" x2="1190.0" y1="1160" y2="1160"/><path class="open" d="M1188.0,1156 L1194.0,1160 L1188.0,1164"/>
+<circle class="start approx" cx="421.3" cy="1160" r="4.5"/>
+<text class="nm" x="430.3" y="1154">Shaivism</text></a><a class="row" href="t/lingayatism.html" data-s="1160" data-e="" style="--c:#b8480a">
+<title>Lingayatism: c. 1160 – present, 866 years</title>
+<rect class="hit" x="0" y="1174" width="1200" height="24"/>
+<line class="life" x1="660.9" x2="1190.0" y1="1186" y2="1186"/><path class="open" d="M1188.0,1182 L1194.0,1186 L1188.0,1190"/>
+<circle class="start approx" cx="660.9" cy="1186" r="4.5"/>
+<text class="nm" x="669.9" y="1180">Lingayatism</text></a><a class="row" href="t/shaktism.html" data-s="500" data-e="" style="--c:#b8480a">
+<title>Shaktism: c. 500 CE – present, 1,526 years</title>
+<rect class="hit" x="0" y="1200" width="1200" height="24"/>
+<line class="life" x1="511.7" x2="1190.0" y1="1212" y2="1212"/><path class="open" d="M1188.0,1208 L1194.0,1212 L1188.0,1216"/>
+<circle class="start approx" cx="511.7" cy="1212" r="4.5"/>
+<text class="nm" x="520.7" y="1206">Shaktism</text></a><a class="row" href="t/smartism.html" data-s="800" data-e="" style="--c:#b8480a">
+<title>Smartism: c. 800 CE – present, 1,226 years</title>
+<rect class="hit" x="0" y="1226" width="1200" height="24"/>
+<line class="life" x1="579.5" x2="1190.0" y1="1238" y2="1238"/><path class="open" d="M1188.0,1234 L1194.0,1238 L1188.0,1242"/>
+<circle class="start approx" cx="579.5" cy="1238" r="4.5"/>
+<text class="nm" x="588.5" y="1232">Smartism</text></a><a class="row" href="t/jainism.html" data-s="-500" data-e="" style="--c:#b8480a">
+<title>Jainism: c. 500 BCE – present, 2,525 years</title>
+<rect class="hit" x="0" y="1252" width="1200" height="24"/>
+<line class="life" x1="285.6" x2="1190.0" y1="1264" y2="1264"/><path class="open" d="M1188.0,1260 L1194.0,1264 L1188.0,1268"/>
+<circle class="start approx" cx="285.6" cy="1264" r="4.5"/>
+<text class="nm" x="294.6" y="1258">Jainism</text></a><a class="row ended" href="t/ajivika.html" data-s="-500" data-e="1400" style="--c:#b8480a">
+<title>Ājīvika: c. 500 BCE – c. 1400, 1,899 years</title>
+<rect class="hit" x="0" y="1278" width="1200" height="24"/>
+<line class="life" x1="285.6" x2="715.2" y1="1290" y2="1290"/><rect class="cap" x="713.7" y="1282" width="3.5" height="16"/>
+<circle class="start approx" cx="285.6" cy="1290" r="4.5"/>
+<text class="nm" x="294.6" y="1284">Ājīvika</text><text class="endtxt" x="722.2" y="1284">c. 1400</text></a><a class="row" href="t/buddhism.html" data-s="-450" data-e="" style="--c:#b8480a">
+<title>Buddhism: c. 450 BCE – present, 2,475 years</title>
+<rect class="hit" x="0" y="1304" width="1200" height="24"/>
+<line class="life" x1="296.9" x2="1190.0" y1="1316" y2="1316"/><path class="open" d="M1188.0,1312 L1194.0,1316 L1188.0,1320"/>
+<circle class="start approx" cx="296.9" cy="1316" r="4.5"/>
+<text class="nm" x="305.9" y="1310">Buddhism</text></a><a class="row" href="t/theravada.html" data-s="-250" data-e="" style="--c:#b8480a">
+<title>Theravada: c. 250 BCE – present, 2,275 years</title>
+<rect class="hit" x="0" y="1330" width="1200" height="24"/>
+<line class="life" x1="342.1" x2="1190.0" y1="1342" y2="1342"/><path class="open" d="M1188.0,1338 L1194.0,1342 L1188.0,1346"/>
+<circle class="start approx" cx="342.1" cy="1342" r="4.5"/>
+<text class="nm" x="351.1" y="1336">Theravada</text></a><a class="row" href="t/mahayana.html" data-s="100" data-e="" style="--c:#b8480a">
+<title>Mahayana: c. 100 CE – present, 1,926 years</title>
+<rect class="hit" x="0" y="1356" width="1200" height="24"/>
+<line class="life" x1="421.3" x2="1190.0" y1="1368" y2="1368"/><path class="open" d="M1188.0,1364 L1194.0,1368 L1188.0,1372"/>
+<circle class="start approx" cx="421.3" cy="1368" r="4.5"/>
+<text class="nm" x="430.3" y="1362">Mahayana</text></a><a class="row" href="t/pure-land.html" data-s="402" data-e="" style="--c:#b8480a">
+<title>Pure Land Buddhism: c. 402 CE – present, 1,624 years</title>
+<rect class="hit" x="0" y="1382" width="1200" height="24"/>
+<line class="life" x1="489.5" x2="1190.0" y1="1394" y2="1394"/><path class="open" d="M1188.0,1390 L1194.0,1394 L1188.0,1398"/>
+<circle class="start approx" cx="489.5" cy="1394" r="4.5"/>
+<text class="nm" x="498.5" y="1388">Pure Land Buddhism</text></a><a class="row" href="t/chan-zen.html" data-s="500" data-e="" style="--c:#b8480a">
+<title>Chan / Zen: c. 500 CE – present, 1,526 years</title>
+<rect class="hit" x="0" y="1408" width="1200" height="24"/>
+<line class="life" x1="511.7" x2="1190.0" y1="1420" y2="1420"/><path class="open" d="M1188.0,1416 L1194.0,1420 L1188.0,1424"/>
+<circle class="start approx" cx="511.7" cy="1420" r="4.5"/>
+<text class="nm" x="520.7" y="1414">Chan / Zen</text></a><a class="row" href="t/vajrayana.html" data-s="650" data-e="" style="--c:#b8480a">
+<title>Vajrayana: c. 650 CE – present, 1,376 years</title>
+<rect class="hit" x="0" y="1434" width="1200" height="24"/>
+<line class="life" x1="545.6" x2="1190.0" y1="1446" y2="1446"/><path class="open" d="M1188.0,1442 L1194.0,1446 L1188.0,1450"/>
+<circle class="start approx" cx="545.6" cy="1446" r="4.5"/>
+<text class="nm" x="554.6" y="1440">Vajrayana</text></a><a class="row" href="t/nichiren.html" data-s="1253" data-e="" style="--c:#b8480a">
+<title>Nichiren Buddhism: 1253 – present, 773 years</title>
+<rect class="hit" x="0" y="1460" width="1200" height="24"/>
+<line class="life" x1="682.0" x2="1190.0" y1="1472" y2="1472"/><path class="open" d="M1188.0,1468 L1194.0,1472 L1188.0,1476"/>
+<circle class="start" cx="682.0" cy="1472" r="4.5"/>
+<text class="nm" x="691.0" y="1466">Nichiren Buddhism</text></a><a class="row" href="t/navayana.html" data-s="1956" data-e="" style="--c:#b8480a">
+<title>Navayana: 1956 – present, 70 years</title>
+<rect class="hit" x="0" y="1486" width="1200" height="24"/>
+<line class="life" x1="1129.8" x2="1190.0" y1="1498" y2="1498"/><path class="open" d="M1188.0,1494 L1194.0,1498 L1188.0,1502"/>
+<circle class="start" cx="1129.8" cy="1498" r="4.5"/>
+<text class="nm" x="1120.8" y="1492" text-anchor="end">Navayana</text></a><a class="row" href="t/sikhism.html" data-s="1499" data-e="" style="--c:#b8480a">
+<title>Sikhism: c. 1499 – present, 527 years</title>
+<rect class="hit" x="0" y="1512" width="1200" height="24"/>
+<line class="life" x1="737.6" x2="1190.0" y1="1524" y2="1524"/><path class="open" d="M1188.0,1520 L1194.0,1524 L1188.0,1528"/>
+<circle class="start approx" cx="737.6" cy="1524" r="4.5"/>
+<text class="nm" x="746.6" y="1518">Sikhism</text></a><a class="row" href="t/khalsa.html" data-s="1699" data-e="" style="--c:#b8480a">
+<title>Khalsa: 1699 – present, 327 years</title>
+<rect class="hit" x="0" y="1538" width="1200" height="24"/>
+<line class="life" x1="908.9" x2="1190.0" y1="1550" y2="1550"/><path class="open" d="M1188.0,1546 L1194.0,1550 L1188.0,1554"/>
+<circle class="start" cx="908.9" cy="1550" r="4.5"/>
+<text class="nm" x="917.9" y="1544">Khalsa</text></a><a class="row" href="t/chinese-folk.html" data-s="-1250" data-e="" style="--c:#b3122e">
+<title>Chinese folk religion: c. 1250 BCE – present, 3,275 years</title>
+<rect class="hit" x="0" y="1604" width="1200" height="24"/>
+<line class="life" x1="214.2" x2="1190.0" y1="1616" y2="1616"/><path class="open" d="M1188.0,1612 L1194.0,1616 L1188.0,1620"/>
+<circle class="start approx" cx="214.2" cy="1616" r="4.5"/>
+<text class="nm" x="223.2" y="1610">Chinese folk religion</text></a><a class="row" href="t/confucianism.html" data-s="-500" data-e="" style="--c:#b3122e">
+<title>Confucianism: c. 500 BCE – present, 2,525 years</title>
+<rect class="hit" x="0" y="1630" width="1200" height="24"/>
+<line class="life" x1="285.6" x2="1190.0" y1="1642" y2="1642"/><path class="open" d="M1188.0,1638 L1194.0,1642 L1188.0,1646"/>
+<circle class="start approx" cx="285.6" cy="1642" r="4.5"/>
+<text class="nm" x="294.6" y="1636">Confucianism</text></a><a class="row" href="t/daoism.html" data-s="-400" data-e="" style="--c:#b3122e">
+<title>Daoism: c. 400 BCE – present, 2,425 years</title>
+<rect class="hit" x="0" y="1656" width="1200" height="24"/>
+<line class="life" x1="308.2" x2="1190.0" y1="1668" y2="1668"/><path class="open" d="M1188.0,1664 L1194.0,1668 L1188.0,1672"/>
+<circle class="start approx" cx="308.2" cy="1668" r="4.5"/>
+<text class="nm" x="317.2" y="1662">Daoism</text></a><a class="row" href="t/celestial-masters.html" data-s="142" data-e="" style="--c:#b3122e">
+<title>Way of the Celestial Masters: 142 CE – present, 1,884 years</title>
+<rect class="hit" x="0" y="1682" width="1200" height="24"/>
+<line class="life" x1="430.8" x2="1190.0" y1="1694" y2="1694"/><path class="open" d="M1188.0,1690 L1194.0,1694 L1188.0,1698"/>
+<circle class="start" cx="430.8" cy="1694" r="4.5"/>
+<text class="nm" x="439.8" y="1688">Way of the Celestial Masters</text></a><a class="row" href="t/quanzhen.html" data-s="1170" data-e="" style="--c:#b3122e">
+<title>Quanzhen Daoism: c. 1170 – present, 856 years</title>
+<rect class="hit" x="0" y="1708" width="1200" height="24"/>
+<line class="life" x1="663.2" x2="1190.0" y1="1720" y2="1720"/><path class="open" d="M1188.0,1716 L1194.0,1720 L1188.0,1724"/>
+<circle class="start approx" cx="663.2" cy="1720" r="4.5"/>
+<text class="nm" x="672.2" y="1714">Quanzhen Daoism</text></a><a class="row" href="t/shinto.html" data-s="700" data-e="" style="--c:#b3122e">
+<title>Shinto: c. 700 CE – present, 1,326 years</title>
+<rect class="hit" x="0" y="1734" width="1200" height="24"/>
+<line class="life" x1="556.9" x2="1190.0" y1="1746" y2="1746"/><path class="open" d="M1188.0,1742 L1194.0,1746 L1188.0,1750"/>
+<circle class="start approx" cx="556.9" cy="1746" r="4.5"/>
+<text class="nm" x="565.9" y="1740">Shinto</text></a><a class="row" href="t/tenrikyo.html" data-s="1838" data-e="" style="--c:#b3122e">
+<title>Tenrikyo: 1838 – present, 188 years</title>
+<rect class="hit" x="0" y="1760" width="1200" height="24"/>
+<line class="life" x1="1028.4" x2="1190.0" y1="1772" y2="1772"/><path class="open" d="M1188.0,1768 L1194.0,1772 L1188.0,1776"/>
+<circle class="start" cx="1028.4" cy="1772" r="4.5"/>
+<text class="nm" x="1019.4" y="1766" text-anchor="end">Tenrikyo</text></a><a class="row ended" href="t/state-shinto.html" data-s="1868" data-e="1945" style="--c:#b3122e">
+<title>State Shinto: 1868 – 1945, 77 years</title>
+<rect class="hit" x="0" y="1786" width="1200" height="24"/>
+<line class="life" x1="1054.2" x2="1120.4" y1="1798" y2="1798"/><rect class="cap" x="1118.9" y="1790" width="3.5" height="16"/>
+<circle class="start" cx="1054.2" cy="1798" r="4.5"/>
+<text class="nm" x="1045.2" y="1792" text-anchor="end">State Shinto</text><text class="endtxt" x="1127.4" y="1792">1945</text></a><a class="row" href="t/cheondoism.html" data-s="1860" data-e="" style="--c:#b3122e">
+<title>Cheondoism: 1860 – present, 166 years</title>
+<rect class="hit" x="0" y="1812" width="1200" height="24"/>
+<line class="life" x1="1047.3" x2="1190.0" y1="1824" y2="1824"/><path class="open" d="M1188.0,1820 L1194.0,1824 L1188.0,1828"/>
+<circle class="start" cx="1047.3" cy="1824" r="4.5"/>
+<text class="nm" x="1038.3" y="1818" text-anchor="end">Cheondoism</text></a><a class="row" href="t/caodaism.html" data-s="1926" data-e="" style="--c:#b3122e">
+<title>Caodaism: 1926 – present, 100 years</title>
+<rect class="hit" x="0" y="1838" width="1200" height="24"/>
+<line class="life" x1="1104.0" x2="1190.0" y1="1850" y2="1850"/><path class="open" d="M1188.0,1846 L1194.0,1850 L1188.0,1854"/>
+<circle class="start" cx="1104.0" cy="1850" r="4.5"/>
+<text class="nm" x="1095.0" y="1844" text-anchor="end">Caodaism</text></a><a class="row" href="t/zoroastrianism.html" data-s="-1000" data-e="" style="--c:#0f7c74">
+<title>Zoroastrianism: c. 1000 BCE – present, 3,025 years</title>
+<rect class="hit" x="0" y="1904" width="1200" height="24"/>
+<line class="life" x1="238.0" x2="1190.0" y1="1916" y2="1916"/><path class="open" d="M1188.0,1912 L1194.0,1916 L1188.0,1920"/>
+<circle class="start approx" cx="238.0" cy="1916" r="4.5"/>
+<text class="nm" x="247.0" y="1910">Zoroastrianism</text></a><a class="row ended" href="t/manichaeism.html" data-s="240" data-e="1600" style="--c:#0f7c74">
+<title>Manichaeism: c. 240 CE – c. 1600, 1,360 years</title>
+<rect class="hit" x="0" y="1930" width="1200" height="24"/>
+<line class="life" x1="452.9" x2="823.8" y1="1942" y2="1942"/><rect class="cap" x="822.3" y="1934" width="3.5" height="16"/>
+<circle class="start approx" cx="452.9" cy="1942" r="4.5"/>
+<text class="nm" x="461.9" y="1936">Manichaeism</text><text class="endtxt" x="830.8" y="1936">c. 1600</text></a><a class="row" href="t/yazidism.html" data-s="1150" data-e="" style="--c:#0f7c74">
+<title>Yazidism: c. 1150 – present, 876 years</title>
+<rect class="hit" x="0" y="1956" width="1200" height="24"/>
+<line class="life" x1="658.7" x2="1190.0" y1="1968" y2="1968"/><path class="open" d="M1188.0,1964 L1194.0,1968 L1188.0,1972"/>
+<circle class="start approx" cx="658.7" cy="1968" r="4.5"/>
+<text class="nm" x="667.7" y="1962">Yazidism</text></a><a class="row ended" href="t/sumerian.html" data-s="-3500" data-e="-2000" style="--c:#7a5526">
+<title>Sumerian religion: c. 3500 BCE – c. 2000 BCE, 1,500 years</title>
+<rect class="hit" x="0" y="2022" width="1200" height="24"/>
+<line class="life" x1="0.0" x2="142.8" y1="2034" y2="2034"/><rect class="cap" x="141.3" y="2026" width="3.5" height="16"/>
+<circle class="start approx" cx="0.0" cy="2034" r="4.5"/>
+<text class="nm" x="9.0" y="2028">Sumerian religion</text><text class="endtxt" x="149.8" y="2028">c. 2000 BCE</text></a><a class="row ended" href="t/mesopotamian.html" data-s="-2000" data-e="100" style="--c:#7a5526">
+<title>Babylonian &amp; Assyrian religion: c. 2000 BCE – c. 100 CE, 2,099 years</title>
+<rect class="hit" x="0" y="2048" width="1200" height="24"/>
+<line class="life" x1="142.8" x2="421.3" y1="2060" y2="2060"/><rect class="cap" x="419.8" y="2052" width="3.5" height="16"/>
+<circle class="start approx" cx="142.8" cy="2060" r="4.5"/>
+<text class="nm" x="151.8" y="2054">Babylonian &amp; Assyrian religion</text><text class="endtxt" x="428.3" y="2054">c. 100 CE</text></a><a class="row ended" href="t/egyptian.html" data-s="-3100" data-e="537" style="--c:#7a5526">
+<title>Ancient Egyptian religion: c. 3100 BCE – c. 537 CE, 3,636 years</title>
+<rect class="hit" x="0" y="2074" width="1200" height="24"/>
+<line class="life" x1="38.1" x2="520.1" y1="2086" y2="2086"/><rect class="cap" x="518.6" y="2078" width="3.5" height="16"/>
+<circle class="start approx" cx="38.1" cy="2086" r="4.5"/>
+<text class="nm" x="47.1" y="2080">Ancient Egyptian religion</text><text class="endtxt" x="527.1" y="2080">c. 537 CE</text></a><a class="row ended" href="t/canaanite.html" data-s="-2000" data-e="400" style="--c:#7a5526">
+<title>Canaanite &amp; Phoenician religion: c. 2000 BCE – c. 400 CE, 2,399 years</title>
+<rect class="hit" x="0" y="2100" width="1200" height="24"/>
+<line class="life" x1="142.8" x2="489.1" y1="2112" y2="2112"/><rect class="cap" x="487.6" y="2104" width="3.5" height="16"/>
+<circle class="start approx" cx="142.8" cy="2112" r="4.5"/>
+<text class="nm" x="151.8" y="2106">Canaanite &amp; Phoenician religion</text><text class="endtxt" x="496.1" y="2106">c. 400 CE</text></a><a class="row ended" href="t/greek.html" data-s="-1400" data-e="529" style="--c:#7a5526">
+<title>Ancient Greek religion: c. 1400 BCE – 529 CE, 1,928 years</title>
+<rect class="hit" x="0" y="2126" width="1200" height="24"/>
+<line class="life" x1="199.9" x2="518.3" y1="2138" y2="2138"/><rect class="cap" x="516.8" y="2130" width="3.5" height="16"/>
+<circle class="start approx" cx="199.9" cy="2138" r="4.5"/>
+<text class="nm" x="208.9" y="2132">Ancient Greek religion</text><text class="endtxt" x="525.3" y="2132">529 CE</text></a><a class="row ended" href="t/roman.html" data-s="-753" data-e="392" style="--c:#7a5526">
+<title>Ancient Roman religion: c. 753 BCE – 392 CE, 1,144 years</title>
+<rect class="hit" x="0" y="2152" width="1200" height="24"/>
+<line class="life" x1="261.5" x2="487.3" y1="2164" y2="2164"/><rect class="cap" x="485.8" y="2156" width="3.5" height="16"/>
+<circle class="start approx" cx="261.5" cy="2164" r="4.5"/>
+<text class="nm" x="270.5" y="2158">Ancient Roman religion</text><text class="endtxt" x="494.3" y="2158">392 CE</text></a><a class="row ended" href="t/mithraism.html" data-s="80" data-e="400" style="--c:#7a5526">
+<title>Mithraism: c. 80 CE – c. 400 CE, 320 years</title>
+<rect class="hit" x="0" y="2178" width="1200" height="24"/>
+<line class="life" x1="416.7" x2="489.1" y1="2190" y2="2190"/><rect class="cap" x="487.6" y="2182" width="3.5" height="16"/>
+<circle class="start approx" cx="416.7" cy="2190" r="4.5"/>
+<text class="nm" x="425.7" y="2184">Mithraism</text><text class="endtxt" x="496.1" y="2184">c. 400 CE</text></a><a class="row ended" href="t/celtic.html" data-s="-600" data-e="600" style="--c:#4a6420">
+<title>Celtic religion: c. 600 BCE – c. 600 CE, 1,199 years</title>
+<rect class="hit" x="0" y="2244" width="1200" height="24"/>
+<line class="life" x1="276.1" x2="534.3" y1="2256" y2="2256"/><rect class="cap" x="532.8" y="2248" width="3.5" height="16"/>
+<circle class="start approx" cx="276.1" cy="2256" r="4.5"/>
+<text class="nm" x="285.1" y="2250">Celtic religion</text><text class="endtxt" x="541.3" y="2250">c. 600 CE</text></a><a class="row ended" href="t/germanic.html" data-s="-500" data-e="1100" style="--c:#4a6420">
+<title>Germanic &amp; Norse religion: c. 500 BCE – c. 1100, 1,599 years</title>
+<rect class="hit" x="0" y="2270" width="1200" height="24"/>
+<line class="life" x1="285.6" x2="647.4" y1="2282" y2="2282"/><rect class="cap" x="645.9" y="2274" width="3.5" height="16"/>
+<circle class="start approx" cx="285.6" cy="2282" r="4.5"/>
+<text class="nm" x="294.6" y="2276">Germanic &amp; Norse religion</text><text class="endtxt" x="654.4" y="2276">c. 1100</text></a><a class="row" href="t/heathenry.html" data-s="1972" data-e="" style="--c:#4a6420">
+<title>Heathenry (Ásatrú): 1972 – present, 54 years</title>
+<rect class="hit" x="0" y="2296" width="1200" height="24"/>
+<line class="life" x1="1143.6" x2="1190.0" y1="2308" y2="2308"/><path class="open" d="M1188.0,2304 L1194.0,2308 L1188.0,2312"/>
+<circle class="start" cx="1143.6" cy="2308" r="4.5"/>
+<text class="nm" x="1134.6" y="2302" text-anchor="end">Heathenry (Ásatrú)</text></a><a class="row ended" href="t/slavic.html" data-s="500" data-e="1168" style="--c:#4a6420">
+<title>Slavic religion: c. 500 CE – 1168, 668 years</title>
+<rect class="hit" x="0" y="2322" width="1200" height="24"/>
+<line class="life" x1="511.7" x2="662.7" y1="2334" y2="2334"/><rect class="cap" x="661.2" y="2326" width="3.5" height="16"/>
+<circle class="start approx" cx="511.7" cy="2334" r="4.5"/>
+<text class="nm" x="520.7" y="2328">Slavic religion</text><text class="endtxt" x="669.7" y="2328">1168</text></a><a class="row ended" href="t/baltic.html" data-s="500" data-e="1387" style="--c:#4a6420">
+<title>Baltic religion: c. 500 CE – 1387, 887 years</title>
+<rect class="hit" x="0" y="2348" width="1200" height="24"/>
+<line class="life" x1="511.7" x2="712.3" y1="2360" y2="2360"/><rect class="cap" x="710.8" y="2352" width="3.5" height="16"/>
+<circle class="start approx" cx="511.7" cy="2360" r="4.5"/>
+<text class="nm" x="520.7" y="2354">Baltic religion</text><text class="endtxt" x="719.3" y="2354">1387</text></a><a class="row" href="t/wicca.html" data-s="1954" data-e="" style="--c:#4a6420">
+<title>Wicca: 1954 – present, 72 years</title>
+<rect class="hit" x="0" y="2374" width="1200" height="24"/>
+<line class="life" x1="1128.1" x2="1190.0" y1="2386" y2="2386"/><path class="open" d="M1188.0,2382 L1194.0,2386 L1188.0,2390"/>
+<circle class="start" cx="1128.1" cy="2386" r="4.5"/>
+<text class="nm" x="1119.1" y="2380" text-anchor="end">Wicca</text></a><a class="row ended" href="t/maya.html" data-s="-1000" data-e="1697" style="--c:#7b3fa0">
+<title>Maya religion: c. 1000 BCE – 1697, 2,696 years</title>
+<rect class="hit" x="0" y="2440" width="1200" height="24"/>
+<line class="life" x1="238.0" x2="907.2" y1="2452" y2="2452"/><rect class="cap" x="905.7" y="2444" width="3.5" height="16"/>
+<circle class="start approx" cx="238.0" cy="2452" r="4.5"/>
+<text class="nm" x="247.0" y="2446">Maya religion</text><text class="endtxt" x="914.2" y="2446">1697</text></a><a class="row ended" href="t/inca.html" data-s="1200" data-e="1572" style="--c:#7b3fa0">
+<title>Inca religion: c. 1200 – 1572, 372 years</title>
+<rect class="hit" x="0" y="2466" width="1200" height="24"/>
+<line class="life" x1="670.0" x2="799.7" y1="2478" y2="2478"/><rect class="cap" x="798.2" y="2470" width="3.5" height="16"/>
+<circle class="start approx" cx="670.0" cy="2478" r="4.5"/>
+<text class="nm" x="679.0" y="2472">Inca religion</text><text class="endtxt" x="806.7" y="2472">1572</text></a><a class="row ended" href="t/mexica.html" data-s="1325" data-e="1521" style="--c:#7b3fa0">
+<title>Mexica (Aztec) religion: 1325 – 1521, 196 years</title>
+<rect class="hit" x="0" y="2492" width="1200" height="24"/>
+<line class="life" x1="698.2" x2="755.9" y1="2504" y2="2504"/><rect class="cap" x="754.4" y="2496" width="3.5" height="16"/>
+<circle class="start" cx="698.2" cy="2504" r="4.5"/>
+<text class="nm" x="707.2" y="2498">Mexica (Aztec) religion</text><text class="endtxt" x="762.9" y="2498">1521</text></a><a class="row" href="t/native-american-church.html" data-s="1918" data-e="" style="--c:#7b3fa0">
+<title>Native American Church: 1918 – present, 108 years</title>
+<rect class="hit" x="0" y="2518" width="1200" height="24"/>
+<line class="life" x1="1097.2" x2="1190.0" y1="2530" y2="2530"/><path class="open" d="M1188.0,2526 L1194.0,2530 L1188.0,2534"/>
+<circle class="start" cx="1097.2" cy="2530" r="4.5"/>
+<text class="nm" x="1088.2" y="2524" text-anchor="end">Native American Church</text></a><a class="row" href="t/yoruba.html" data-s="1000" data-e="" style="--c:#b02a6a">
+<title>Yoruba religion (Ifá, Orisha): c. 1000 – present, 1,026 years</title>
+<rect class="hit" x="0" y="2584" width="1200" height="24"/>
+<line class="life" x1="624.7" x2="1190.0" y1="2596" y2="2596"/><path class="open" d="M1188.0,2592 L1194.0,2596 L1188.0,2600"/>
+<circle class="start approx" cx="624.7" cy="2596" r="4.5"/>
+<text class="nm" x="633.7" y="2590">Yoruba religion (Ifá, Orisha)</text></a><a class="row" href="t/candomble.html" data-s="1830" data-e="" style="--c:#b02a6a">
+<title>Candomblé: c. 1830 – present, 196 years</title>
+<rect class="hit" x="0" y="2610" width="1200" height="24"/>
+<line class="life" x1="1021.5" x2="1190.0" y1="2622" y2="2622"/><path class="open" d="M1188.0,2618 L1194.0,2622 L1188.0,2626"/>
+<circle class="start approx" cx="1021.5" cy="2622" r="4.5"/>
+<text class="nm" x="1012.5" y="2616" text-anchor="end">Candomblé</text></a><a class="row" href="t/santeria.html" data-s="1850" data-e="" style="--c:#b02a6a">
+<title>Santería (Lucumí): c. 1850 – present, 176 years</title>
+<rect class="hit" x="0" y="2636" width="1200" height="24"/>
+<line class="life" x1="1038.7" x2="1190.0" y1="2648" y2="2648"/><path class="open" d="M1188.0,2644 L1194.0,2648 L1188.0,2652"/>
+<circle class="start approx" cx="1038.7" cy="2648" r="4.5"/>
+<text class="nm" x="1029.7" y="2642" text-anchor="end">Santería (Lucumí)</text></a><a class="row" href="t/vodun.html" data-s="1600" data-e="" style="--c:#b02a6a">
+<title>Vodun: c. 1600 – present, 426 years</title>
+<rect class="hit" x="0" y="2662" width="1200" height="24"/>
+<line class="life" x1="823.8" x2="1190.0" y1="2674" y2="2674"/><path class="open" d="M1188.0,2670 L1194.0,2674 L1188.0,2678"/>
+<circle class="start approx" cx="823.8" cy="2674" r="4.5"/>
+<text class="nm" x="832.8" y="2668">Vodun</text></a><a class="row" href="t/vodou.html" data-s="1750" data-e="" style="--c:#b02a6a">
+<title>Haitian Vodou: c. 1750 – present, 276 years</title>
+<rect class="hit" x="0" y="2688" width="1200" height="24"/>
+<line class="life" x1="952.7" x2="1190.0" y1="2700" y2="2700"/><path class="open" d="M1188.0,2696 L1194.0,2700 L1188.0,2704"/>
+<circle class="start approx" cx="952.7" cy="2700" r="4.5"/>
+<text class="nm" x="961.7" y="2694">Haitian Vodou</text></a></g>
+<line class="cursor" x1="0" x2="0" y1="22" y2="2736" hidden/>
 </svg></div>
-<p class="fold-note">At full width, 100 years is drawn 9.5 px before 500 BCE, 22.6 px from 500 BCE to 1500, 86.0 px after 1500. The gridlines (every 500, 100 and 50 years) show the same change.</p>
-<details class="tablewrap"><summary>The same data as a table</summary><div class="tscroll" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens"><table class="data"><caption>All 91 traditions</caption><thead><tr><th scope="col">Tradition</th><th scope="col">Family</th><th scope="col">Branch of</th><th scope="col">Dates</th><th scope="col">Origin</th></tr></thead><tbody><tr><th scope="row"><a href="t/judaism.html">Judaism</a></th><td>Abrahamic</td><td>—</td><td class="num">c. 1200 BCE – present</td><td>Judean and Samarian hill country</td></tr><tr><th scope="row"><a href="t/samaritanism.html">Samaritanism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 400 BCE – present</td><td>Mount Gerizim</td></tr><tr><th scope="row"><a href="t/christianity.html">Christianity</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 30 CE – present</td><td>Jerusalem</td></tr><tr><th scope="row"><a href="t/church-of-the-east.html">Church of the East</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 431 CE – present</td><td>Seleucia-Ctesiphon</td></tr><tr><th scope="row"><a href="t/oriental-orthodox.html">Oriental Orthodoxy</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">451 CE – present</td><td>Alexandria</td></tr><tr><th scope="row"><a href="t/eastern-orthodox.html">Eastern Orthodoxy</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 1054 – present</td><td>Constantinople</td></tr><tr><th scope="row"><a href="t/catholicism.html">Catholicism</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 1054 – present</td><td>Rome</td></tr><tr><th scope="row"><a href="t/protestantism.html">Protestantism</a></th><td>Abrahamic</td><td><a href="t/catholicism.html">Catholicism</a></td><td class="num">1517 – present</td><td>Wittenberg</td></tr><tr><th scope="row"><a href="t/reformed.html">Reformed (Calvinist)</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1519 – present</td><td>Zürich</td></tr><tr><th scope="row"><a href="t/anabaptism.html">Anabaptism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1525 – present</td><td>Zürich</td></tr><tr><th scope="row"><a href="t/lutheranism.html">Lutheranism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1530 – present</td><td>Augsburg</td></tr><tr><th scope="row"><a href="t/anglicanism.html">Anglicanism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1534 – present</td><td>London</td></tr><tr><th scope="row"><a href="t/methodism.html">Methodism</a></th><td>Abrahamic</td><td><a href="t/anglicanism.html">Anglicanism</a></td><td class="num">1738 – present</td><td>London</td></tr><tr><th scope="row"><a href="t/pentecostalism.html">Pentecostalism</a></th><td>Abrahamic</td><td><a href="t/methodism.html">Methodism</a></td><td class="num">1906 – present</td><td>Azusa Street, Los Angeles</td></tr><tr><th scope="row"><a href="t/baptists.html">Baptists</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1609 – present</td><td>Amsterdam</td></tr><tr><th scope="row"><a href="t/quakers.html">Quakers</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1652 – present</td><td>Pendle Hill, Lancashire</td></tr><tr><th scope="row"><a href="t/adventism.html">Seventh-day Adventism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1863 – present</td><td>Battle Creek, Michigan</td></tr><tr><th scope="row"><a href="t/jehovahs-witnesses.html">Jehovah's Witnesses</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1879 – present</td><td>Pittsburgh</td></tr><tr><th scope="row"><a href="t/latter-day-saints.html">Latter Day Saints</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">1830 – present</td><td>Fayette, New York</td></tr><tr><th scope="row"><a href="t/rastafari.html">Rastafari</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 1930 – present</td><td>Kingston, Jamaica</td></tr><tr><th scope="row"><a href="t/karaite.html">Karaite Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 760 CE – present</td><td>Baghdad</td></tr><tr><th scope="row"><a href="t/hasidism.html">Hasidic Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 1740 – present</td><td>Medzhybizh, Podolia</td></tr><tr><th scope="row"><a href="t/reform-judaism.html">Reform Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">1810 – present</td><td>Seesen, Germany</td></tr><tr><th scope="row"><a href="t/orthodox-judaism.html">Orthodox Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 1820 – present</td><td>Central Europe (Hungary, Germany)</td></tr><tr><th scope="row"><a href="t/conservative-judaism.html">Conservative Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">1886 – present</td><td>New York</td></tr><tr><th scope="row"><a href="t/mandaeism.html">Mandaeism</a></th><td>Abrahamic</td><td>—</td><td class="num">c. 100 CE – present</td><td>Southern Mesopotamia</td></tr><tr><th scope="row"><a href="t/islam.html">Islam</a></th><td>Abrahamic</td><td>—</td><td class="num">610 CE – present</td><td>Mecca</td></tr><tr><th scope="row"><a href="t/sunni.html">Sunni Islam</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 632 CE – present</td><td>Medina</td></tr><tr><th scope="row"><a href="t/ahmadiyya.html">Ahmadiyya</a></th><td>Abrahamic</td><td><a href="t/sunni.html">Sunni Islam</a></td><td class="num">1889 – present</td><td>Qadian, Punjab</td></tr><tr><th scope="row"><a href="t/shia.html">Shia Islam</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 680 CE – present</td><td>Kufa and Karbala</td></tr><tr><th scope="row"><a href="t/ismailism.html">Ismailism</a></th><td>Abrahamic</td><td><a href="t/shia.html">Shia Islam</a></td><td class="num">c. 765 CE – present</td><td>Medina</td></tr><tr><th scope="row"><a href="t/druze.html">Druze</a></th><td>Abrahamic</td><td><a href="t/ismailism.html">Ismailism</a></td><td class="num">1017 – present</td><td>Cairo</td></tr><tr><th scope="row"><a href="t/babism.html">Bábism</a></th><td>Abrahamic</td><td><a href="t/shia.html">Shia Islam</a></td><td class="num">c. 1844 – 1866</td><td>Shiraz</td></tr><tr><th scope="row"><a href="t/bahai.html">Bahá'í Faith</a></th><td>Abrahamic</td><td><a href="t/babism.html">Bábism</a></td><td class="num">1863 – present</td><td>Baghdad</td></tr><tr><th scope="row"><a href="t/ibadi.html">Ibadi Islam</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 685 CE – present</td><td>Basra</td></tr><tr><th scope="row"><a href="t/sufism.html">Sufism</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 750 CE – present</td><td>Basra and Baghdad</td></tr><tr><th scope="row"><a href="t/vedic.html">Historical Vedic religion</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 1500 BCE – 500 BCE</td><td>Punjab, Sapta Sindhu</td></tr><tr><th scope="row"><a href="t/hinduism.html">Hinduism</a></th><td>Indian (Dharmic)</td><td><a href="t/vedic.html">Historical Vedic religion</a></td><td class="num">c. 500 BCE – present</td><td>Ganges plain</td></tr><tr><th scope="row"><a href="t/vaishnavism.html">Vaishnavism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 150 BCE – present</td><td>Vidisha</td></tr><tr><th scope="row"><a href="t/gaudiya.html">Gaudiya Vaishnavism</a></th><td>Indian (Dharmic)</td><td><a href="t/vaishnavism.html">Vaishnavism</a></td><td class="num">c. 1510 – present</td><td>Navadwip, Bengal</td></tr><tr><th scope="row"><a href="t/shaivism.html">Shaivism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 100 CE – present</td><td>Northwest India</td></tr><tr><th scope="row"><a href="t/lingayatism.html">Lingayatism</a></th><td>Indian (Dharmic)</td><td><a href="t/shaivism.html">Shaivism</a></td><td class="num">c. 1160 – present</td><td>Basavakalyan, Karnataka</td></tr><tr><th scope="row"><a href="t/shaktism.html">Shaktism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 500 CE – present</td><td>North India</td></tr><tr><th scope="row"><a href="t/smartism.html">Smartism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 800 CE – present</td><td>Kaladi, Kerala</td></tr><tr><th scope="row"><a href="t/jainism.html">Jainism</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 500 BCE – present</td><td>Vaishali, Bihar</td></tr><tr><th scope="row"><a href="t/ajivika.html">Ājīvika</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 500 BCE – 1400</td><td>Shravasti</td></tr><tr><th scope="row"><a href="t/buddhism.html">Buddhism</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 450 BCE – present</td><td>Bodh Gaya</td></tr><tr><th scope="row"><a href="t/theravada.html">Theravada</a></th><td>Indian (Dharmic)</td><td><a href="t/buddhism.html">Buddhism</a></td><td class="num">c. 250 BCE – present</td><td>Anuradhapura, Sri Lanka</td></tr><tr><th scope="row"><a href="t/mahayana.html">Mahayana</a></th><td>Indian (Dharmic)</td><td><a href="t/buddhism.html">Buddhism</a></td><td class="num">c. 100 CE – present</td><td>Gandhara and northwest India</td></tr><tr><th scope="row"><a href="t/pure-land.html">Pure Land Buddhism</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">c. 402 CE – present</td><td>Mount Lu</td></tr><tr><th scope="row"><a href="t/chan-zen.html">Chan / Zen</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">c. 500 CE – present</td><td>Songshan, Henan</td></tr><tr><th scope="row"><a href="t/vajrayana.html">Vajrayana</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">c. 650 CE – present</td><td>Nalanda, Bihar</td></tr><tr><th scope="row"><a href="t/nichiren.html">Nichiren Buddhism</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">1253 – present</td><td>Kamakura</td></tr><tr><th scope="row"><a href="t/navayana.html">Navayana</a></th><td>Indian (Dharmic)</td><td><a href="t/buddhism.html">Buddhism</a></td><td class="num">1956 – present</td><td>Nagpur</td></tr><tr><th scope="row"><a href="t/sikhism.html">Sikhism</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 1499 – present</td><td>Sultanpur Lodhi, Punjab</td></tr><tr><th scope="row"><a href="t/khalsa.html">Khalsa</a></th><td>Indian (Dharmic)</td><td><a href="t/sikhism.html">Sikhism</a></td><td class="num">1699 – present</td><td>Anandpur Sahib</td></tr><tr><th scope="row"><a href="t/chinese-folk.html">Chinese folk religion</a></th><td>East Asian</td><td>—</td><td class="num">c. 1250 BCE – present</td><td>Anyang</td></tr><tr><th scope="row"><a href="t/confucianism.html">Confucianism</a></th><td>East Asian</td><td><a href="t/chinese-folk.html">Chinese folk religion</a></td><td class="num">c. 500 BCE – present</td><td>Qufu</td></tr><tr><th scope="row"><a href="t/daoism.html">Daoism</a></th><td>East Asian</td><td><a href="t/chinese-folk.html">Chinese folk religion</a></td><td class="num">c. 400 BCE – present</td><td>Chu and Henan</td></tr><tr><th scope="row"><a href="t/celestial-masters.html">Way of the Celestial Masters</a></th><td>East Asian</td><td><a href="t/daoism.html">Daoism</a></td><td class="num">142 CE – present</td><td>Mount Heming, Sichuan</td></tr><tr><th scope="row"><a href="t/quanzhen.html">Quanzhen Daoism</a></th><td>East Asian</td><td><a href="t/daoism.html">Daoism</a></td><td class="num">c. 1170 – present</td><td>Zhongnan Mountains</td></tr><tr><th scope="row"><a href="t/shinto.html">Shinto</a></th><td>East Asian</td><td>—</td><td class="num">c. 700 CE – present</td><td>Ise and Yamato</td></tr><tr><th scope="row"><a href="t/tenrikyo.html">Tenrikyo</a></th><td>East Asian</td><td><a href="t/shinto.html">Shinto</a></td><td class="num">1838 – present</td><td>Tenri, Nara</td></tr><tr><th scope="row"><a href="t/state-shinto.html">State Shinto</a></th><td>East Asian</td><td><a href="t/shinto.html">Shinto</a></td><td class="num">1868 – 1945</td><td>Tokyo</td></tr><tr><th scope="row"><a href="t/cheondoism.html">Cheondoism</a></th><td>East Asian</td><td>—</td><td class="num">1860 – present</td><td>Gyeongju</td></tr><tr><th scope="row"><a href="t/caodaism.html">Caodaism</a></th><td>East Asian</td><td>—</td><td class="num">1926 – present</td><td>Tây Ninh</td></tr><tr><th scope="row"><a href="t/zoroastrianism.html">Zoroastrianism</a></th><td>Iranian</td><td>—</td><td class="num">c. 1000 BCE – present</td><td>Eastern Iran / Central Asia</td></tr><tr><th scope="row"><a href="t/manichaeism.html">Manichaeism</a></th><td>Iranian</td><td>—</td><td class="num">c. 240 CE – 1600</td><td>Ctesiphon</td></tr><tr><th scope="row"><a href="t/yazidism.html">Yazidism</a></th><td>Iranian</td><td>—</td><td class="num">c. 1150 – present</td><td>Lalish</td></tr><tr><th scope="row"><a href="t/sumerian.html">Sumerian religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 3500 BCE – 2000 BCE</td><td>Uruk</td></tr><tr><th scope="row"><a href="t/mesopotamian.html">Babylonian &amp; Assyrian religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td><a href="t/sumerian.html">Sumerian religion</a></td><td class="num">c. 2000 BCE – 100 CE</td><td>Babylon</td></tr><tr><th scope="row"><a href="t/egyptian.html">Ancient Egyptian religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 3100 BCE – 537 CE</td><td>Abydos and the Nile valley</td></tr><tr><th scope="row"><a href="t/canaanite.html">Canaanite &amp; Phoenician religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 2000 BCE – 400 CE</td><td>Ugarit and the Levant coast</td></tr><tr><th scope="row"><a href="t/greek.html">Ancient Greek religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 1400 BCE – 529 CE</td><td>Mycenaean Greece</td></tr><tr><th scope="row"><a href="t/roman.html">Ancient Roman religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 753 BCE – 392 CE</td><td>Rome</td></tr><tr><th scope="row"><a href="t/mithraism.html">Mithraism</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 80 CE – 400 CE</td><td>Rome</td></tr><tr><th scope="row"><a href="t/celtic.html">Celtic religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 600 BCE – 600 CE</td><td>Central Europe (Hallstatt)</td></tr><tr><th scope="row"><a href="t/germanic.html">Germanic &amp; Norse religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 500 BCE – 1100</td><td>Scandinavia and northern Germany</td></tr><tr><th scope="row"><a href="t/heathenry.html">Heathenry (Ásatrú)</a></th><td>Northern &amp; Celtic Europe</td><td><a href="t/germanic.html">Germanic &amp; Norse religion</a></td><td class="num">1972 – present</td><td>Reykjavík</td></tr><tr><th scope="row"><a href="t/slavic.html">Slavic religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 500 CE – 1168</td><td>Eastern Europe</td></tr><tr><th scope="row"><a href="t/baltic.html">Baltic religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 500 CE – 1387</td><td>Lithuania and Prussia</td></tr><tr><th scope="row"><a href="t/wicca.html">Wicca</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">1954 – present</td><td>New Forest, England</td></tr><tr><th scope="row"><a href="t/maya.html">Maya religion</a></th><td>Indigenous Americas</td><td>—</td><td class="num">c. 1000 BCE – 1697</td><td>Petén lowlands</td></tr><tr><th scope="row"><a href="t/inca.html">Inca religion</a></th><td>Indigenous Americas</td><td>—</td><td class="num">c. 1200 – 1572</td><td>Cusco</td></tr><tr><th scope="row"><a href="t/mexica.html">Mexica (Aztec) religion</a></th><td>Indigenous Americas</td><td>—</td><td class="num">1325 – 1521</td><td>Tenochtitlan</td></tr><tr><th scope="row"><a href="t/native-american-church.html">Native American Church</a></th><td>Indigenous Americas</td><td>—</td><td class="num">1918 – present</td><td>Oklahoma</td></tr><tr><th scope="row"><a href="t/yoruba.html">Yoruba religion (Ifá, Orisha)</a></th><td>Africa &amp; diaspora</td><td>—</td><td class="num">c. 1000 – present</td><td>Ile-Ife</td></tr><tr><th scope="row"><a href="t/candomble.html">Candomblé</a></th><td>Africa &amp; diaspora</td><td><a href="t/yoruba.html">Yoruba religion (Ifá, Orisha)</a></td><td class="num">c. 1830 – present</td><td>Salvador da Bahia</td></tr><tr><th scope="row"><a href="t/santeria.html">Santería (Lucumí)</a></th><td>Africa &amp; diaspora</td><td><a href="t/yoruba.html">Yoruba religion (Ifá, Orisha)</a></td><td class="num">c. 1850 – present</td><td>Havana and Matanzas</td></tr><tr><th scope="row"><a href="t/vodun.html">Vodun</a></th><td>Africa &amp; diaspora</td><td>—</td><td class="num">c. 1600 – present</td><td>Abomey, Dahomey</td></tr><tr><th scope="row"><a href="t/vodou.html">Haitian Vodou</a></th><td>Africa &amp; diaspora</td><td><a href="t/vodun.html">Vodun</a></td><td class="num">c. 1750 – present</td><td>Saint-Domingue (Haiti)</td></tr></tbody></table></div></details>
+<p class="fold-note">Gridlines are drawn every 100 years in all three stretches, so their spacing is the scale: 9.5, 22.6, 86.0 chart units apart before 500 BCE, from 500 BCE to 1500, and after 1500. Line lengths compare honestly only inside one stretch; each row's title and the table give its length in years.</p>
+<details class="tablewrap"><summary>The same data as a table</summary><div class="tscroll" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens"><table class="data"><caption>All 91 traditions</caption><thead><tr><th scope="col">Tradition</th><th scope="col">Family</th><th scope="col">Branch of</th><th scope="col">Dates</th><th scope="col">Years</th><th scope="col">Origin</th></tr></thead><tbody><tr><th scope="row"><a href="t/judaism.html">Judaism</a></th><td>Abrahamic</td><td>—</td><td class="num">c. 1200 BCE – present</td><td class="num">c. 3,225</td><td>Judean and Samarian hill country</td></tr><tr><th scope="row"><a href="t/samaritanism.html">Samaritanism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 400 BCE – present</td><td class="num">c. 2,425</td><td>Mount Gerizim</td></tr><tr><th scope="row"><a href="t/christianity.html">Christianity</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 30 CE – present</td><td class="num">c. 1,996</td><td>Jerusalem</td></tr><tr><th scope="row"><a href="t/church-of-the-east.html">Church of the East</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 431 CE – present</td><td class="num">c. 1,595</td><td>Seleucia-Ctesiphon</td></tr><tr><th scope="row"><a href="t/oriental-orthodox.html">Oriental Orthodoxy</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">451 CE – present</td><td class="num">1,575</td><td>Alexandria</td></tr><tr><th scope="row"><a href="t/eastern-orthodox.html">Eastern Orthodoxy</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 1054 – present</td><td class="num">c. 972</td><td>Constantinople</td></tr><tr><th scope="row"><a href="t/catholicism.html">Catholicism</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 1054 – present</td><td class="num">c. 972</td><td>Rome</td></tr><tr><th scope="row"><a href="t/protestantism.html">Protestantism</a></th><td>Abrahamic</td><td><a href="t/catholicism.html">Catholicism</a></td><td class="num">1517 – present</td><td class="num">509</td><td>Wittenberg</td></tr><tr><th scope="row"><a href="t/reformed.html">Reformed (Calvinist)</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1519 – present</td><td class="num">507</td><td>Zürich</td></tr><tr><th scope="row"><a href="t/anabaptism.html">Anabaptism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1525 – present</td><td class="num">501</td><td>Zürich</td></tr><tr><th scope="row"><a href="t/lutheranism.html">Lutheranism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1530 – present</td><td class="num">496</td><td>Augsburg</td></tr><tr><th scope="row"><a href="t/anglicanism.html">Anglicanism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1534 – present</td><td class="num">492</td><td>London</td></tr><tr><th scope="row"><a href="t/methodism.html">Methodism</a></th><td>Abrahamic</td><td><a href="t/anglicanism.html">Anglicanism</a></td><td class="num">1738 – present</td><td class="num">288</td><td>London</td></tr><tr><th scope="row"><a href="t/pentecostalism.html">Pentecostalism</a></th><td>Abrahamic</td><td><a href="t/methodism.html">Methodism</a></td><td class="num">1906 – present</td><td class="num">120</td><td>Azusa Street, Los Angeles</td></tr><tr><th scope="row"><a href="t/baptists.html">Baptists</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1609 – present</td><td class="num">417</td><td>Amsterdam</td></tr><tr><th scope="row"><a href="t/quakers.html">Quakers</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1652 – present</td><td class="num">374</td><td>Pendle Hill, Lancashire</td></tr><tr><th scope="row"><a href="t/adventism.html">Seventh-day Adventism</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1863 – present</td><td class="num">163</td><td>Battle Creek, Michigan</td></tr><tr><th scope="row"><a href="t/jehovahs-witnesses.html">Jehovah's Witnesses</a></th><td>Abrahamic</td><td><a href="t/protestantism.html">Protestantism</a></td><td class="num">1879 – present</td><td class="num">147</td><td>Pittsburgh</td></tr><tr><th scope="row"><a href="t/latter-day-saints.html">Latter Day Saints</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">1830 – present</td><td class="num">196</td><td>Fayette, New York</td></tr><tr><th scope="row"><a href="t/rastafari.html">Rastafari</a></th><td>Abrahamic</td><td><a href="t/christianity.html">Christianity</a></td><td class="num">c. 1930 – present</td><td class="num">c. 96</td><td>Kingston, Jamaica</td></tr><tr><th scope="row"><a href="t/karaite.html">Karaite Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 760 CE – present</td><td class="num">c. 1,266</td><td>Baghdad</td></tr><tr><th scope="row"><a href="t/hasidism.html">Hasidic Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 1740 – present</td><td class="num">c. 286</td><td>Medzhybizh, Podolia</td></tr><tr><th scope="row"><a href="t/reform-judaism.html">Reform Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">1810 – present</td><td class="num">216</td><td>Seesen, Germany</td></tr><tr><th scope="row"><a href="t/orthodox-judaism.html">Orthodox Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">c. 1820 – present</td><td class="num">c. 206</td><td>Central Europe (Hungary, Germany)</td></tr><tr><th scope="row"><a href="t/conservative-judaism.html">Conservative Judaism</a></th><td>Abrahamic</td><td><a href="t/judaism.html">Judaism</a></td><td class="num">1886 – present</td><td class="num">140</td><td>New York</td></tr><tr><th scope="row"><a href="t/mandaeism.html">Mandaeism</a></th><td>Abrahamic</td><td>—</td><td class="num">c. 100 CE – present</td><td class="num">c. 1,926</td><td>Southern Mesopotamia</td></tr><tr><th scope="row"><a href="t/islam.html">Islam</a></th><td>Abrahamic</td><td>—</td><td class="num">610 CE – present</td><td class="num">1,416</td><td>Mecca</td></tr><tr><th scope="row"><a href="t/sunni.html">Sunni Islam</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 632 CE – present</td><td class="num">c. 1,394</td><td>Medina</td></tr><tr><th scope="row"><a href="t/ahmadiyya.html">Ahmadiyya</a></th><td>Abrahamic</td><td><a href="t/sunni.html">Sunni Islam</a></td><td class="num">1889 – present</td><td class="num">137</td><td>Qadian, Punjab</td></tr><tr><th scope="row"><a href="t/shia.html">Shia Islam</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 680 CE – present</td><td class="num">c. 1,346</td><td>Kufa and Karbala</td></tr><tr><th scope="row"><a href="t/ismailism.html">Ismailism</a></th><td>Abrahamic</td><td><a href="t/shia.html">Shia Islam</a></td><td class="num">c. 765 CE – present</td><td class="num">c. 1,261</td><td>Medina</td></tr><tr><th scope="row"><a href="t/druze.html">Druze</a></th><td>Abrahamic</td><td><a href="t/ismailism.html">Ismailism</a></td><td class="num">1017 – present</td><td class="num">1,009</td><td>Cairo</td></tr><tr><th scope="row"><a href="t/babism.html">Bábism</a></th><td>Abrahamic</td><td><a href="t/shia.html">Shia Islam</a></td><td class="num">c. 1844 – c. 1866</td><td class="num">c. 22</td><td>Shiraz</td></tr><tr><th scope="row"><a href="t/bahai.html">Bahá'í Faith</a></th><td>Abrahamic</td><td><a href="t/babism.html">Bábism</a></td><td class="num">1863 – present</td><td class="num">163</td><td>Baghdad</td></tr><tr><th scope="row"><a href="t/ibadi.html">Ibadi Islam</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 685 CE – present</td><td class="num">c. 1,341</td><td>Basra</td></tr><tr><th scope="row"><a href="t/sufism.html">Sufism</a></th><td>Abrahamic</td><td><a href="t/islam.html">Islam</a></td><td class="num">c. 750 CE – present</td><td class="num">c. 1,276</td><td>Basra and Baghdad</td></tr><tr><th scope="row"><a href="t/vedic.html">Historical Vedic religion</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 1500 BCE – c. 500 BCE</td><td class="num">c. 1,000</td><td>Punjab, Sapta Sindhu</td></tr><tr><th scope="row"><a href="t/hinduism.html">Hinduism</a></th><td>Indian (Dharmic)</td><td><a href="t/vedic.html">Historical Vedic religion</a></td><td class="num">c. 500 BCE – present</td><td class="num">c. 2,525</td><td>Ganges plain</td></tr><tr><th scope="row"><a href="t/vaishnavism.html">Vaishnavism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 150 BCE – present</td><td class="num">c. 2,175</td><td>Vidisha</td></tr><tr><th scope="row"><a href="t/gaudiya.html">Gaudiya Vaishnavism</a></th><td>Indian (Dharmic)</td><td><a href="t/vaishnavism.html">Vaishnavism</a></td><td class="num">c. 1510 – present</td><td class="num">c. 516</td><td>Navadwip, Bengal</td></tr><tr><th scope="row"><a href="t/shaivism.html">Shaivism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 100 CE – present</td><td class="num">c. 1,926</td><td>Northwest India</td></tr><tr><th scope="row"><a href="t/lingayatism.html">Lingayatism</a></th><td>Indian (Dharmic)</td><td><a href="t/shaivism.html">Shaivism</a></td><td class="num">c. 1160 – present</td><td class="num">c. 866</td><td>Basavakalyan, Karnataka</td></tr><tr><th scope="row"><a href="t/shaktism.html">Shaktism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 500 CE – present</td><td class="num">c. 1,526</td><td>North India</td></tr><tr><th scope="row"><a href="t/smartism.html">Smartism</a></th><td>Indian (Dharmic)</td><td><a href="t/hinduism.html">Hinduism</a></td><td class="num">c. 800 CE – present</td><td class="num">c. 1,226</td><td>Kaladi, Kerala</td></tr><tr><th scope="row"><a href="t/jainism.html">Jainism</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 500 BCE – present</td><td class="num">c. 2,525</td><td>Vaishali, Bihar</td></tr><tr><th scope="row"><a href="t/ajivika.html">Ājīvika</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 500 BCE – c. 1400</td><td class="num">c. 1,899</td><td>Shravasti</td></tr><tr><th scope="row"><a href="t/buddhism.html">Buddhism</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 450 BCE – present</td><td class="num">c. 2,475</td><td>Bodh Gaya</td></tr><tr><th scope="row"><a href="t/theravada.html">Theravada</a></th><td>Indian (Dharmic)</td><td><a href="t/buddhism.html">Buddhism</a></td><td class="num">c. 250 BCE – present</td><td class="num">c. 2,275</td><td>Anuradhapura, Sri Lanka</td></tr><tr><th scope="row"><a href="t/mahayana.html">Mahayana</a></th><td>Indian (Dharmic)</td><td><a href="t/buddhism.html">Buddhism</a></td><td class="num">c. 100 CE – present</td><td class="num">c. 1,926</td><td>Gandhara and northwest India</td></tr><tr><th scope="row"><a href="t/pure-land.html">Pure Land Buddhism</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">c. 402 CE – present</td><td class="num">c. 1,624</td><td>Mount Lu</td></tr><tr><th scope="row"><a href="t/chan-zen.html">Chan / Zen</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">c. 500 CE – present</td><td class="num">c. 1,526</td><td>Songshan, Henan</td></tr><tr><th scope="row"><a href="t/vajrayana.html">Vajrayana</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">c. 650 CE – present</td><td class="num">c. 1,376</td><td>Nalanda, Bihar</td></tr><tr><th scope="row"><a href="t/nichiren.html">Nichiren Buddhism</a></th><td>Indian (Dharmic)</td><td><a href="t/mahayana.html">Mahayana</a></td><td class="num">1253 – present</td><td class="num">773</td><td>Kamakura</td></tr><tr><th scope="row"><a href="t/navayana.html">Navayana</a></th><td>Indian (Dharmic)</td><td><a href="t/buddhism.html">Buddhism</a></td><td class="num">1956 – present</td><td class="num">70</td><td>Nagpur</td></tr><tr><th scope="row"><a href="t/sikhism.html">Sikhism</a></th><td>Indian (Dharmic)</td><td>—</td><td class="num">c. 1499 – present</td><td class="num">c. 527</td><td>Sultanpur Lodhi, Punjab</td></tr><tr><th scope="row"><a href="t/khalsa.html">Khalsa</a></th><td>Indian (Dharmic)</td><td><a href="t/sikhism.html">Sikhism</a></td><td class="num">1699 – present</td><td class="num">327</td><td>Anandpur Sahib</td></tr><tr><th scope="row"><a href="t/chinese-folk.html">Chinese folk religion</a></th><td>East Asian</td><td>—</td><td class="num">c. 1250 BCE – present</td><td class="num">c. 3,275</td><td>Anyang</td></tr><tr><th scope="row"><a href="t/confucianism.html">Confucianism</a></th><td>East Asian</td><td><a href="t/chinese-folk.html">Chinese folk religion</a></td><td class="num">c. 500 BCE – present</td><td class="num">c. 2,525</td><td>Qufu</td></tr><tr><th scope="row"><a href="t/daoism.html">Daoism</a></th><td>East Asian</td><td><a href="t/chinese-folk.html">Chinese folk religion</a></td><td class="num">c. 400 BCE – present</td><td class="num">c. 2,425</td><td>Chu and Henan</td></tr><tr><th scope="row"><a href="t/celestial-masters.html">Way of the Celestial Masters</a></th><td>East Asian</td><td><a href="t/daoism.html">Daoism</a></td><td class="num">142 CE – present</td><td class="num">1,884</td><td>Mount Heming, Sichuan</td></tr><tr><th scope="row"><a href="t/quanzhen.html">Quanzhen Daoism</a></th><td>East Asian</td><td><a href="t/daoism.html">Daoism</a></td><td class="num">c. 1170 – present</td><td class="num">c. 856</td><td>Zhongnan Mountains</td></tr><tr><th scope="row"><a href="t/shinto.html">Shinto</a></th><td>East Asian</td><td>—</td><td class="num">c. 700 CE – present</td><td class="num">c. 1,326</td><td>Ise and Yamato</td></tr><tr><th scope="row"><a href="t/tenrikyo.html">Tenrikyo</a></th><td>East Asian</td><td><a href="t/shinto.html">Shinto</a></td><td class="num">1838 – present</td><td class="num">188</td><td>Tenri, Nara</td></tr><tr><th scope="row"><a href="t/state-shinto.html">State Shinto</a></th><td>East Asian</td><td><a href="t/shinto.html">Shinto</a></td><td class="num">1868 – 1945</td><td class="num">77</td><td>Tokyo</td></tr><tr><th scope="row"><a href="t/cheondoism.html">Cheondoism</a></th><td>East Asian</td><td>—</td><td class="num">1860 – present</td><td class="num">166</td><td>Gyeongju</td></tr><tr><th scope="row"><a href="t/caodaism.html">Caodaism</a></th><td>East Asian</td><td>—</td><td class="num">1926 – present</td><td class="num">100</td><td>Tây Ninh</td></tr><tr><th scope="row"><a href="t/zoroastrianism.html">Zoroastrianism</a></th><td>Iranian</td><td>—</td><td class="num">c. 1000 BCE – present</td><td class="num">c. 3,025</td><td>Eastern Iran / Central Asia</td></tr><tr><th scope="row"><a href="t/manichaeism.html">Manichaeism</a></th><td>Iranian</td><td>—</td><td class="num">c. 240 CE – c. 1600</td><td class="num">c. 1,360</td><td>Ctesiphon</td></tr><tr><th scope="row"><a href="t/yazidism.html">Yazidism</a></th><td>Iranian</td><td>—</td><td class="num">c. 1150 – present</td><td class="num">c. 876</td><td>Lalish</td></tr><tr><th scope="row"><a href="t/sumerian.html">Sumerian religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 3500 BCE – c. 2000 BCE</td><td class="num">c. 1,500</td><td>Uruk</td></tr><tr><th scope="row"><a href="t/mesopotamian.html">Babylonian &amp; Assyrian religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td><a href="t/sumerian.html">Sumerian religion</a></td><td class="num">c. 2000 BCE – c. 100 CE</td><td class="num">c. 2,099</td><td>Babylon</td></tr><tr><th scope="row"><a href="t/egyptian.html">Ancient Egyptian religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 3100 BCE – c. 537 CE</td><td class="num">c. 3,636</td><td>Abydos and the Nile valley</td></tr><tr><th scope="row"><a href="t/canaanite.html">Canaanite &amp; Phoenician religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 2000 BCE – c. 400 CE</td><td class="num">c. 2,399</td><td>Ugarit and the Levant coast</td></tr><tr><th scope="row"><a href="t/greek.html">Ancient Greek religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 1400 BCE – 529 CE</td><td class="num">c. 1,928</td><td>Mycenaean Greece</td></tr><tr><th scope="row"><a href="t/roman.html">Ancient Roman religion</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 753 BCE – 392 CE</td><td class="num">c. 1,144</td><td>Rome</td></tr><tr><th scope="row"><a href="t/mithraism.html">Mithraism</a></th><td>Ancient Near East &amp; Mediterranean</td><td>—</td><td class="num">c. 80 CE – c. 400 CE</td><td class="num">c. 320</td><td>Rome</td></tr><tr><th scope="row"><a href="t/celtic.html">Celtic religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 600 BCE – c. 600 CE</td><td class="num">c. 1,199</td><td>Central Europe (Hallstatt)</td></tr><tr><th scope="row"><a href="t/germanic.html">Germanic &amp; Norse religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 500 BCE – c. 1100</td><td class="num">c. 1,599</td><td>Scandinavia and northern Germany</td></tr><tr><th scope="row"><a href="t/heathenry.html">Heathenry (Ásatrú)</a></th><td>Northern &amp; Celtic Europe</td><td><a href="t/germanic.html">Germanic &amp; Norse religion</a></td><td class="num">1972 – present</td><td class="num">54</td><td>Reykjavík</td></tr><tr><th scope="row"><a href="t/slavic.html">Slavic religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 500 CE – 1168</td><td class="num">c. 668</td><td>Eastern Europe</td></tr><tr><th scope="row"><a href="t/baltic.html">Baltic religion</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">c. 500 CE – 1387</td><td class="num">c. 887</td><td>Lithuania and Prussia</td></tr><tr><th scope="row"><a href="t/wicca.html">Wicca</a></th><td>Northern &amp; Celtic Europe</td><td>—</td><td class="num">1954 – present</td><td class="num">72</td><td>New Forest, England</td></tr><tr><th scope="row"><a href="t/maya.html">Maya religion</a></th><td>Indigenous Americas</td><td>—</td><td class="num">c. 1000 BCE – 1697</td><td class="num">c. 2,696</td><td>Petén lowlands</td></tr><tr><th scope="row"><a href="t/inca.html">Inca religion</a></th><td>Indigenous Americas</td><td>—</td><td class="num">c. 1200 – 1572</td><td class="num">c. 372</td><td>Cusco</td></tr><tr><th scope="row"><a href="t/mexica.html">Mexica (Aztec) religion</a></th><td>Indigenous Americas</td><td>—</td><td class="num">1325 – 1521</td><td class="num">196</td><td>Tenochtitlan</td></tr><tr><th scope="row"><a href="t/native-american-church.html">Native American Church</a></th><td>Indigenous Americas</td><td>—</td><td class="num">1918 – present</td><td class="num">108</td><td>Oklahoma</td></tr><tr><th scope="row"><a href="t/yoruba.html">Yoruba religion (Ifá, Orisha)</a></th><td>Africa &amp; diaspora</td><td>—</td><td class="num">c. 1000 – present</td><td class="num">c. 1,026</td><td>Ile-Ife</td></tr><tr><th scope="row"><a href="t/candomble.html">Candomblé</a></th><td>Africa &amp; diaspora</td><td><a href="t/yoruba.html">Yoruba religion (Ifá, Orisha)</a></td><td class="num">c. 1830 – present</td><td class="num">c. 196</td><td>Salvador da Bahia</td></tr><tr><th scope="row"><a href="t/santeria.html">Santería (Lucumí)</a></th><td>Africa &amp; diaspora</td><td><a href="t/yoruba.html">Yoruba religion (Ifá, Orisha)</a></td><td class="num">c. 1850 – present</td><td class="num">c. 176</td><td>Havana and Matanzas</td></tr><tr><th scope="row"><a href="t/vodun.html">Vodun</a></th><td>Africa &amp; diaspora</td><td>—</td><td class="num">c. 1600 – present</td><td class="num">c. 426</td><td>Abomey, Dahomey</td></tr><tr><th scope="row"><a href="t/vodou.html">Haitian Vodou</a></th><td>Africa &amp; diaspora</td><td><a href="t/vodun.html">Vodun</a></td><td class="num">c. 1750 – present</td><td class="num">c. 276</td><td>Saint-Domingue (Haiti)</td></tr></tbody></table></div></details>
 </main>
 <footer class="foot">
   <p>91 traditions, 8 families, 3500 BCE to 2026. Dates marked c. are approximate; see <a href="sources.html">Sources &amp; method</a>.</p>

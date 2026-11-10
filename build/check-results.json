@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-10T02:13:15.354Z",
+  "at": "2026-11-10T02:29:08.000Z",
   "results": [
     {
       "probe": "internal links resolve",
@@ -54,14 +54,14 @@
     {
       "probe": "(info) route strip bottom at 1280x800",
       "pass": true,
-      "detail": "711px"
+      "detail": "751px"
     },
     {
       "probe": "hero complete above the fold at 375x812",
       "pass": true,
       "detail": {
-        "top": 90.6875,
-        "bottom": 689.75,
+        "top": 84.6875,
+        "bottom": 709.75,
         "right": 359,
         "innerScroll": 0,
         "parts": 5
@@ -70,38 +70,52 @@
     {
       "probe": "(info) route strip bottom at 375x812",
       "pass": true,
-      "detail": "849px"
+      "detail": "997px"
     },
     {
-      "probe": "legibility: default route traceable at 1280px",
+      "probe": "legibility: default route traceable at 1280px (origin and last stop labelled, on screen)",
       "pass": true,
       "detail": {
         "route": "buddhism",
-        "legs": 9,
-        "labels": [
-          "Bodh Gaya · c. 450 BCE",
-          "Anuradhapura 250 BCE",
-          "Taxila 250 BCE",
-          "Asuka 538 CE",
-          "Borobudur 800 CE",
-          "Bagan 1056",
+        "legs": 7,
+        "origin": [
+          "Bodh Gaya · c. 450 BCE"
+        ],
+        "last": [
           "Hohhot 1578"
-        ]
+        ],
+        "visible": 7
       }
     },
     {
-      "probe": "legibility: default route traceable at 375px",
+      "probe": "legibility: default route traceable at 375px (origin and last stop labelled, on screen)",
       "pass": true,
       "detail": {
         "route": "buddhism",
-        "legs": 9,
-        "labels": [
-          "Bodh Gaya · c. 450 BCE",
-          "Anuradhapura 250 BCE",
-          "Borobudur 800 CE",
+        "legs": 7,
+        "origin": [
+          "Bodh Gaya · c. 450 BCE"
+        ],
+        "last": [
           "Hohhot 1578"
-        ]
+        ],
+        "visible": 4
       }
+    },
+    {
+      "probe": "year control reached within 25 Tab presses (375px)",
+      "pass": true,
+      "detail": "23 presses"
+    },
+    {
+      "probe": "map marks: out of tab order, each with a list/table equivalent on the page (2.5.8 equivalent)",
+      "pass": true,
+      "detail": "all marks"
+    },
+    {
+      "probe": "forced colours: family colours survive on the map",
+      "pass": true,
+      "detail": "8 distinct dot fills"
     },
     {
       "probe": "map labels inside their map at 1280px",
@@ -213,7 +227,7 @@
       "pass": true,
       "detail": {
         "min": "10.5",
-        "n": 133
+        "n": 132
       }
     },
     {
@@ -224,7 +238,7 @@
     {
       "probe": "printed figures reproduce from data",
       "pass": true,
-      "detail": "9 figures"
+      "detail": "16 figures"
     }
   ]
 }

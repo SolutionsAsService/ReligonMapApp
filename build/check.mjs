@@ -84,7 +84,7 @@ const smallTargets = () => {
       if (!a.e.closest('.chips, .routes-pick, .famlist, nav')) continue;
     }
     if (a.w >= 24 && a.h >= 24) continue;
-    if (a.e.closest('svg')) continue; // map marks are duplicated by list links; counted separately
+    if (a.e.closest('svg')) continue; // map marks: covered by the equivalent-control probe below (tabindex -1, list twin)
     const near = all.some(b => b !== a && Math.hypot(a.x - b.x, a.y - b.y) < 24);
     if (near) bad.push(`${a.e.tagName}.${a.e.className} ${Math.round(a.w)}x${Math.round(a.h)} "${(a.e.textContent || '').trim().slice(0, 20)}"`);
   }
@@ -131,16 +131,56 @@ for (const [w, h] of [[1280, 800], [375, 812]]) {
   await ctx.close();
 }
 
-// ---------- legibility probe: the default route is drawn and its origin + last stop are labelled
+// ---------- legibility probe: the default route is drawn, and its origin and its last stop are both labelled
 for (const [w, h] of [[1280, 800], [375, 812]]) {
   const { p, ctx } = await open(B + 'index.html', w, h);
   const r = await p.evaluate(() => {
     const g = document.querySelector('#hero .route:not([hidden])');
     const legs = g ? [...g.querySelectorAll('.leg')].filter(l => getComputedStyle(l).display !== 'none').length : 0;
-    const labels = [...document.querySelectorAll('#hero .lbl')].filter(l => getComputedStyle(l).display !== 'none' && !l.hidden).map(l => l.textContent);
-    return { route: g && g.dataset.route, legs, labels };
+    const vis = [...document.querySelectorAll('#hero .lbl')].filter(l => getComputedStyle(l).display !== 'none' && !l.hidden);
+    const fold = document.querySelector('.hero');
+    const inView = l => l.getBoundingClientRect().bottom <= innerHeight;
+    return { route: g && g.dataset.route, legs, origin: vis.filter(l => l.classList.contains('origin') && inView(l)).map(l => l.textContent), last: vis.filter(l => l.classList.contains('last') && inView(l)).map(l => l.textContent), visible: vis.length };
   });
-  rec(`legibility: default route traceable at ${w}px`, r.legs > 0 && r.labels.length >= 2, r);
+  rec(`legibility: default route traceable at ${w}px (origin and last stop labelled, on screen)`, r.legs > 0 && r.origin.length === 1 && r.last.length === 1, r);
+  await ctx.close();
+}
+
+// ---------- tab order: the year control is reached quickly; map marks are out of the tab order but have list equivalents
+{
+  const { p, ctx } = await open(B + 'index.html', 375, 812);
+  let n = 0, hit = false;
+  for (; n < 60 && !hit; n++) { await p.keyboard.press('Tab'); hit = await p.evaluate(() => document.activeElement && document.activeElement.id === 'hero-year'); }
+  rec('year control reached within 25 Tab presses (375px)', hit && n <= 25, `${hit ? n : '>60'} presses`);
+  await ctx.close();
+}
+{
+  const bad = [];
+  for (const pg of ['index.html', 'atlas.html', 'lost.html', 'families/africa.html', 't/buddhism.html']) {
+    const { p, ctx } = await open(B + pg, 375, 812);
+    const r = await p.evaluate(() => {
+      const marks = [...document.querySelectorAll('.mk:not(.ghost)')];
+      const out = [];
+      for (const m of marks) {
+        if (m.getAttribute('tabindex') !== '-1') out.push('focusable ' + m.dataset.id);
+        const href = m.getAttribute('href');
+        const twin = [...document.querySelectorAll(`a[href="${href}"]:not(.mk), button[data-show-route="${m.dataset.id}"]`)].length;
+        const self = location.pathname.endsWith(href.split('/').pop());
+        if (!twin && !self) out.push('no list equivalent ' + m.dataset.id);
+      }
+      return { n: marks.length, out };
+    });
+    r.out.forEach(o => bad.push(`${pg}: ${o}`));
+    await ctx.close();
+  }
+  rec('map marks: out of tab order, each with a list/table equivalent on the page (2.5.8 equivalent)', bad.length === 0, bad.length ? bad.slice(0, 6) : 'all marks');
+}
+{
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, forcedColors: 'active' });
+  const p = await ctx.newPage();
+  await p.goto(B + 'index.html');
+  const fills = await p.evaluate(() => new Set([...document.querySelectorAll('#hero .mk .dot')].map(d => getComputedStyle(d).fill)).size);
+  rec('forced colours: family colours survive on the map', fills >= 8, `${fills} distinct dot fills`);
   await ctx.close();
 }
 
@@ -232,16 +272,25 @@ for (const [w, h] of [[1280, 800], [375, 812]]) {
   const facts = JSON.parse(fs.readFileSync(path.join(SITE, 'build-facts.json'), 'utf8'));
   const home = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
   const src = fs.readFileSync(path.join(SITE, 'sources.html'), 'utf8');
+  const tl = fs.readFileSync(path.join(SITE, 'timeline.html'), 'utf8');
+  const stops = traditions.flatMap(t => t.spread);
   const r = foldRatios();
   const checks = [
     ['home: "Where N religions"', home.includes(`Where ${traditions.length} religions`)],
     ['home: living count', home.includes(`${traditions.length - ended.length} are still practised`)],
     ['home: ended count', home.includes(`${ended.length} have ended`)],
-    ['family chip counts', families.every(f => home.includes(`${f.name.replace('&', '&amp;')} <span class="n">${traditions.filter(t => t.family === f.id).length}</span>`))],
-    ['fold ratio printed (×after-1500 vs before-500 BCE)', home.includes(`${r.r31.toFixed(1)}× wider`)],
-    ['sources: approx count', src.includes(`${traditions.filter(t => t.approx).length} of ${traditions.length} start dates`)],
+    ['family chip counts', families.every(f => home.includes(`${f.short.replace('&', '&amp;')}</span> <span class="n">${traditions.filter(t => t.family === f.id).length}</span>`))],
+    ['home: ×9.0 (after 1500 vs before 500 BCE)', home.includes(`${r.r31.toFixed(1)}× wider`)],
+    ['home track: ×2.4 and ×3.8 on the seams', home.includes(`×${r.r21.toFixed(1)}</span>`) && home.includes(`×${r.r32.toFixed(1)}</span>`)],
+    ['timeline: fold labels ×2.4 / ×3.8', tl.includes(`fold: ×${r.r21.toFixed(1)} per year`) && tl.includes(`fold: ×${r.r32.toFixed(1)} per year`)],
+    ['sources: 24/38/38 split', [0, 1, 2].every(i => src.includes(`takes ${Math.round((FOLDS[i].f1 - FOLDS[i].f0) * 100)}%`))],
+    ['sources: approx start count', src.includes(`${traditions.filter(t => t.approx).length} of ${traditions.length} start dates`)],
+    ['sources: approx end count', src.includes(`${traditions.filter(t => t.end_approx).length} of ${ended.length} end dates`)],
     ['sources: region count', src.includes(`${traditions.filter(t => t.origin.precision === 'region').length} are a region`)],
+    ['sources: stops traced / not traced', src.includes(`${stops.length} stops in all`) && src.includes(`(${stops.filter(s => s[4] !== '?').length} stops)`) && src.includes(`other ${stops.filter(s => s[4] === '?').length} are drawn`)],
+    ['sources: adherent rows match data', traditions.filter(t => t.adherents).every(t => src.includes(`${t.adherents.millions.toLocaleString('en-US')} million</td><td>${t.adherents.source === 'india2011' ? 'India only, 2011' : 'World, 2020'}`))],
     ['alive now = living', aliveIn(traditions, NOW).length === traditions.length - ended.length],
+    ['present year pinned', NOW === JSON.parse(fs.readFileSync(path.join(ROOT, 'data/meta.json'), 'utf8')).present],
     ['build-facts match data', facts.traditions === traditions.length && facts.ended === ended.length],
   ];
   const bad = checks.filter(c => !c[1]).map(c => c[0]);

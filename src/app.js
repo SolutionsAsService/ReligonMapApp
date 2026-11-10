@@ -90,7 +90,13 @@
 
   // ---- atlas family filters
   $$('[data-fam-toggle]').forEach(cb => cb.addEventListener('change', () => {
-    $$(`.mk[data-f="${cb.dataset.famToggle}"]`).forEach(m => m.classList.toggle('famoff', !cb.checked));
+    const f = cb.dataset.famToggle;
+    $$(`.mk[data-f="${f}"]`).forEach(m => m.classList.toggle('famoff', !cb.checked));
+    // hide the family's buttons and, if its route is showing, the route
+    cb.closest('li').querySelectorAll('ul .tbtn').forEach(b => b.closest('li').classList.toggle('famoff-li', !cb.checked));
+    const on = pickers.find(b => b.getAttribute('aria-pressed') === 'true');
+    const fm = on && document.querySelector(`.mk[data-id="${on.dataset.showRoute}"]`);
+    if (!cb.checked && fm && fm.dataset.f === f) showRoute(null);
     const ctl = document.querySelector('[data-yearctl] input');
     if (ctl) ctl.dispatchEvent(new Event('input'));
   }));

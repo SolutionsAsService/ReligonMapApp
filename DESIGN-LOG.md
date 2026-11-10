@@ -315,3 +315,135 @@ Consequence: Adds a third line type (dashed), which the legend must name. On the
 Fence: Dashes usually mean "uncertain". Here the legend states their meaning instead.
 Frontier effect: This adds a legend item and a check that the dashes stay distinguishable at 375 px.
 Mode field: The advanced pole is descent drawn as distance. The acceptable pole is a legend line: "dashed = born from".
+
+---
+
+## Panel, WHOLE, round R1 (artifact examined: site/ after M1–M10, commit 26b1a62; panel/R1/*.png; evidence panel/R1/evidence.md)
+
+All 8 seats filed (`collect_panel.py`: 8 REPORTED).
+
+| Critic | Anchor used | Observed in the work | Verdict | Requested change |
+|---|---|---|---|---|
+| Critic: Evidence (Cairo) | How Charts Lie | Re-ran check (26/26). Figures reproduce. But: end dates print without c.; the evidence overstated the visible labels (7/4, not 8/5); the legibility probe tests count, not origin+last; the ribbon "alive" is a count of this catalogue; the India census is called "recent"; NOW floats with the clock; the figure probe skips the ratios. | OBJECT | end_approx flag; fix the probe and evidence; "of the 91 listed"; India-only label; pin the year; extend the figure probe |
+| Critic: Evidence (Tufte) | Visual Display (lie factor) | fold() is continuous and all marks derive from it. But the gridlines land 47.6/22.6/43.0 px apart, which hides the fold. The filled ribbon area has lie factors 0.24 and 2.2. Labels collide ("1000 BCE500 BCE", the Vedic end text). The ribbon ticks are hand-picked. | OBJECT | one 100-year grid; the ribbon as a line; durations in titles; fix collisions; ticks from FOLDS |
+| Critic: Usability (Krug) | Don't Make Me Think | Passes the five-second test at both widths; Bodh Gaya → Anuradhapura traceable. Phone route chips and nav are cut without a cue. The strip does not name its route. The fold sentence is needless words. | PASS | wrap chips and nav; "Buddhism route:"; a shorter fold note |
+| Critic: Inclusion (Holmes) | Mismatch | 91 map dots come before the year slider in tab order. The phone nav is cut. Candomblé lineage labels collide or are clipped on phone. Terms are unglossed. The fold note is hidden on phone. | OBJECT | slider before the dots, or dots out of tab order; wrap nav; fix labels; gloss terms; fold note on phone |
+| Critic: Inclusion (Mace) | Principles of Universal Design | Map-mark focus is invisible (outline:none, 3.8 px dot at 375). The year control is the 114th Tab stop. 89/91 marks are within 24 px; the probe skips SVG. Forced colours erase family. The phone nav focus is off-screen. | OBJECT | marks out of tab order or a ring; measure SVG targets; forced-color-adjust; nav focus in view |
+| Critic: Provocateur (Debord) | Society of the Spectacle | Numbers hold, verbs fail. 156/196 legs are drawn from the origin with no recorded `from`. "Where each date … comes from" is not delivered. End years read as exact. "Several have modern revivals" (only one). The atlas family filter does not filter routes. "Recent" census. | OBJECT | draw legs only where `from` is recorded; reword the claims; end c.; "one revival", linked; filter routes |
+| Critic: Provocateur (Shklovsky) | Art as Technique | The fold is the one estranging device, and on the home page it shrinks to dotted ticks and a caption. The chips are SaaS pills. Labels collide on the fold. | OBJECT | zigzag seams and ×9.0 on the home track; one control row; move the fold labels |
+| Critic: Rupture (Shklovsky) | Art as Technique | The same: the fold is real rupture but softened on the landing; the landing is "newspaper explainer" smooth; the end caps work. | OBJECT | carry the seams into the slider; show the true unfolded proportion beside the folded one on the first screen |
+
+**Statements of meaning:** The panel reads the site as "where and when, honestly". The fold and the endings are recognised as its own devices. The map's routes are read as transmission claims, and that is where the data fails them.
+
+**Andon:** pulled by Debord (F1). Drawn legs assert transmissions the data does not hold. No new moves until it is resolved: M11 resolves it first.
+
+| Finding | Resolution |
+|---|---|
+| Debord: 156 legs drawn from origin without a recorded `from` | ADAPT (M11): every stop now carries an explicit `from` (153 asserted, 43 marked "?" = path not traced, drawn as a dated dot with no leg) |
+| Cairo + Debord: end dates print as exact | ADAPT (M12): `end_approx` flag; "c." printed on approximate ends |
+| Cairo: evidence said 8/5 visible labels | OVERRULE (premise refuted: my evidence file was wrong, the seat was right. Recorded as an error in my evidence, corrected in R2 evidence) |
+| Cairo: legibility probe tests count only | ADAPT (M12): probe asserts the origin and the last stop are visible |
+| Cairo: "alive" counts this catalogue only | ADAPT (M13): note says "of the 91 traditions listed here" |
+| Cairo + Debord: "recent" India census beside world totals | ADAPT (M12): "India only, 2011" printed with the figure; "recent" removed |
+| Cairo: NOW floats with the build clock | ADAPT (M12): `data/meta.json` pins the present year (2026) |
+| Cairo: figure probe skips ratios, the 24/38/38 split and adherents | ADAPT (M12): probe extended |
+| Tufte + Shklovsky (both): gridlines hide the fold; label collisions on the fold | ADAPT (M13): one 100-year grid everywhere; fold labels moved into a header band; end years moved; 1000 BCE label dropped |
+| Tufte: filled ribbon area misstates | ADAPT (M13): ribbon drawn as a line |
+| Tufte: durations not shown | ADAPT (M13): duration in years in every row title and table |
+| Tufte: ribbon ticks hand-picked | ADAPT (M13): ticks from FOLDS boundaries plus round centuries |
+| Shklovsky (Provocateur) + Shklovsky (Rupture): fold softened on the landing | ADAPT (M14, BREAK): the home track shows its zigzag seams with ×2.4/×3.8 printed on them, and a true-scale key beneath, linking each fold to where it would sit on an unfolded line |
+| Shklovsky (Provocateur): chips are SaaS pills, merge the family row | OVERRULE (MAYA, Adaptive criterion + Landing rule: the family chips are the per-topic links and figures the landing must carry; merging them into the ribbon would hide eight of the site's topics) |
+| Holmes + Mace: 91 dots before the slider in tab order; invisible mark focus | ADAPT (M15): map marks leave the tab order (`tabindex="-1"`); every tradition is reachable from the lists and tables beside each map |
+| Mace: SVG targets not measured | ADAPT (M15): probe measures map marks; they are pointer-only duplicates of list links, so 2.5.8's equivalent-control exception applies, and the probe asserts the duplicate exists |
+| Mace: forced colours erase family | ADAPT (M15): `forced-color-adjust: none` on map and timeline SVG |
+| Holmes + Mace + Krug: phone nav and route chips cut | ADAPT (M15): nav and chips wrap at ≤ 900 px |
+| Holmes: Candomblé lineage label clipped on phone | ADAPT (M13): fold labels moved; the chart opens scrolled so its left-hand labels are in view |
+| Holmes: unglossed terms; fold note hidden on phone | ADAPT (M15): glosses in the text; short fold note shown at every width |
+| Krug: strip does not name its route | ADAPT (M11): the strip starts with "Buddhism route:" |
+| Krug: needless fold words | ADAPT (M14): the note is shortened; the ratio now lives on the track |
+| Debord: "where each date comes from" | ADAPT (M12): reworded to "how each date was reasoned" |
+| Debord: "several have modern revivals" | ADAPT (M12): "one (Heathenry, from Germanic religion)", linked |
+| Debord: atlas family filter does not filter routes | ADAPT (M15): unchecking a family also hides its route and its list buttons |
+
+## Move M11: Every leg is a recorded transmission  (KEEP-THE-RULE; resolves the Andon)
+Depends on: M1, M4, M5 (REOPENED by Debord F1)
+Anchors: Rule The Visual Display of Quantitative Information (Edward Tufte) (graphical integrity) | Counterpoint Dear Data (Giorgia Lupi, Stefanie Posavec)
+Intent: Each of the 196 stops gets an explicit `from`. It is either a named place (asserted) or `"?"` (reached, path not traced). Legs are drawn only for asserted `from`. A `?` stop is a dated dot with a dotted ring. The strip names the route ("Buddhism route:"), lists each stop with "from X" or "path not traced", and drops the arrows that implied a single chain.
+Formal argument: A line between two places is a claim of transmission. Tufte: show no more than the data. Lupi: the unknown is written in words, not hidden.
+Alternatives rejected:
+- (a) Connect each stop to its nearest earlier stop. Rejected: that invents a geography.
+- (b) Drop the unknown stops. Rejected: the date that a place was reached is still true and useful.
+Consequence: Some maps lose legs (Hinduism's Southeast Asia, for example), which is honest. It adds a key item.
+Fence: n/a.
+Frontier effect: The map key and the strip format change; Debord re-judges.
+Mode field: The advanced pole is that the unknown is drawn as unknown. The acceptable pole is the plain words "path not traced".
+
+## Move M12: Claims and figures made reproducible  (KEEP-THE-RULE)
+Depends on: M1, M8 (REOPENED by Cairo F3/F5/F6/F7, Debord F2–F4/F6)
+Anchors: Rule The Visual Display of Quantitative Information (Edward Tufte)
+Intent:
+- `end_approx` prints "c." on uncertain ends.
+- The present year is pinned in `data/meta.json`.
+- The India census is printed as "India only, 2011", and "recent" is dropped.
+- "How each date was reasoned" replaces "where each date comes from".
+- The revival sentence names its one case and links it.
+- The probe asserts the origin and the last labels, the fold ratios and percentages, and the adherent rows.
+Formal argument: A figure is evidence only if a reader can reproduce it, including when the site is rebuilt next year.
+Alternatives rejected:
+- (a) Footnote the uncertainty. Rejected: readers skip footnotes.
+- (b) Remove the end dates. Rejected: endings are the site's events (M8).
+Consequence: Rebuilding in a later year needs a deliberate edit to meta.json.
+Fence: n/a.
+Frontier effect: The R2 evidence must be re-measured.
+Mode field: The advanced pole is that every printed figure has a procedure. The acceptable pole is the plain "c." and "India only".
+
+## Move M13: One grid, a line ribbon, collision-free folds  (KEEP-THE-RULE)
+Depends on: M3 (REOPENED by Tufte F2/F3/F5/F6, Shklovsky F5, Holmes F3)
+Anchors: Breaker Making and Breaking the Grid (Timothy Samara) | Counterpoint Grid Systems in Graphic Design (Josef Müller-Brockmann) (dotted "loosens")
+Intent:
+- A single 100-year gridline interval everywhere, so the line density itself shows the fold: 9.5, 22.6 and 86 px apart.
+- The alive count drawn as a line, not a filled area.
+- Ribbon ticks derived from FOLDS.
+- Fold labels set in a header band above the first row.
+- End-year text set above the line.
+- Durations in row titles and tables.
+Formal argument: Müller-Brockmann's uniform module is the measure that makes Samara's break visible. Tufte's lie factor rules out a filled area on a non-linear x.
+Alternatives rejected:
+- (a) Keep the per-stretch grid. Rejected: it hides the fold, as measured.
+- (b) An area ribbon on a linear inset. Rejected: two axes for one control.
+Consequence: The first stretch's grid is dense (9.5 px), so it is drawn lighter.
+Fence: The uniform grid is the rule; the fold is the break against it.
+Frontier effect: Feeds M14.
+Mode field: The advanced pole is that the grid reveals the fold. The acceptable pole is fewer, clearer labels.
+
+## Move M14: The fold on the first screen, with a true-scale key  (BREAK; escalates M3; the S4 candidate)
+Depends on: M3, M5, M13
+Anchors: Breaker Making and Breaking the Grid (Timothy Samara) | Stance Make It Bigger (Paula Scher) | Welcome MAYA: Most Advanced Yet Acceptable (Raymond Loewy)
+Intent: The home year track shows the zigzag seams and prints "×2.4" and "×3.8" on them. Beneath it, a thin unfolded line of the same 5,526 years carries the same three stretches, joined to the folded track by slanted connectors. The eye sees the first 3,000 years take 54% of real time but only 24% of the slider.
+Formal argument: Both Shklovsky seats found the fold to be the one estranging device and said the landing softens it into a caption. Rupture asked for the unfolded proportion to be shown, not stated. Samara's break must be visible where the reader first meets it. MAYA keeps it legible: two aligned lines and two ratios.
+Alternatives rejected:
+- (a) A longer caption. Rejected: Krug's needless words.
+- (b) An animation unfolding the axis. Rejected: motion is not readable under reduced motion.
+Consequence: About 22 px more height in the hero, which must still fit at 375 × 812.
+Fence: n/a.
+Frontier effect: First-screen re-measurement; this is the S4 push.
+Mode field: The advanced pole is that the distortion is drawn. The acceptable pole is two labelled lines.
+
+## Move M15: Access and wrapping  (KEEP-THE-RULE)
+Depends on: M5, M6 (REOPENED by Holmes F1–F3/F5, Mace F1–F5, Krug F2, Debord F5)
+Anchors: Rule WCAG 2.2 Contrast and Perceivability (W3C)
+Intent:
+- Map marks get `tabindex="-1"`, because every tradition has a list or table link beside the map.
+- Nav and chips wrap on the phone.
+- `forced-color-adjust: none` on the figures.
+- Glosses in the summaries.
+- The short fold note shown at every width.
+- The atlas family filter hides that family's routes and buttons.
+Formal argument: WCAG 2.4.3 focus order and 2.5.8 (equivalent control): a 91-stop detour is a mismatch (Holmes). Forced colours must not erase the meaning carried by colour.
+Alternatives rejected:
+- (a) Roving tabindex across the marks. Rejected: complex for 91 marks that duplicate lists.
+- (b) A "skip map" link. Rejected: it still leaves 91 stops on every other path.
+Consequence: Keyboard users choose traditions from lists, not dots.
+Fence: n/a.
+Frontier effect: The probes for tab order and forced colours.
+Mode field: The advanced pole is that nothing is removed. The acceptable pole is a short tab path.
