@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-10T02:29:08.000Z",
+  "at": "2026-11-10T02:40:48.107Z",
   "results": [
     {
       "probe": "internal links resolve",
@@ -45,7 +45,7 @@
       "pass": true,
       "detail": {
         "top": 74.25,
-        "bottom": 638.75,
+        "bottom": 663.546875,
         "right": 1241.609375,
         "innerScroll": 0,
         "parts": 5
@@ -226,7 +226,7 @@
       "probe": "smallest timeline label at 375px ≥ 10px rendered",
       "pass": true,
       "detail": {
-        "min": "10.5",
+        "min": "10.9",
         "n": 132
       }
     },
@@ -238,7 +238,7 @@
     {
       "probe": "printed figures reproduce from data",
       "pass": true,
-      "detail": "16 figures"
+      "detail": "17 figures"
     }
   ]
 }

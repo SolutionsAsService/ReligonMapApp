@@ -32,9 +32,9 @@
   }
   function setTimelineYear(year) {
     $$('svg[data-tl]').forEach(svg => {
-      const w = +svg.dataset.w - 10;
+      const l = +svg.dataset.l, r = +svg.dataset.r;
       const c = svg.querySelector('.cursor');
-      const x = (fold(year) * w).toFixed(1);
+      const x = (l + fold(year) * (r - l)).toFixed(1);
       c.setAttribute('x1', x); c.setAttribute('x2', x); c.removeAttribute('hidden');
       $$('.row', svg).forEach(r => {
         const s = +r.dataset.s, e = r.dataset.e === '' ? null : +r.dataset.e;
@@ -111,8 +111,8 @@
     if (!svg || box.scrollWidth <= box.clientWidth) return;
     const starts = [...svg.querySelectorAll('.row')].map(r => +r.dataset.s);
     const first = Math.min(...starts);
-    const vb = svg.viewBox.baseVal.width, w = +svg.dataset.w - 10;
-    const px = fold(first) * w * (svg.getBoundingClientRect().width / vb);
+    const vb = svg.viewBox.baseVal.width, l = +svg.dataset.l, r = +svg.dataset.r;
+    const px = (l + fold(first) * (r - l)) * (svg.getBoundingClientRect().width / vb);
     box.scrollLeft = Math.max(0, px - 60);
   });
 })();

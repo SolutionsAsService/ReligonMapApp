@@ -291,6 +291,14 @@ for (const [w, h] of [[1280, 800], [375, 812]]) {
     ['sources: adherent rows match data', traditions.filter(t => t.adherents).every(t => src.includes(`${t.adherents.millions.toLocaleString('en-US')} million</td><td>${t.adherents.source === 'india2011' ? 'India only, 2011' : 'World, 2020'}`))],
     ['alive now = living', aliveIn(traditions, NOW).length === traditions.length - ended.length],
     ['present year pinned', NOW === JSON.parse(fs.readFileSync(path.join(ROOT, 'data/meta.json'), 'utf8')).present],
+    ['every approximate end year printed with c. (lost, tradition pages, landing)', (() => {
+      const lost = fs.readFileSync(path.join(SITE, 'lost.html'), 'utf8');
+      return ended.filter(t => t.end_approx).every(t => {
+        const y = (t.end < 0 ? `${-t.end} BCE` : t.end < 1000 ? `${t.end} CE` : String(t.end));
+        const pg = fs.readFileSync(path.join(SITE, 't', t.id + '.html'), 'utf8');
+        return !lost.includes(`Ended ${y}.`) && !pg.includes(`How it ended (${y})`) && !home.includes(`(${y})`);
+      });
+    })()],
     ['build-facts match data', facts.traditions === traditions.length && facts.ended === ended.length],
   ];
   const bad = checks.filter(c => !c[1]).map(c => c[0]);

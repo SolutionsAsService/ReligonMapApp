@@ -447,3 +447,95 @@ Consequence: Keyboard users choose traditions from lists, not dots.
 Fence: n/a.
 Frontier effect: The probes for tab order and forced colours.
 Mode field: The advanced pole is that nothing is removed. The acceptable pole is a short tab path.
+
+---
+
+## Panel, WHOLE, round R2 (artifact examined: site/ at commit bb400b1 plus panel/R2/*.png; evidence panel/R2/evidence.md)
+
+The run was closed by the owner's grade (A−) while R2 was sitting. Three seats had been launched and all three filed. The other five were never launched (Krug, Holmes, Mace, Shklovsky ×2). They are recorded as NOT CONVENED (run closed by owner), not as PASS.
+
+| Critic | Anchor used | Observed in the work | Verdict | Requested change |
+|---|---|---|---|---|
+| Critic: Evidence (Cairo) | How Charts Lie | Check run twice: 29/29. All figures recomputed: 153 `.leg` and 43 `.stop unk` on the atlas; the connectors at 54.3% and 90.5%; durations correct with no year 0; 7 adherent rows. R1 F1–F5 resolved. | PASS | Reissue evidence (stale: edits landed mid-round); "year this edition is pinned to"; spacing note from R−L; extend the probe |
+| Critic: Evidence (Tufte) | Visual Display (lie factor, aligned scales) | The folded axis is honest: the grid (9.5/22.6/86), seams, ratios and key all come from the scale. R1 F2–F4 resolved. New: end years collide with names (Vedic, Mexica); the ribbon and the timeline misaligned (330 vs 310, 782 vs 742); the phone hides the ×2.4 seam year; a "1000" tick is hand-picked; the note hard-codes 1190. | OBJECT | Move end years; share insets; seam years at every width; compute the note |
+| Critic: Provocateur (Debord) | Society of the Spectacle | **Andon (R1 F1) RESOLVED**: no leg without a recorded origin. Figures hold. New: approximate end years lose "c." in three places. Advisory: stop years have no approx flag; region-based distances to the km; "every dot is a birthplace". | OBJECT (F1 only) | Print "c." in the three places; advisory changes |
+
+**Andon:** Debord's R1 Andon is resolved by M11, confirmed by Debord.
+
+| Finding | Resolution |
+|---|---|
+| Debord: approximate end years printed without c. (lost, tradition pages, landing) | ADAPT (applied, not re-judged): one `endYr()` helper; probe added and passing |
+| Debord: region-based distances to the km | ADAPT (applied, not re-judged): rounded to 100 km and marked c. when the leg starts from a region origin |
+| Debord: "every dot is a birthplace" | ADAPT (applied, not re-judged): "Every dot is a birthplace; a route adds its dated stops." |
+| Debord: stop years have no approximate flag | DEFERRED: Open frontier |
+| Tufte: end-year text collides with names | ADAPT (applied, not re-judged): the end year drops below the line when the name runs past it. Measured: 0 overlaps on timeline.html |
+| Tufte: ribbon and timeline misaligned | ADAPT (applied, not re-judged): the plot runs 10..1200 in a 1210 viewBox, matching the track insets. Measured at 1280: seams at 332/782 on both; "now" at 1232 vs 1230 |
+| Tufte: ×2.4 seam has no year on phone; "1000" tick hand-picked | ADAPT (applied, not re-judged): ticks only from FOLDS boundaries; the seam years kept at every width |
+| Tufte + Cairo: fold note hard-codes 1190 | ADAPT (applied, not re-judged): computed from TL_W − TL_L |
+| Cairo: evidence stale | OVERRULE (premise correct, recorded as a process fault): I applied Debord's and Tufte's fixes while Cairo was still measuring. Final figures are re-measured below (Step 2g) |
+| Cairo: "the year this site was built" | ADAPT (applied, not re-judged): "the year this edition is pinned to (data/meta.json)" |
+| Cairo: the pinned-year probe can never fail; some figures unprobed (57 sites, Years column, Followers lines) | DEFERRED: Open frontier |
+
+## Step 2g: Final-state measurement (after the last edit; `npm run check` 29/29, panel/R2/check-results-final.json)
+
+| Printed figure | Procedure | Final value | Status |
+|---|---|---|---|
+| "Where 91 religions" | count of records in data/traditions.json | 91 | reproducible |
+| "72 are still practised; 19 have ended" | count of `end === null` | 72 / 19 | reproducible |
+| Family chip counts (36, 20, 10, 3, 7, 6, 4, 5) | count by `family` | same | reproducible |
+| ×2.4, ×3.8, ×9.0 | per-year width ratios from FOLDS in build/lib.mjs | 2.375, 3.802, 9.030 | reproducible |
+| 24% / 38% / 38% | FOLDS f1 − f0 | same | reproducible |
+| Gridline spacing 9.5 / 22.6 / 86.0 | (f1 − f0)/(to − from) × (1200 − 10) × 100 | same | reproducible (now computed) |
+| 60 of 91 approximate starts; 11 of 19 approximate ends | `approx`, `end_approx` | same | reproducible |
+| 34 region origins | `origin.precision` | 34 | reproducible |
+| 196 stops, 153 traced, 43 not | `spread[].from` ≠ "?" | same | reproducible |
+| 7 adherent figures with coverage | data/sources.json + `adherents` | same | reproducible against the cited publications (not fetched in this sandbox) |
+| "2026 · 72 of 91 alive" readout | aliveIn(year) | 72 | reproducible |
+| Durations ("2,475 years" for Buddhism) | end (or 2026) − start, minus 1 across 1 BCE/1 CE | same | reproducible |
+| First screen | hero union bottom | 663.5 at 1280×800; 709.8 at 375×812 | passes |
+| Smallest label at 375 | rendered font size | timeline 10.9 px, map 11 px | passes |
+
+## S4: Ambition push (M14)
+
+The boldest Breaker, the fold, was pushed onto the first screen. Measured in the rendered page:
+- Before (R1): the home track showed the fold only as two 1 px dotted ticks, with a 2-line caption.
+- After:
+  - zigzag seams 8 px wide and 46 px tall at 24% and 62% of the track, each printing its ratio
+  - a true-scale line whose dashed connectors run from 54.3% and 90.5% (real time) to 24% and 62% (folded)
+- Cost: the year control grew from 64 to 84 px. The phone hero ended at 881 > 812 after the push; the probe caught it, and M15's shorter phone labels brought it to 710.
+
+## Stop test
+
+- **S1** (no OPEN Frontier items): **met**. Every item is TAKEN or DEFERRED with a reason; the deferrals are listed under Open frontier.
+- **S2** (a WHOLE round with every required critic passing): **not met**.
+  - R2 seated 3 of 8 seats. Cairo passed; Tufte and Debord objected, and their objections were fixed but not re-judged.
+  - Holmes, Mace, Krug and both Shklovsky seats did not sit R2.
+- **S3** (two quiet WHOLE rounds): **not met**.
+- **S4** (ambition push, measured): **met** (M14, above).
+- **S5** (every dotted edge applied or declined): **met**.
+  - samBreak -.-> mb: applied (M13: the uniform grid is the measure the break is read against).
+  - lupiDear -.-> tufteV: applied (M1, M8, M11: written uncertainty).
+  - scher -.-> vignelliCanon: applied as restraint (one paper, three faces); declined as a frame swap.
+
+**The run is incomplete under the owner's close.** The owner graded it A− and asked to ship it to the portfolio. Under the bounded-run rule, the fixes after R2 were measured but not judged, and they are logged as "applied, not re-judged".
+
+## Open frontier (resume point)
+
+1. Convene R3 WHOLE with all 8 seats on the current site (commit after this log). Brief Tufte and Debord first, to judge the post-R2 fixes. Then Krug, Holmes, Mace and the two Shklovsky seats, who last sat R1.
+2. Add an approximate flag for stop years (Debord R2 F2). About 50 stop years are round hundreds.
+3. Give the tab-order, forced-colour, mark-equivalent and legibility probes their own failing fixtures. The pinned-year probe must compare the printed year with meta.json (Cairo R2 F2).
+4. Probe the remaining printed figures: the 57 sites, the Years column, and the Followers lines on tradition pages (Cairo R2 F4).
+
+## Double loop
+
+The criterion held: MAYA kept the fold legible, and it was the right ground to overrule merging the topic chips. The panel failed in one way. Both Shklovsky seats and Tufte had to find the same fault from opposite sides (the fold is the one strange device, and it was hidden on the landing). No seat was briefed to check that the signature device of the inner pages appears on the first screen. The process also failed once, through me: I patched the artifact while the R2 measurement seat was still running, and its evidence went stale. **Graph amendment:** add an edge `samBreak -->|must appear on the first screen of| c_prog` (or a Landing-rule line): "the run's BREAK device must be visible on the landing, not only on an inner page." **Process amendment:** no edit to the artifact while any seat of the round is still running, including advisory fixes from seats that have already filed.
+
+## Human grade
+
+- **Grade:** A−
+- **Date:** 2026-11-10
+- **Words (verbatim):** "Good design that's an A minus record and slot in to portfolio appropriately"
+- **What it most likely rewards:**
+  - One composed first screen: the map that moves with the year, a featured route, the folded ribbon with its true-scale key, and a link per family.
+  - Data honesty a reader can see: dates explained, untraced paths shown as untraced.
+- **What it may withhold the A for:** the open R2 seats, or the long, dense timeline page.

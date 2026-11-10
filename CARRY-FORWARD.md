@@ -1,0 +1,10 @@
+# Carry-Forward Ledger (facts about the medium, measured in this run)
+
+- `element.hidden = false` does nothing on an SVG element. `hidden` is an HTMLElement property, so the attribute stays and `[hidden]{display:none}` keeps the group invisible. Measured: Buddhism's route labels showed but its 9 legs did not. Fix: `toggleAttribute('hidden', …)` / `removeAttribute('hidden')`. (M5)
+- SVG `<text>` inside a `preserveAspectRatio="none"` SVG is stretched with the box. On a 343 px track the tick labels were squeezed unreadably. Fix: put tick labels and ratio labels in HTML positioned by `%`, and keep only paths and lines in the stretched SVG with `vector-effect: non-scaling-stroke`. (M5, M14)
+- d3-geo `fitExtent` on a MultiPoint with one point (or near-coincident points) returns NaN scale. Khalsa's map rendered `MNaN`. Fix: pad every point into a ±4° lat / ±6° lon box before fitting, and cap the scale. (M9)
+- A range input wider than its track (`left:-10px; width:calc(100% + 20px)`) counts as inner overflow (scrollWidth − clientWidth = 10). It also misaligns the thumb against a background chart by the thumb radius. Fix: a full-width input, and inset the background chart by the thumb radius (10 px). (M5)
+- Text-width estimates for label placement: 600-weight IBM Plex Sans at 12 px averages about 7.4 px per character, and at 11 px about 6.9. Estimates of 6.9 and 6.3 under-ran by 5 px ("Petén lowlands · c. 1000 BCE" overflowed at 375). (M5)
+- Hiding a label with `display:none` removes it from the accessibility tree. Pairing it with an `aria-hidden` short label leaves the link nameless. Fix: an explicit `aria-label` on the link. (M15)
+- A chart that scrolls inside its own box opens at scrollLeft 0. For a lineage of modern traditions on a 3500 BCE axis, that shows only empty years at 375 px. Fix: set scrollLeft at load from the earliest row's x. (M10)
+- `@media (forced-colors: active)` rules that set `fill: CanvasText` override `forced-color-adjust: none` on a parent. Remove them when you opt a figure out. (M15)

@@ -12,6 +12,7 @@ const N = traditions.length;
 const ENDED = traditions.filter(t => t.end !== null).sort((a, b) => a.end - b.end);
 const LIVING = traditions.filter(t => t.end === null);
 const ratios = foldRatios();
+const endYr = t => (t.end_approx ? 'c. ' : '') + yr(t.end);
 const STOPS = traditions.flatMap(t => routeOf(t));
 const FEATURED = ['buddhism', 'christianity', 'islam', 'manichaeism', 'judaism', 'hinduism'];
 
@@ -212,8 +213,8 @@ function ribbonSvg(w = 1000, h = 46) {
     const r = i === 0 ? ratios.r21 : ratios.r32;
     return `<span class="seamz" style="left:${(fold(s.from) * 100).toFixed(2)}%"></span><span class="seamr" style="left:${(fold(s.from) * 100).toFixed(2)}%">×${r.toFixed(1)}</span>`;
   }).join('');
-  const tickYears = [FOLDS[0].from, ...FOLDS.slice(1).map(s => s.from), 1000, NOW];
-  const ticks = tickYears.map(y => `<span class="rt${y === 1000 || y === -500 ? ' m-x' : ''}" style="left:${(fold(y) * 100).toFixed(2)}%">${y === NOW ? 'now' : y < 0 ? `${-y} BCE` : y < 1000 ? `${y} CE` : y}</span>`).join('');
+  const tickYears = [FOLDS[0].from, ...FOLDS.slice(1).map(s => s.from), NOW];
+  const ticks = tickYears.map(y => `<span class="rt${y === FOLDS[0].from ? ' m-x' : ''}" style="left:${(fold(y) * 100).toFixed(2)}%">${y === NOW ? 'now' : y < 0 ? `${-y} BCE` : y < 1000 ? `${y} CE` : y}</span>`).join('');
   const kx = FOLDS.slice(1).map(s => s.from);
   const key = `<svg class="tkey" viewBox="0 0 ${w} 18" preserveAspectRatio="none" aria-hidden="true"><line class="kbase" x1="0" x2="${w}" y1="2" y2="2"/>${[FOLDS[0].from, ...kx, NOW].map(y => `<line class="ktick" x1="${(LIN(y) * w).toFixed(1)}" x2="${(LIN(y) * w).toFixed(1)}" y1="0" y2="6"/>`).join('')}${kx.map(y => `<line class="kconn" x1="${(LIN(y) * w).toFixed(1)}" x2="${X(y)}" y1="2" y2="18"/>`).join('')}</svg>`;
   const keyLabel = '';
@@ -229,8 +230,9 @@ function yearControl(target, { value = NOW } = {}) {
 }
 
 // ---------------------------------------------------------------- timeline (folded, lineage)
-function timelineSvg(list, { up = '', W = 1200, row = 26, showFamilies = true, highlight = null } = {}) {
-  const L = 0, R = W - 10;
+const TL_L = 10, TL_W = 1200; // plot runs TL_L..TL_W inside a viewBox of TL_W + TL_L, matching the year track's 10 px insets
+function timelineSvg(list, { up = '', W = TL_W, row = 26, showFamilies = true, highlight = null } = {}) {
+  const L = TL_L, R = W;
   const X = y => (L + fold(y) * (R - L));
   let y = 58;
   const rows = [];
@@ -275,7 +277,8 @@ function timelineSvg(list, { up = '', W = 1200, row = 26, showFamilies = true, h
       : `<rect class="cap" x="${(x1 - 1.5).toFixed(1)}" y="${ry - 8}" width="3.5" height="16"/>`;
     const labelLeft = x0 > W * 0.8;
     const lx = labelLeft ? x0 - 9 : x0 + 9;
-    const endText = t.end !== null ? `<text class="endtxt" x="${(x1 + 7).toFixed(1)}" y="${ry - 6}">${t.end_approx ? 'c. ' : ''}${yr(t.end)}</text>` : '';
+    const nameEnd = labelLeft ? x0 : lx + t.name.length * 7.6;
+    const endText = t.end !== null ? `<text class="endtxt" x="${(x1 + 7).toFixed(1)}" y="${nameEnd > x1 ? ry + 13 : ry - 6}">${t.end_approx ? 'c. ' : ''}${yr(t.end)}</text>` : '';
     const hl = highlight && highlight === t.id ? ' hl' : '';
     return `<a class="row${t.living ? '' : ' ended'}${hl}" href="${up}t/${t.id}.html" data-s="${t.start}" data-e="${t.end ?? ''}" style="--c:${t.color}">
 <title>${esc(t.name)}: ${esc(span(t))}, ${years(t).toLocaleString('en-US')} years</title>
@@ -284,7 +287,7 @@ function timelineSvg(list, { up = '', W = 1200, row = 26, showFamilies = true, h
 <circle class="start${t.approx ? ' approx' : ''}" cx="${x0.toFixed(1)}" cy="${ry}" r="4.5"/>
 <text class="nm" x="${lx.toFixed(1)}" y="${ry - 6}"${labelLeft ? ' text-anchor="end"' : ''}>${esc(t.name)}</text>${endText}</a>`;
   }).join('');
-  return { svg: `<svg class="tl" viewBox="0 0 ${W + 60} ${H}" data-tl data-w="${W}" role="img" aria-label="Lineage timeline of ${list.length} traditions on a folded time axis; the same data is listed in the table below.">
+  return { svg: `<svg class="tl" viewBox="0 0 ${W + L} ${H}" data-tl data-l="${L}" data-r="${R}" role="img" aria-label="Lineage timeline of ${list.length} traditions on a folded time axis; the same data is listed in the table below.">
 <g class="grid">${grid.join('')}</g>${seams}<g class="heads">${rows.join('')}</g><g class="links">${links}</g><g class="rows">${bars}</g>
 <line class="cursor" x1="0" x2="0" y1="22" y2="${H}" hidden/>
 </svg>`, H };
@@ -319,7 +322,7 @@ fs.copyFileSync(path.join(ROOT, 'data', 'families.json'), path.join(OUT, 'data',
 <section class="hero">
   <div class="hero-text">
     <h1>Where ${N} religions began, <em>and when</em></h1>
-    <p class="lede">Every dot is a birthplace. Drag the year to watch them appear, spread and end. ${LIVING.length} are still practised; ${ENDED.length} have ended.</p>
+    <p class="lede">Every dot is a birthplace; a route adds its dated stops. Drag the year to watch them appear, spread and end. ${LIVING.length} are still practised; ${ENDED.length} have ended.</p>
     <div class="routes-pick" role="group" aria-label="Show the spread of">
       <span class="rp-label">Follow the spread of</span>${chips}
     </div>
@@ -334,7 +337,7 @@ fs.copyFileSync(path.join(ROOT, 'data', 'families.json'), path.join(OUT, 'data',
 <section class="doors">
   <a class="door" href="timeline.html"><h2>Timeline</h2><p>All ${N} on one folded axis: who branched from whom, and which lines stop.</p></a>
   <a class="door" href="atlas.html"><h2>Atlas</h2><p>Every origin and every dated route, filterable by family and year.</p></a>
-  <a class="door" href="lost.html"><h2>Lost religions</h2><p>${ENDED.length} traditions that ended, from ${esc(ENDED[0].name)} (${yr(ENDED[0].end)}) to ${esc(ENDED[ENDED.length - 1].name)} (${yr(ENDED[ENDED.length - 1].end)}), and what ended them.</p></a>
+  <a class="door" href="lost.html"><h2>Lost religions</h2><p>${ENDED.length} traditions that ended, from ${esc(ENDED[0].name)} (${endYr(ENDED[0])}) to ${esc(ENDED[ENDED.length - 1].name)} (${endYr(ENDED[ENDED.length - 1])}), and what ended them.</p></a>
   <a class="door" href="sources.html"><h2>Sources &amp; method</h2><p>How each date was reasoned, where each number comes from, and what is not known.</p></a>
 </section>
 <details class="az"><summary>All ${N} traditions, A to Z</summary><ul>${[...traditions].sort((a, b) => a.name.localeCompare(b.name)).map(t => `<li style="--c:${t.color}"><a href="t/${t.id}.html">${esc(t.name)}</a> <span class="y">${esc(span(t))}</span></li>`).join('')}</ul></details>`;
@@ -360,7 +363,7 @@ fs.copyFileSync(path.join(ROOT, 'data', 'families.json'), path.join(OUT, 'data',
   ${yearControl('tl')}
 </section>
 <div class="tl-scroll" tabindex="0" role="region" aria-label="Timeline chart, scrolls sideways on small screens">${svg}</div>
-<p class="fold-note">Gridlines are drawn every ${GRID} years in all three stretches, so their spacing is the scale: ${FOLDS.map(f => ((f.f1 - f.f0) / (f.to - f.from) * 1190 * GRID).toFixed(1)).join(', ')} chart units apart before 500 BCE, from 500 BCE to 1500, and after 1500. Line lengths compare honestly only inside one stretch; each row's title and the table give its length in years.</p>
+<p class="fold-note">Gridlines are drawn every ${GRID} years in all three stretches, so their spacing is the scale: ${FOLDS.map(f => ((f.f1 - f.f0) / (f.to - f.from) * (TL_W - TL_L) * GRID).toFixed(1)).join(', ')} chart units apart before 500 BCE, from 500 BCE to 1500, and after 1500. Line lengths compare honestly only inside one stretch; each row's title and the table give its length in years.</p>
 <details class="tablewrap"><summary>The same data as a table</summary>${table}</details>`;
   page({ file: 'timeline.html', current: 'timeline.html', title: 'Timeline · The Religion Map', desc: `Lineage of ${N} religious traditions on a folded time axis, from ${yr(FOLDS[0].from)} to ${NOW}.`, body });
 }
@@ -416,7 +419,7 @@ ${yearControl('fam')}
   const rows = ENDED.map(t => `<li class="lost" style="--c:${t.color}">
 <div class="lost-head"><a href="t/${t.id}.html">${esc(t.name)}</a> <span class="y">${esc(span(t))}</span></div>
 ${spanBar(t, 600)}
-<p class="why"><b>Ended ${yr(t.end)}.</b> ${esc(t.ended_by || '')}</p></li>`).join('');
+<p class="why"><b>Ended ${endYr(t)}.</b> ${esc(t.ended_by || '')}</p></li>`).join('');
   page({ file: 'lost.html', current: 'lost.html', title: 'Lost religions · The Religion Map', desc: `${ENDED.length} religious traditions that ended, in the order they ended, with what ended them.`, body: `
 <section class="pagehead"><h1>Lost religions</h1><p class="lede">${ENDED.length} of the ${N} traditions here are no longer practised as living religions. They are listed in the order they ended. Most did not simply die: they were banned, conquered, absorbed, or became something else. One has a modern revival listed here as its own tradition: <a href="t/heathenry.html">Heathenry</a>, from Germanic &amp; Norse religion.</p></section>
 ${mapFigure({ id: 'lostmap', list: ENDED, caption: `Birthplaces of the ${ENDED.length} ended traditions.`, labelOrigins: true })}
@@ -434,7 +437,7 @@ ${mapFigure({ id: 'lostmap', list: ENDED, caption: `Birthplaces of the ${ENDED.l
 <section class="pagehead"><h1>Sources &amp; method</h1><p class="lede">This is a map of beginnings, not of today's believers. Dates of origin are often disputed; the map says so rather than hiding it.</p></section>
 <div class="prose">
 <h2>Dates</h2>
-<p>${approx} of ${N} start dates and ${traditions.filter(t => t.end_approx).length} of ${ENDED.length} end dates are approximate and are written with "c." On the timeline an approximate start has a hollow dot. Each tradition's page explains how its date was reasoned, including where tradition and historians disagree (for example Zarathustra, the Buddha, or Shinto). Years are BCE/CE; there is no year 0. Living traditions run to ${NOW}, the year this site was built, and stay open-ended.</p>
+<p>${approx} of ${N} start dates and ${traditions.filter(t => t.end_approx).length} of ${ENDED.length} end dates are approximate and are written with "c." On the timeline an approximate start has a hollow dot. Each tradition's page explains how its date was reasoned, including where tradition and historians disagree (for example Zarathustra, the Buddha, or Shinto). Years are BCE/CE; there is no year 0. Living traditions run to ${NOW}, the year this edition is pinned to (data/meta.json), and stay open-ended.</p>
 <h2>Places</h2>
 <p>Each origin is a single latitude and longitude. ${N - region} are a specific site (a city, a mountain, a temple); ${region} are a region, drawn with a soft halo, because the tradition has no single birthplace. Spread routes mark dated places a tradition reached: ${STOPS.length} stops in all. A line is drawn only where the data names the place a tradition came from (${STOPS.filter(s => !s.unknown).length} stops), as a great-circle line. The other ${STOPS.filter(s => s.unknown).length} are drawn as a dated dot with no line and marked "path not traced", because the route is unknown or ran through places not in the data. They are milestones, not complete histories.</p>
 <h2>The folded time axis</h2>
@@ -464,7 +467,7 @@ traditions.forEach(t => {
   const lineage = [...chain, t, ...t.children];
   const { svg } = timelineSvg(lineage, { up: '../', showFamilies: false, row: 28, highlight: t.id });
   const steps = routeOf(t);
-  const routeTable = steps.length ? `<table class="data"><caption>Dated spread of ${esc(t.name)}</caption><thead><tr><th scope="col">Year</th><th scope="col">Place</th><th scope="col">From</th><th scope="col">Distance</th><th scope="col">Note</th></tr></thead><tbody>${steps.map(s => `<tr><td class="num">${yr(s.year)}</td><td>${esc(s.place)}</td><td>${s.unknown ? '<i>path not traced</i>' : esc(s.from)}</td><td class="num">${s.unknown ? '—' : km(s.fromPt, [s.lat, s.lon]).toLocaleString('en-US') + ' km'}</td><td>${esc(s.note || '')}</td></tr>`).join('')}</tbody></table>` : `<p class="muted">No spread route is recorded for ${esc(t.name)}.</p>`;
+  const routeTable = steps.length ? `<table class="data"><caption>Dated spread of ${esc(t.name)}</caption><thead><tr><th scope="col">Year</th><th scope="col">Place</th><th scope="col">From</th><th scope="col">Distance</th><th scope="col">Note</th></tr></thead><tbody>${steps.map(s => `<tr><td class="num">${yr(s.year)}</td><td>${esc(s.place)}</td><td>${s.unknown ? '<i>path not traced</i>' : esc(s.from)}</td><td class="num">${s.unknown ? '—' : (s.from === t.origin.place && t.origin.precision === 'region' ? 'c. ' + (Math.round(km(s.fromPt, [s.lat, s.lon]) / 100) * 100).toLocaleString('en-US') : km(s.fromPt, [s.lat, s.lon]).toLocaleString('en-US')) + ' km'}</td><td>${esc(s.note || '')}</td></tr>`).join('')}</tbody></table>` : `<p class="muted">No spread route is recorded for ${esc(t.name)}.</p>`;
   const siblings = f.members;
   const i = siblings.indexOf(t);
   const prev = siblings[(i + siblings.length - 1) % siblings.length], next = siblings[(i + 1) % siblings.length];
@@ -482,7 +485,7 @@ traditions.forEach(t => {
     ${t.children.length ? `<div><dt>Branches</dt><dd>${t.children.map(c => `<a href="${c.id}.html">${esc(c.name)}</a>`).join(', ')}</dd></div>` : ''}
   </dl>
   <p class="datenote"><b>About the date:</b> ${esc(t.date_note)}</p>
-  ${t.ended_by ? `<p class="endnote"><b>How it ended (${yr(t.end)}):</b> ${esc(t.ended_by)}</p>` : ''}
+  ${t.ended_by ? `<p class="endnote"><b>How it ended (${endYr(t)}):</b> ${esc(t.ended_by)}</p>` : ''}
 </header>
 ${mapFigure({ id: 'tmap', list: [t], routes: steps.length ? [t] : [], up: '../', caption: steps.length ? `${esc(t.name)}: birthplace and ${steps.length} dated stop${steps.length > 1 ? 's' : ''}.` : `Birthplace of ${esc(t.name)}.`, cls: 'solo', labelOrigins: steps.length ? 'ghosts' : true, fit: true, lineage: true })}
 ${routeTable}
